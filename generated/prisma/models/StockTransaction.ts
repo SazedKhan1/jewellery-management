@@ -4,7 +4,7 @@
 // biome-ignore-all lint: generated file
 // @ts-nocheck 
 /*
- * This file exports the `StockTransaction` model and its related types.
+ * This file exports the `stocktransaction` model and its related types.
  *
  * 🟢 You can import this file directly.
  */
@@ -13,566 +13,566 @@ import type * as $Enums from "../enums.ts"
 import type * as Prisma from "../internal/prismaNamespace.ts"
 
 /**
- * Model StockTransaction
+ * Model stocktransaction
  * 
  */
-export type StockTransactionModel = runtime.Types.Result.DefaultSelection<Prisma.$StockTransactionPayload>
+export type stocktransactionModel = runtime.Types.Result.DefaultSelection<Prisma.$stocktransactionPayload>
 
-export type AggregateStockTransaction = {
-  _count: StockTransactionCountAggregateOutputType | null
-  _avg: StockTransactionAvgAggregateOutputType | null
-  _sum: StockTransactionSumAggregateOutputType | null
-  _min: StockTransactionMinAggregateOutputType | null
-  _max: StockTransactionMaxAggregateOutputType | null
+export type AggregateStocktransaction = {
+  _count: StocktransactionCountAggregateOutputType | null
+  _avg: StocktransactionAvgAggregateOutputType | null
+  _sum: StocktransactionSumAggregateOutputType | null
+  _min: StocktransactionMinAggregateOutputType | null
+  _max: StocktransactionMaxAggregateOutputType | null
 }
 
-export type StockTransactionAvgAggregateOutputType = {
+export type StocktransactionAvgAggregateOutputType = {
   id: number | null
   productId: number | null
   quantity: number | null
-  grossWeight: runtime.Decimal | null
-  stoneWeight: runtime.Decimal | null
-  netWeight: runtime.Decimal | null
   referenceId: number | null
+  grossWeight: runtime.Decimal | null
+  netWeight: runtime.Decimal | null
+  stoneWeight: runtime.Decimal | null
 }
 
-export type StockTransactionSumAggregateOutputType = {
+export type StocktransactionSumAggregateOutputType = {
   id: number | null
   productId: number | null
   quantity: number | null
-  grossWeight: runtime.Decimal | null
-  stoneWeight: runtime.Decimal | null
-  netWeight: runtime.Decimal | null
   referenceId: number | null
+  grossWeight: runtime.Decimal | null
+  netWeight: runtime.Decimal | null
+  stoneWeight: runtime.Decimal | null
 }
 
-export type StockTransactionMinAggregateOutputType = {
-  id: number | null
-  productId: number | null
-  transactionType: string | null
-  quantity: number | null
-  grossWeight: runtime.Decimal | null
-  stoneWeight: runtime.Decimal | null
-  netWeight: runtime.Decimal | null
-  referenceType: string | null
-  referenceId: number | null
-  note: string | null
-  createdAt: Date | null
-}
-
-export type StockTransactionMaxAggregateOutputType = {
+export type StocktransactionMinAggregateOutputType = {
   id: number | null
   productId: number | null
   transactionType: string | null
   quantity: number | null
-  grossWeight: runtime.Decimal | null
-  stoneWeight: runtime.Decimal | null
-  netWeight: runtime.Decimal | null
   referenceType: string | null
   referenceId: number | null
   note: string | null
   createdAt: Date | null
+  grossWeight: runtime.Decimal | null
+  netWeight: runtime.Decimal | null
+  stoneWeight: runtime.Decimal | null
 }
 
-export type StockTransactionCountAggregateOutputType = {
+export type StocktransactionMaxAggregateOutputType = {
+  id: number | null
+  productId: number | null
+  transactionType: string | null
+  quantity: number | null
+  referenceType: string | null
+  referenceId: number | null
+  note: string | null
+  createdAt: Date | null
+  grossWeight: runtime.Decimal | null
+  netWeight: runtime.Decimal | null
+  stoneWeight: runtime.Decimal | null
+}
+
+export type StocktransactionCountAggregateOutputType = {
   id: number
   productId: number
   transactionType: number
   quantity: number
-  grossWeight: number
-  stoneWeight: number
-  netWeight: number
   referenceType: number
   referenceId: number
   note: number
   createdAt: number
+  grossWeight: number
+  netWeight: number
+  stoneWeight: number
   _all: number
 }
 
 
-export type StockTransactionAvgAggregateInputType = {
+export type StocktransactionAvgAggregateInputType = {
   id?: true
   productId?: true
   quantity?: true
-  grossWeight?: true
-  stoneWeight?: true
-  netWeight?: true
   referenceId?: true
+  grossWeight?: true
+  netWeight?: true
+  stoneWeight?: true
 }
 
-export type StockTransactionSumAggregateInputType = {
+export type StocktransactionSumAggregateInputType = {
   id?: true
   productId?: true
   quantity?: true
-  grossWeight?: true
-  stoneWeight?: true
-  netWeight?: true
   referenceId?: true
+  grossWeight?: true
+  netWeight?: true
+  stoneWeight?: true
 }
 
-export type StockTransactionMinAggregateInputType = {
+export type StocktransactionMinAggregateInputType = {
   id?: true
   productId?: true
   transactionType?: true
   quantity?: true
-  grossWeight?: true
-  stoneWeight?: true
-  netWeight?: true
   referenceType?: true
   referenceId?: true
   note?: true
   createdAt?: true
+  grossWeight?: true
+  netWeight?: true
+  stoneWeight?: true
 }
 
-export type StockTransactionMaxAggregateInputType = {
+export type StocktransactionMaxAggregateInputType = {
   id?: true
   productId?: true
   transactionType?: true
   quantity?: true
-  grossWeight?: true
-  stoneWeight?: true
-  netWeight?: true
   referenceType?: true
   referenceId?: true
   note?: true
   createdAt?: true
+  grossWeight?: true
+  netWeight?: true
+  stoneWeight?: true
 }
 
-export type StockTransactionCountAggregateInputType = {
+export type StocktransactionCountAggregateInputType = {
   id?: true
   productId?: true
   transactionType?: true
   quantity?: true
-  grossWeight?: true
-  stoneWeight?: true
-  netWeight?: true
   referenceType?: true
   referenceId?: true
   note?: true
   createdAt?: true
+  grossWeight?: true
+  netWeight?: true
+  stoneWeight?: true
   _all?: true
 }
 
-export type StockTransactionAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type StocktransactionAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Filter which StockTransaction to aggregate.
+   * Filter which stocktransaction to aggregate.
    */
-  where?: Prisma.StockTransactionWhereInput
+  where?: Prisma.stocktransactionWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of StockTransactions to fetch.
+   * Determine the order of stocktransactions to fetch.
    */
-  orderBy?: Prisma.StockTransactionOrderByWithRelationInput | Prisma.StockTransactionOrderByWithRelationInput[]
+  orderBy?: Prisma.stocktransactionOrderByWithRelationInput | Prisma.stocktransactionOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
    * Sets the start position
    */
-  cursor?: Prisma.StockTransactionWhereUniqueInput
+  cursor?: Prisma.stocktransactionWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` StockTransactions from the position of the cursor.
+   * Take `±n` stocktransactions from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` StockTransactions.
+   * Skip the first `n` stocktransactions.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
-   * Count returned StockTransactions
+   * Count returned stocktransactions
   **/
-  _count?: true | StockTransactionCountAggregateInputType
+  _count?: true | StocktransactionCountAggregateInputType
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
    * Select which fields to average
   **/
-  _avg?: StockTransactionAvgAggregateInputType
+  _avg?: StocktransactionAvgAggregateInputType
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
    * Select which fields to sum
   **/
-  _sum?: StockTransactionSumAggregateInputType
+  _sum?: StocktransactionSumAggregateInputType
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
    * Select which fields to find the minimum value
   **/
-  _min?: StockTransactionMinAggregateInputType
+  _min?: StocktransactionMinAggregateInputType
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
    * Select which fields to find the maximum value
   **/
-  _max?: StockTransactionMaxAggregateInputType
+  _max?: StocktransactionMaxAggregateInputType
 }
 
-export type GetStockTransactionAggregateType<T extends StockTransactionAggregateArgs> = {
-      [P in keyof T & keyof AggregateStockTransaction]: P extends '_count' | 'count'
+export type GetStocktransactionAggregateType<T extends StocktransactionAggregateArgs> = {
+      [P in keyof T & keyof AggregateStocktransaction]: P extends '_count' | 'count'
     ? T[P] extends true
       ? number
-      : Prisma.GetScalarType<T[P], AggregateStockTransaction[P]>
-    : Prisma.GetScalarType<T[P], AggregateStockTransaction[P]>
+      : Prisma.GetScalarType<T[P], AggregateStocktransaction[P]>
+    : Prisma.GetScalarType<T[P], AggregateStocktransaction[P]>
 }
 
 
 
 
-export type StockTransactionGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.StockTransactionWhereInput
-  orderBy?: Prisma.StockTransactionOrderByWithAggregationInput | Prisma.StockTransactionOrderByWithAggregationInput[]
-  by: Prisma.StockTransactionScalarFieldEnum[] | Prisma.StockTransactionScalarFieldEnum
-  having?: Prisma.StockTransactionScalarWhereWithAggregatesInput
+export type stocktransactionGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.stocktransactionWhereInput
+  orderBy?: Prisma.stocktransactionOrderByWithAggregationInput | Prisma.stocktransactionOrderByWithAggregationInput[]
+  by: Prisma.StocktransactionScalarFieldEnum[] | Prisma.StocktransactionScalarFieldEnum
+  having?: Prisma.stocktransactionScalarWhereWithAggregatesInput
   take?: number
   skip?: number
-  _count?: StockTransactionCountAggregateInputType | true
-  _avg?: StockTransactionAvgAggregateInputType
-  _sum?: StockTransactionSumAggregateInputType
-  _min?: StockTransactionMinAggregateInputType
-  _max?: StockTransactionMaxAggregateInputType
+  _count?: StocktransactionCountAggregateInputType | true
+  _avg?: StocktransactionAvgAggregateInputType
+  _sum?: StocktransactionSumAggregateInputType
+  _min?: StocktransactionMinAggregateInputType
+  _max?: StocktransactionMaxAggregateInputType
 }
 
-export type StockTransactionGroupByOutputType = {
+export type StocktransactionGroupByOutputType = {
   id: number
   productId: number
   transactionType: string
   quantity: number
-  grossWeight: runtime.Decimal
-  stoneWeight: runtime.Decimal
-  netWeight: runtime.Decimal
   referenceType: string | null
   referenceId: number | null
   note: string | null
   createdAt: Date
-  _count: StockTransactionCountAggregateOutputType | null
-  _avg: StockTransactionAvgAggregateOutputType | null
-  _sum: StockTransactionSumAggregateOutputType | null
-  _min: StockTransactionMinAggregateOutputType | null
-  _max: StockTransactionMaxAggregateOutputType | null
+  grossWeight: runtime.Decimal
+  netWeight: runtime.Decimal
+  stoneWeight: runtime.Decimal
+  _count: StocktransactionCountAggregateOutputType | null
+  _avg: StocktransactionAvgAggregateOutputType | null
+  _sum: StocktransactionSumAggregateOutputType | null
+  _min: StocktransactionMinAggregateOutputType | null
+  _max: StocktransactionMaxAggregateOutputType | null
 }
 
-export type GetStockTransactionGroupByPayload<T extends StockTransactionGroupByArgs> = Prisma.PrismaPromise<
+export type GetStocktransactionGroupByPayload<T extends stocktransactionGroupByArgs> = Prisma.PrismaPromise<
   Array<
-    Prisma.PickEnumerable<StockTransactionGroupByOutputType, T['by']> &
+    Prisma.PickEnumerable<StocktransactionGroupByOutputType, T['by']> &
       {
-        [P in ((keyof T) & (keyof StockTransactionGroupByOutputType))]: P extends '_count'
+        [P in ((keyof T) & (keyof StocktransactionGroupByOutputType))]: P extends '_count'
           ? T[P] extends boolean
             ? number
-            : Prisma.GetScalarType<T[P], StockTransactionGroupByOutputType[P]>
-          : Prisma.GetScalarType<T[P], StockTransactionGroupByOutputType[P]>
+            : Prisma.GetScalarType<T[P], StocktransactionGroupByOutputType[P]>
+          : Prisma.GetScalarType<T[P], StocktransactionGroupByOutputType[P]>
       }
     >
   >
 
 
 
-export type StockTransactionWhereInput = {
-  AND?: Prisma.StockTransactionWhereInput | Prisma.StockTransactionWhereInput[]
-  OR?: Prisma.StockTransactionWhereInput[]
-  NOT?: Prisma.StockTransactionWhereInput | Prisma.StockTransactionWhereInput[]
-  id?: Prisma.IntFilter<"StockTransaction"> | number
-  productId?: Prisma.IntFilter<"StockTransaction"> | number
-  transactionType?: Prisma.StringFilter<"StockTransaction"> | string
-  quantity?: Prisma.IntFilter<"StockTransaction"> | number
-  grossWeight?: Prisma.DecimalFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  referenceType?: Prisma.StringNullableFilter<"StockTransaction"> | string | null
-  referenceId?: Prisma.IntNullableFilter<"StockTransaction"> | number | null
-  note?: Prisma.StringNullableFilter<"StockTransaction"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"StockTransaction"> | Date | string
-  product?: Prisma.XOR<Prisma.ProductScalarRelationFilter, Prisma.ProductWhereInput>
+export type stocktransactionWhereInput = {
+  AND?: Prisma.stocktransactionWhereInput | Prisma.stocktransactionWhereInput[]
+  OR?: Prisma.stocktransactionWhereInput[]
+  NOT?: Prisma.stocktransactionWhereInput | Prisma.stocktransactionWhereInput[]
+  id?: Prisma.IntFilter<"stocktransaction"> | number
+  productId?: Prisma.IntFilter<"stocktransaction"> | number
+  transactionType?: Prisma.StringFilter<"stocktransaction"> | string
+  quantity?: Prisma.IntFilter<"stocktransaction"> | number
+  referenceType?: Prisma.StringNullableFilter<"stocktransaction"> | string | null
+  referenceId?: Prisma.IntNullableFilter<"stocktransaction"> | number | null
+  note?: Prisma.StringNullableFilter<"stocktransaction"> | string | null
+  createdAt?: Prisma.DateTimeFilter<"stocktransaction"> | Date | string
+  grossWeight?: Prisma.DecimalFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  product?: Prisma.XOR<Prisma.ProductScalarRelationFilter, Prisma.productWhereInput>
 }
 
-export type StockTransactionOrderByWithRelationInput = {
+export type stocktransactionOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   productId?: Prisma.SortOrder
   transactionType?: Prisma.SortOrder
   quantity?: Prisma.SortOrder
-  grossWeight?: Prisma.SortOrder
-  stoneWeight?: Prisma.SortOrder
-  netWeight?: Prisma.SortOrder
   referenceType?: Prisma.SortOrderInput | Prisma.SortOrder
   referenceId?: Prisma.SortOrderInput | Prisma.SortOrder
   note?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
-  product?: Prisma.ProductOrderByWithRelationInput
-  _relevance?: Prisma.StockTransactionOrderByRelevanceInput
+  grossWeight?: Prisma.SortOrder
+  netWeight?: Prisma.SortOrder
+  stoneWeight?: Prisma.SortOrder
+  product?: Prisma.productOrderByWithRelationInput
+  _relevance?: Prisma.stocktransactionOrderByRelevanceInput
 }
 
-export type StockTransactionWhereUniqueInput = Prisma.AtLeast<{
+export type stocktransactionWhereUniqueInput = Prisma.AtLeast<{
   id?: number
-  AND?: Prisma.StockTransactionWhereInput | Prisma.StockTransactionWhereInput[]
-  OR?: Prisma.StockTransactionWhereInput[]
-  NOT?: Prisma.StockTransactionWhereInput | Prisma.StockTransactionWhereInput[]
-  productId?: Prisma.IntFilter<"StockTransaction"> | number
-  transactionType?: Prisma.StringFilter<"StockTransaction"> | string
-  quantity?: Prisma.IntFilter<"StockTransaction"> | number
-  grossWeight?: Prisma.DecimalFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  referenceType?: Prisma.StringNullableFilter<"StockTransaction"> | string | null
-  referenceId?: Prisma.IntNullableFilter<"StockTransaction"> | number | null
-  note?: Prisma.StringNullableFilter<"StockTransaction"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"StockTransaction"> | Date | string
-  product?: Prisma.XOR<Prisma.ProductScalarRelationFilter, Prisma.ProductWhereInput>
+  AND?: Prisma.stocktransactionWhereInput | Prisma.stocktransactionWhereInput[]
+  OR?: Prisma.stocktransactionWhereInput[]
+  NOT?: Prisma.stocktransactionWhereInput | Prisma.stocktransactionWhereInput[]
+  productId?: Prisma.IntFilter<"stocktransaction"> | number
+  transactionType?: Prisma.StringFilter<"stocktransaction"> | string
+  quantity?: Prisma.IntFilter<"stocktransaction"> | number
+  referenceType?: Prisma.StringNullableFilter<"stocktransaction"> | string | null
+  referenceId?: Prisma.IntNullableFilter<"stocktransaction"> | number | null
+  note?: Prisma.StringNullableFilter<"stocktransaction"> | string | null
+  createdAt?: Prisma.DateTimeFilter<"stocktransaction"> | Date | string
+  grossWeight?: Prisma.DecimalFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  product?: Prisma.XOR<Prisma.ProductScalarRelationFilter, Prisma.productWhereInput>
 }, "id">
 
-export type StockTransactionOrderByWithAggregationInput = {
+export type stocktransactionOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   productId?: Prisma.SortOrder
   transactionType?: Prisma.SortOrder
   quantity?: Prisma.SortOrder
-  grossWeight?: Prisma.SortOrder
-  stoneWeight?: Prisma.SortOrder
-  netWeight?: Prisma.SortOrder
   referenceType?: Prisma.SortOrderInput | Prisma.SortOrder
   referenceId?: Prisma.SortOrderInput | Prisma.SortOrder
   note?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
-  _count?: Prisma.StockTransactionCountOrderByAggregateInput
-  _avg?: Prisma.StockTransactionAvgOrderByAggregateInput
-  _max?: Prisma.StockTransactionMaxOrderByAggregateInput
-  _min?: Prisma.StockTransactionMinOrderByAggregateInput
-  _sum?: Prisma.StockTransactionSumOrderByAggregateInput
+  grossWeight?: Prisma.SortOrder
+  netWeight?: Prisma.SortOrder
+  stoneWeight?: Prisma.SortOrder
+  _count?: Prisma.stocktransactionCountOrderByAggregateInput
+  _avg?: Prisma.stocktransactionAvgOrderByAggregateInput
+  _max?: Prisma.stocktransactionMaxOrderByAggregateInput
+  _min?: Prisma.stocktransactionMinOrderByAggregateInput
+  _sum?: Prisma.stocktransactionSumOrderByAggregateInput
 }
 
-export type StockTransactionScalarWhereWithAggregatesInput = {
-  AND?: Prisma.StockTransactionScalarWhereWithAggregatesInput | Prisma.StockTransactionScalarWhereWithAggregatesInput[]
-  OR?: Prisma.StockTransactionScalarWhereWithAggregatesInput[]
-  NOT?: Prisma.StockTransactionScalarWhereWithAggregatesInput | Prisma.StockTransactionScalarWhereWithAggregatesInput[]
-  id?: Prisma.IntWithAggregatesFilter<"StockTransaction"> | number
-  productId?: Prisma.IntWithAggregatesFilter<"StockTransaction"> | number
-  transactionType?: Prisma.StringWithAggregatesFilter<"StockTransaction"> | string
-  quantity?: Prisma.IntWithAggregatesFilter<"StockTransaction"> | number
-  grossWeight?: Prisma.DecimalWithAggregatesFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalWithAggregatesFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalWithAggregatesFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  referenceType?: Prisma.StringNullableWithAggregatesFilter<"StockTransaction"> | string | null
-  referenceId?: Prisma.IntNullableWithAggregatesFilter<"StockTransaction"> | number | null
-  note?: Prisma.StringNullableWithAggregatesFilter<"StockTransaction"> | string | null
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"StockTransaction"> | Date | string
+export type stocktransactionScalarWhereWithAggregatesInput = {
+  AND?: Prisma.stocktransactionScalarWhereWithAggregatesInput | Prisma.stocktransactionScalarWhereWithAggregatesInput[]
+  OR?: Prisma.stocktransactionScalarWhereWithAggregatesInput[]
+  NOT?: Prisma.stocktransactionScalarWhereWithAggregatesInput | Prisma.stocktransactionScalarWhereWithAggregatesInput[]
+  id?: Prisma.IntWithAggregatesFilter<"stocktransaction"> | number
+  productId?: Prisma.IntWithAggregatesFilter<"stocktransaction"> | number
+  transactionType?: Prisma.StringWithAggregatesFilter<"stocktransaction"> | string
+  quantity?: Prisma.IntWithAggregatesFilter<"stocktransaction"> | number
+  referenceType?: Prisma.StringNullableWithAggregatesFilter<"stocktransaction"> | string | null
+  referenceId?: Prisma.IntNullableWithAggregatesFilter<"stocktransaction"> | number | null
+  note?: Prisma.StringNullableWithAggregatesFilter<"stocktransaction"> | string | null
+  createdAt?: Prisma.DateTimeWithAggregatesFilter<"stocktransaction"> | Date | string
+  grossWeight?: Prisma.DecimalWithAggregatesFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalWithAggregatesFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalWithAggregatesFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionCreateInput = {
+export type stocktransactionCreateInput = {
   transactionType: string
   quantity?: number
-  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: string | null
   referenceId?: number | null
   note?: string | null
   createdAt?: Date | string
-  product: Prisma.ProductCreateNestedOneWithoutStockTransactionsInput
+  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  product: Prisma.productCreateNestedOneWithoutStocktransactionInput
 }
 
-export type StockTransactionUncheckedCreateInput = {
+export type stocktransactionUncheckedCreateInput = {
   id?: number
   productId: number
   transactionType: string
   quantity?: number
-  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: string | null
   referenceId?: number | null
   note?: string | null
   createdAt?: Date | string
+  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionUpdateInput = {
+export type stocktransactionUpdateInput = {
   transactionType?: Prisma.StringFieldUpdateOperationsInput | string
   quantity?: Prisma.IntFieldUpdateOperationsInput | number
-  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   referenceId?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  product?: Prisma.ProductUpdateOneRequiredWithoutStockTransactionsNestedInput
+  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  product?: Prisma.productUpdateOneRequiredWithoutStocktransactionNestedInput
 }
 
-export type StockTransactionUncheckedUpdateInput = {
+export type stocktransactionUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productId?: Prisma.IntFieldUpdateOperationsInput | number
   transactionType?: Prisma.StringFieldUpdateOperationsInput | string
   quantity?: Prisma.IntFieldUpdateOperationsInput | number
-  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   referenceId?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionCreateManyInput = {
+export type stocktransactionCreateManyInput = {
   id?: number
   productId: number
   transactionType: string
   quantity?: number
-  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: string | null
   referenceId?: number | null
   note?: string | null
   createdAt?: Date | string
+  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionUpdateManyMutationInput = {
+export type stocktransactionUpdateManyMutationInput = {
   transactionType?: Prisma.StringFieldUpdateOperationsInput | string
   quantity?: Prisma.IntFieldUpdateOperationsInput | number
-  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   referenceId?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionUncheckedUpdateManyInput = {
+export type stocktransactionUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productId?: Prisma.IntFieldUpdateOperationsInput | number
   transactionType?: Prisma.StringFieldUpdateOperationsInput | string
   quantity?: Prisma.IntFieldUpdateOperationsInput | number
-  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   referenceId?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionListRelationFilter = {
-  every?: Prisma.StockTransactionWhereInput
-  some?: Prisma.StockTransactionWhereInput
-  none?: Prisma.StockTransactionWhereInput
+export type StocktransactionListRelationFilter = {
+  every?: Prisma.stocktransactionWhereInput
+  some?: Prisma.stocktransactionWhereInput
+  none?: Prisma.stocktransactionWhereInput
 }
 
-export type StockTransactionOrderByRelationAggregateInput = {
+export type stocktransactionOrderByRelationAggregateInput = {
   _count?: Prisma.SortOrder
 }
 
-export type StockTransactionOrderByRelevanceInput = {
-  fields: Prisma.StockTransactionOrderByRelevanceFieldEnum | Prisma.StockTransactionOrderByRelevanceFieldEnum[]
+export type stocktransactionOrderByRelevanceInput = {
+  fields: Prisma.stocktransactionOrderByRelevanceFieldEnum | Prisma.stocktransactionOrderByRelevanceFieldEnum[]
   sort: Prisma.SortOrder
   search: string
 }
 
-export type StockTransactionCountOrderByAggregateInput = {
+export type stocktransactionCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   productId?: Prisma.SortOrder
   transactionType?: Prisma.SortOrder
   quantity?: Prisma.SortOrder
-  grossWeight?: Prisma.SortOrder
-  stoneWeight?: Prisma.SortOrder
-  netWeight?: Prisma.SortOrder
   referenceType?: Prisma.SortOrder
   referenceId?: Prisma.SortOrder
   note?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
+  grossWeight?: Prisma.SortOrder
+  netWeight?: Prisma.SortOrder
+  stoneWeight?: Prisma.SortOrder
 }
 
-export type StockTransactionAvgOrderByAggregateInput = {
+export type stocktransactionAvgOrderByAggregateInput = {
   id?: Prisma.SortOrder
   productId?: Prisma.SortOrder
   quantity?: Prisma.SortOrder
-  grossWeight?: Prisma.SortOrder
-  stoneWeight?: Prisma.SortOrder
-  netWeight?: Prisma.SortOrder
   referenceId?: Prisma.SortOrder
+  grossWeight?: Prisma.SortOrder
+  netWeight?: Prisma.SortOrder
+  stoneWeight?: Prisma.SortOrder
 }
 
-export type StockTransactionMaxOrderByAggregateInput = {
+export type stocktransactionMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   productId?: Prisma.SortOrder
   transactionType?: Prisma.SortOrder
   quantity?: Prisma.SortOrder
-  grossWeight?: Prisma.SortOrder
-  stoneWeight?: Prisma.SortOrder
-  netWeight?: Prisma.SortOrder
   referenceType?: Prisma.SortOrder
   referenceId?: Prisma.SortOrder
   note?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
+  grossWeight?: Prisma.SortOrder
+  netWeight?: Prisma.SortOrder
+  stoneWeight?: Prisma.SortOrder
 }
 
-export type StockTransactionMinOrderByAggregateInput = {
+export type stocktransactionMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   productId?: Prisma.SortOrder
   transactionType?: Prisma.SortOrder
   quantity?: Prisma.SortOrder
-  grossWeight?: Prisma.SortOrder
-  stoneWeight?: Prisma.SortOrder
-  netWeight?: Prisma.SortOrder
   referenceType?: Prisma.SortOrder
   referenceId?: Prisma.SortOrder
   note?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
+  grossWeight?: Prisma.SortOrder
+  netWeight?: Prisma.SortOrder
+  stoneWeight?: Prisma.SortOrder
 }
 
-export type StockTransactionSumOrderByAggregateInput = {
+export type stocktransactionSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
   productId?: Prisma.SortOrder
   quantity?: Prisma.SortOrder
-  grossWeight?: Prisma.SortOrder
-  stoneWeight?: Prisma.SortOrder
-  netWeight?: Prisma.SortOrder
   referenceId?: Prisma.SortOrder
+  grossWeight?: Prisma.SortOrder
+  netWeight?: Prisma.SortOrder
+  stoneWeight?: Prisma.SortOrder
 }
 
-export type StockTransactionCreateNestedManyWithoutProductInput = {
-  create?: Prisma.XOR<Prisma.StockTransactionCreateWithoutProductInput, Prisma.StockTransactionUncheckedCreateWithoutProductInput> | Prisma.StockTransactionCreateWithoutProductInput[] | Prisma.StockTransactionUncheckedCreateWithoutProductInput[]
-  connectOrCreate?: Prisma.StockTransactionCreateOrConnectWithoutProductInput | Prisma.StockTransactionCreateOrConnectWithoutProductInput[]
-  createMany?: Prisma.StockTransactionCreateManyProductInputEnvelope
-  connect?: Prisma.StockTransactionWhereUniqueInput | Prisma.StockTransactionWhereUniqueInput[]
+export type stocktransactionCreateNestedManyWithoutProductInput = {
+  create?: Prisma.XOR<Prisma.stocktransactionCreateWithoutProductInput, Prisma.stocktransactionUncheckedCreateWithoutProductInput> | Prisma.stocktransactionCreateWithoutProductInput[] | Prisma.stocktransactionUncheckedCreateWithoutProductInput[]
+  connectOrCreate?: Prisma.stocktransactionCreateOrConnectWithoutProductInput | Prisma.stocktransactionCreateOrConnectWithoutProductInput[]
+  createMany?: Prisma.stocktransactionCreateManyProductInputEnvelope
+  connect?: Prisma.stocktransactionWhereUniqueInput | Prisma.stocktransactionWhereUniqueInput[]
 }
 
-export type StockTransactionUncheckedCreateNestedManyWithoutProductInput = {
-  create?: Prisma.XOR<Prisma.StockTransactionCreateWithoutProductInput, Prisma.StockTransactionUncheckedCreateWithoutProductInput> | Prisma.StockTransactionCreateWithoutProductInput[] | Prisma.StockTransactionUncheckedCreateWithoutProductInput[]
-  connectOrCreate?: Prisma.StockTransactionCreateOrConnectWithoutProductInput | Prisma.StockTransactionCreateOrConnectWithoutProductInput[]
-  createMany?: Prisma.StockTransactionCreateManyProductInputEnvelope
-  connect?: Prisma.StockTransactionWhereUniqueInput | Prisma.StockTransactionWhereUniqueInput[]
+export type stocktransactionUncheckedCreateNestedManyWithoutProductInput = {
+  create?: Prisma.XOR<Prisma.stocktransactionCreateWithoutProductInput, Prisma.stocktransactionUncheckedCreateWithoutProductInput> | Prisma.stocktransactionCreateWithoutProductInput[] | Prisma.stocktransactionUncheckedCreateWithoutProductInput[]
+  connectOrCreate?: Prisma.stocktransactionCreateOrConnectWithoutProductInput | Prisma.stocktransactionCreateOrConnectWithoutProductInput[]
+  createMany?: Prisma.stocktransactionCreateManyProductInputEnvelope
+  connect?: Prisma.stocktransactionWhereUniqueInput | Prisma.stocktransactionWhereUniqueInput[]
 }
 
-export type StockTransactionUpdateManyWithoutProductNestedInput = {
-  create?: Prisma.XOR<Prisma.StockTransactionCreateWithoutProductInput, Prisma.StockTransactionUncheckedCreateWithoutProductInput> | Prisma.StockTransactionCreateWithoutProductInput[] | Prisma.StockTransactionUncheckedCreateWithoutProductInput[]
-  connectOrCreate?: Prisma.StockTransactionCreateOrConnectWithoutProductInput | Prisma.StockTransactionCreateOrConnectWithoutProductInput[]
-  upsert?: Prisma.StockTransactionUpsertWithWhereUniqueWithoutProductInput | Prisma.StockTransactionUpsertWithWhereUniqueWithoutProductInput[]
-  createMany?: Prisma.StockTransactionCreateManyProductInputEnvelope
-  set?: Prisma.StockTransactionWhereUniqueInput | Prisma.StockTransactionWhereUniqueInput[]
-  disconnect?: Prisma.StockTransactionWhereUniqueInput | Prisma.StockTransactionWhereUniqueInput[]
-  delete?: Prisma.StockTransactionWhereUniqueInput | Prisma.StockTransactionWhereUniqueInput[]
-  connect?: Prisma.StockTransactionWhereUniqueInput | Prisma.StockTransactionWhereUniqueInput[]
-  update?: Prisma.StockTransactionUpdateWithWhereUniqueWithoutProductInput | Prisma.StockTransactionUpdateWithWhereUniqueWithoutProductInput[]
-  updateMany?: Prisma.StockTransactionUpdateManyWithWhereWithoutProductInput | Prisma.StockTransactionUpdateManyWithWhereWithoutProductInput[]
-  deleteMany?: Prisma.StockTransactionScalarWhereInput | Prisma.StockTransactionScalarWhereInput[]
+export type stocktransactionUpdateManyWithoutProductNestedInput = {
+  create?: Prisma.XOR<Prisma.stocktransactionCreateWithoutProductInput, Prisma.stocktransactionUncheckedCreateWithoutProductInput> | Prisma.stocktransactionCreateWithoutProductInput[] | Prisma.stocktransactionUncheckedCreateWithoutProductInput[]
+  connectOrCreate?: Prisma.stocktransactionCreateOrConnectWithoutProductInput | Prisma.stocktransactionCreateOrConnectWithoutProductInput[]
+  upsert?: Prisma.stocktransactionUpsertWithWhereUniqueWithoutProductInput | Prisma.stocktransactionUpsertWithWhereUniqueWithoutProductInput[]
+  createMany?: Prisma.stocktransactionCreateManyProductInputEnvelope
+  set?: Prisma.stocktransactionWhereUniqueInput | Prisma.stocktransactionWhereUniqueInput[]
+  disconnect?: Prisma.stocktransactionWhereUniqueInput | Prisma.stocktransactionWhereUniqueInput[]
+  delete?: Prisma.stocktransactionWhereUniqueInput | Prisma.stocktransactionWhereUniqueInput[]
+  connect?: Prisma.stocktransactionWhereUniqueInput | Prisma.stocktransactionWhereUniqueInput[]
+  update?: Prisma.stocktransactionUpdateWithWhereUniqueWithoutProductInput | Prisma.stocktransactionUpdateWithWhereUniqueWithoutProductInput[]
+  updateMany?: Prisma.stocktransactionUpdateManyWithWhereWithoutProductInput | Prisma.stocktransactionUpdateManyWithWhereWithoutProductInput[]
+  deleteMany?: Prisma.stocktransactionScalarWhereInput | Prisma.stocktransactionScalarWhereInput[]
 }
 
-export type StockTransactionUncheckedUpdateManyWithoutProductNestedInput = {
-  create?: Prisma.XOR<Prisma.StockTransactionCreateWithoutProductInput, Prisma.StockTransactionUncheckedCreateWithoutProductInput> | Prisma.StockTransactionCreateWithoutProductInput[] | Prisma.StockTransactionUncheckedCreateWithoutProductInput[]
-  connectOrCreate?: Prisma.StockTransactionCreateOrConnectWithoutProductInput | Prisma.StockTransactionCreateOrConnectWithoutProductInput[]
-  upsert?: Prisma.StockTransactionUpsertWithWhereUniqueWithoutProductInput | Prisma.StockTransactionUpsertWithWhereUniqueWithoutProductInput[]
-  createMany?: Prisma.StockTransactionCreateManyProductInputEnvelope
-  set?: Prisma.StockTransactionWhereUniqueInput | Prisma.StockTransactionWhereUniqueInput[]
-  disconnect?: Prisma.StockTransactionWhereUniqueInput | Prisma.StockTransactionWhereUniqueInput[]
-  delete?: Prisma.StockTransactionWhereUniqueInput | Prisma.StockTransactionWhereUniqueInput[]
-  connect?: Prisma.StockTransactionWhereUniqueInput | Prisma.StockTransactionWhereUniqueInput[]
-  update?: Prisma.StockTransactionUpdateWithWhereUniqueWithoutProductInput | Prisma.StockTransactionUpdateWithWhereUniqueWithoutProductInput[]
-  updateMany?: Prisma.StockTransactionUpdateManyWithWhereWithoutProductInput | Prisma.StockTransactionUpdateManyWithWhereWithoutProductInput[]
-  deleteMany?: Prisma.StockTransactionScalarWhereInput | Prisma.StockTransactionScalarWhereInput[]
+export type stocktransactionUncheckedUpdateManyWithoutProductNestedInput = {
+  create?: Prisma.XOR<Prisma.stocktransactionCreateWithoutProductInput, Prisma.stocktransactionUncheckedCreateWithoutProductInput> | Prisma.stocktransactionCreateWithoutProductInput[] | Prisma.stocktransactionUncheckedCreateWithoutProductInput[]
+  connectOrCreate?: Prisma.stocktransactionCreateOrConnectWithoutProductInput | Prisma.stocktransactionCreateOrConnectWithoutProductInput[]
+  upsert?: Prisma.stocktransactionUpsertWithWhereUniqueWithoutProductInput | Prisma.stocktransactionUpsertWithWhereUniqueWithoutProductInput[]
+  createMany?: Prisma.stocktransactionCreateManyProductInputEnvelope
+  set?: Prisma.stocktransactionWhereUniqueInput | Prisma.stocktransactionWhereUniqueInput[]
+  disconnect?: Prisma.stocktransactionWhereUniqueInput | Prisma.stocktransactionWhereUniqueInput[]
+  delete?: Prisma.stocktransactionWhereUniqueInput | Prisma.stocktransactionWhereUniqueInput[]
+  connect?: Prisma.stocktransactionWhereUniqueInput | Prisma.stocktransactionWhereUniqueInput[]
+  update?: Prisma.stocktransactionUpdateWithWhereUniqueWithoutProductInput | Prisma.stocktransactionUpdateWithWhereUniqueWithoutProductInput[]
+  updateMany?: Prisma.stocktransactionUpdateManyWithWhereWithoutProductInput | Prisma.stocktransactionUpdateManyWithWhereWithoutProductInput[]
+  deleteMany?: Prisma.stocktransactionScalarWhereInput | Prisma.stocktransactionScalarWhereInput[]
 }
 
 export type NullableIntFieldUpdateOperationsInput = {
@@ -583,317 +583,317 @@ export type NullableIntFieldUpdateOperationsInput = {
   divide?: number
 }
 
-export type StockTransactionCreateWithoutProductInput = {
+export type stocktransactionCreateWithoutProductInput = {
   transactionType: string
   quantity?: number
-  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: string | null
   referenceId?: number | null
   note?: string | null
   createdAt?: Date | string
+  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionUncheckedCreateWithoutProductInput = {
+export type stocktransactionUncheckedCreateWithoutProductInput = {
   id?: number
   transactionType: string
   quantity?: number
-  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: string | null
   referenceId?: number | null
   note?: string | null
   createdAt?: Date | string
+  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionCreateOrConnectWithoutProductInput = {
-  where: Prisma.StockTransactionWhereUniqueInput
-  create: Prisma.XOR<Prisma.StockTransactionCreateWithoutProductInput, Prisma.StockTransactionUncheckedCreateWithoutProductInput>
+export type stocktransactionCreateOrConnectWithoutProductInput = {
+  where: Prisma.stocktransactionWhereUniqueInput
+  create: Prisma.XOR<Prisma.stocktransactionCreateWithoutProductInput, Prisma.stocktransactionUncheckedCreateWithoutProductInput>
 }
 
-export type StockTransactionCreateManyProductInputEnvelope = {
-  data: Prisma.StockTransactionCreateManyProductInput | Prisma.StockTransactionCreateManyProductInput[]
+export type stocktransactionCreateManyProductInputEnvelope = {
+  data: Prisma.stocktransactionCreateManyProductInput | Prisma.stocktransactionCreateManyProductInput[]
   skipDuplicates?: boolean
 }
 
-export type StockTransactionUpsertWithWhereUniqueWithoutProductInput = {
-  where: Prisma.StockTransactionWhereUniqueInput
-  update: Prisma.XOR<Prisma.StockTransactionUpdateWithoutProductInput, Prisma.StockTransactionUncheckedUpdateWithoutProductInput>
-  create: Prisma.XOR<Prisma.StockTransactionCreateWithoutProductInput, Prisma.StockTransactionUncheckedCreateWithoutProductInput>
+export type stocktransactionUpsertWithWhereUniqueWithoutProductInput = {
+  where: Prisma.stocktransactionWhereUniqueInput
+  update: Prisma.XOR<Prisma.stocktransactionUpdateWithoutProductInput, Prisma.stocktransactionUncheckedUpdateWithoutProductInput>
+  create: Prisma.XOR<Prisma.stocktransactionCreateWithoutProductInput, Prisma.stocktransactionUncheckedCreateWithoutProductInput>
 }
 
-export type StockTransactionUpdateWithWhereUniqueWithoutProductInput = {
-  where: Prisma.StockTransactionWhereUniqueInput
-  data: Prisma.XOR<Prisma.StockTransactionUpdateWithoutProductInput, Prisma.StockTransactionUncheckedUpdateWithoutProductInput>
+export type stocktransactionUpdateWithWhereUniqueWithoutProductInput = {
+  where: Prisma.stocktransactionWhereUniqueInput
+  data: Prisma.XOR<Prisma.stocktransactionUpdateWithoutProductInput, Prisma.stocktransactionUncheckedUpdateWithoutProductInput>
 }
 
-export type StockTransactionUpdateManyWithWhereWithoutProductInput = {
-  where: Prisma.StockTransactionScalarWhereInput
-  data: Prisma.XOR<Prisma.StockTransactionUpdateManyMutationInput, Prisma.StockTransactionUncheckedUpdateManyWithoutProductInput>
+export type stocktransactionUpdateManyWithWhereWithoutProductInput = {
+  where: Prisma.stocktransactionScalarWhereInput
+  data: Prisma.XOR<Prisma.stocktransactionUpdateManyMutationInput, Prisma.stocktransactionUncheckedUpdateManyWithoutProductInput>
 }
 
-export type StockTransactionScalarWhereInput = {
-  AND?: Prisma.StockTransactionScalarWhereInput | Prisma.StockTransactionScalarWhereInput[]
-  OR?: Prisma.StockTransactionScalarWhereInput[]
-  NOT?: Prisma.StockTransactionScalarWhereInput | Prisma.StockTransactionScalarWhereInput[]
-  id?: Prisma.IntFilter<"StockTransaction"> | number
-  productId?: Prisma.IntFilter<"StockTransaction"> | number
-  transactionType?: Prisma.StringFilter<"StockTransaction"> | string
-  quantity?: Prisma.IntFilter<"StockTransaction"> | number
-  grossWeight?: Prisma.DecimalFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFilter<"StockTransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  referenceType?: Prisma.StringNullableFilter<"StockTransaction"> | string | null
-  referenceId?: Prisma.IntNullableFilter<"StockTransaction"> | number | null
-  note?: Prisma.StringNullableFilter<"StockTransaction"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"StockTransaction"> | Date | string
+export type stocktransactionScalarWhereInput = {
+  AND?: Prisma.stocktransactionScalarWhereInput | Prisma.stocktransactionScalarWhereInput[]
+  OR?: Prisma.stocktransactionScalarWhereInput[]
+  NOT?: Prisma.stocktransactionScalarWhereInput | Prisma.stocktransactionScalarWhereInput[]
+  id?: Prisma.IntFilter<"stocktransaction"> | number
+  productId?: Prisma.IntFilter<"stocktransaction"> | number
+  transactionType?: Prisma.StringFilter<"stocktransaction"> | string
+  quantity?: Prisma.IntFilter<"stocktransaction"> | number
+  referenceType?: Prisma.StringNullableFilter<"stocktransaction"> | string | null
+  referenceId?: Prisma.IntNullableFilter<"stocktransaction"> | number | null
+  note?: Prisma.StringNullableFilter<"stocktransaction"> | string | null
+  createdAt?: Prisma.DateTimeFilter<"stocktransaction"> | Date | string
+  grossWeight?: Prisma.DecimalFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFilter<"stocktransaction"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionCreateManyProductInput = {
+export type stocktransactionCreateManyProductInput = {
   id?: number
   transactionType: string
   quantity?: number
-  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: string | null
   referenceId?: number | null
   note?: string | null
   createdAt?: Date | string
+  grossWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionUpdateWithoutProductInput = {
+export type stocktransactionUpdateWithoutProductInput = {
   transactionType?: Prisma.StringFieldUpdateOperationsInput | string
   quantity?: Prisma.IntFieldUpdateOperationsInput | number
-  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   referenceId?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionUncheckedUpdateWithoutProductInput = {
+export type stocktransactionUncheckedUpdateWithoutProductInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   transactionType?: Prisma.StringFieldUpdateOperationsInput | string
   quantity?: Prisma.IntFieldUpdateOperationsInput | number
-  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   referenceId?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type StockTransactionUncheckedUpdateManyWithoutProductInput = {
+export type stocktransactionUncheckedUpdateManyWithoutProductInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   transactionType?: Prisma.StringFieldUpdateOperationsInput | string
   quantity?: Prisma.IntFieldUpdateOperationsInput | number
-  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   referenceType?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   referenceId?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  grossWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 
 
-export type StockTransactionSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
+export type stocktransactionSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   productId?: boolean
   transactionType?: boolean
   quantity?: boolean
-  grossWeight?: boolean
-  stoneWeight?: boolean
-  netWeight?: boolean
   referenceType?: boolean
   referenceId?: boolean
   note?: boolean
   createdAt?: boolean
-  product?: boolean | Prisma.ProductDefaultArgs<ExtArgs>
-}, ExtArgs["result"]["stockTransaction"]>
+  grossWeight?: boolean
+  netWeight?: boolean
+  stoneWeight?: boolean
+  product?: boolean | Prisma.productDefaultArgs<ExtArgs>
+}, ExtArgs["result"]["stocktransaction"]>
 
 
 
-export type StockTransactionSelectScalar = {
+export type stocktransactionSelectScalar = {
   id?: boolean
   productId?: boolean
   transactionType?: boolean
   quantity?: boolean
-  grossWeight?: boolean
-  stoneWeight?: boolean
-  netWeight?: boolean
   referenceType?: boolean
   referenceId?: boolean
   note?: boolean
   createdAt?: boolean
+  grossWeight?: boolean
+  netWeight?: boolean
+  stoneWeight?: boolean
 }
 
-export type StockTransactionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "productId" | "transactionType" | "quantity" | "grossWeight" | "stoneWeight" | "netWeight" | "referenceType" | "referenceId" | "note" | "createdAt", ExtArgs["result"]["stockTransaction"]>
-export type StockTransactionInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  product?: boolean | Prisma.ProductDefaultArgs<ExtArgs>
+export type stocktransactionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "productId" | "transactionType" | "quantity" | "referenceType" | "referenceId" | "note" | "createdAt" | "grossWeight" | "netWeight" | "stoneWeight", ExtArgs["result"]["stocktransaction"]>
+export type stocktransactionInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  product?: boolean | Prisma.productDefaultArgs<ExtArgs>
 }
 
-export type $StockTransactionPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  name: "StockTransaction"
+export type $stocktransactionPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  name: "stocktransaction"
   objects: {
-    product: Prisma.$ProductPayload<ExtArgs>
+    product: Prisma.$productPayload<ExtArgs>
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: number
     productId: number
     transactionType: string
     quantity: number
-    grossWeight: runtime.Decimal
-    stoneWeight: runtime.Decimal
-    netWeight: runtime.Decimal
     referenceType: string | null
     referenceId: number | null
     note: string | null
     createdAt: Date
-  }, ExtArgs["result"]["stockTransaction"]>
+    grossWeight: runtime.Decimal
+    netWeight: runtime.Decimal
+    stoneWeight: runtime.Decimal
+  }, ExtArgs["result"]["stocktransaction"]>
   composites: {}
 }
 
-export type StockTransactionGetPayload<S extends boolean | null | undefined | StockTransactionDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload, S>
+export type stocktransactionGetPayload<S extends boolean | null | undefined | stocktransactionDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload, S>
 
-export type StockTransactionCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> =
-  Omit<StockTransactionFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-    select?: StockTransactionCountAggregateInputType | true
+export type stocktransactionCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> =
+  Omit<stocktransactionFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+    select?: StocktransactionCountAggregateInputType | true
   }
 
-export interface StockTransactionDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-  [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['StockTransaction'], meta: { name: 'StockTransaction' } }
+export interface stocktransactionDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+  [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['stocktransaction'], meta: { name: 'stocktransaction' } }
   /**
-   * Find zero or one StockTransaction that matches the filter.
-   * @param {StockTransactionFindUniqueArgs} args - Arguments to find a StockTransaction
+   * Find zero or one Stocktransaction that matches the filter.
+   * @param {stocktransactionFindUniqueArgs} args - Arguments to find a Stocktransaction
    * @example
-   * // Get one StockTransaction
-   * const stockTransaction = await prisma.stockTransaction.findUnique({
+   * // Get one Stocktransaction
+   * const stocktransaction = await prisma.stocktransaction.findUnique({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findUnique<T extends StockTransactionFindUniqueArgs>(args: Prisma.SelectSubset<T, StockTransactionFindUniqueArgs<ExtArgs>>): Prisma.Prisma__StockTransactionClient<runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  findUnique<T extends stocktransactionFindUniqueArgs>(args: Prisma.SelectSubset<T, stocktransactionFindUniqueArgs<ExtArgs>>): Prisma.Prisma__stocktransactionClient<runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find one StockTransaction that matches the filter or throw an error with `error.code='P2025'`
+   * Find one Stocktransaction that matches the filter or throw an error with `error.code='P2025'`
    * if no matches were found.
-   * @param {StockTransactionFindUniqueOrThrowArgs} args - Arguments to find a StockTransaction
+   * @param {stocktransactionFindUniqueOrThrowArgs} args - Arguments to find a Stocktransaction
    * @example
-   * // Get one StockTransaction
-   * const stockTransaction = await prisma.stockTransaction.findUniqueOrThrow({
+   * // Get one Stocktransaction
+   * const stocktransaction = await prisma.stocktransaction.findUniqueOrThrow({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findUniqueOrThrow<T extends StockTransactionFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, StockTransactionFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__StockTransactionClient<runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  findUniqueOrThrow<T extends stocktransactionFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, stocktransactionFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__stocktransactionClient<runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find the first StockTransaction that matches the filter.
+   * Find the first Stocktransaction that matches the filter.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {StockTransactionFindFirstArgs} args - Arguments to find a StockTransaction
+   * @param {stocktransactionFindFirstArgs} args - Arguments to find a Stocktransaction
    * @example
-   * // Get one StockTransaction
-   * const stockTransaction = await prisma.stockTransaction.findFirst({
+   * // Get one Stocktransaction
+   * const stocktransaction = await prisma.stocktransaction.findFirst({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findFirst<T extends StockTransactionFindFirstArgs>(args?: Prisma.SelectSubset<T, StockTransactionFindFirstArgs<ExtArgs>>): Prisma.Prisma__StockTransactionClient<runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  findFirst<T extends stocktransactionFindFirstArgs>(args?: Prisma.SelectSubset<T, stocktransactionFindFirstArgs<ExtArgs>>): Prisma.Prisma__stocktransactionClient<runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find the first StockTransaction that matches the filter or
+   * Find the first Stocktransaction that matches the filter or
    * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {StockTransactionFindFirstOrThrowArgs} args - Arguments to find a StockTransaction
+   * @param {stocktransactionFindFirstOrThrowArgs} args - Arguments to find a Stocktransaction
    * @example
-   * // Get one StockTransaction
-   * const stockTransaction = await prisma.stockTransaction.findFirstOrThrow({
+   * // Get one Stocktransaction
+   * const stocktransaction = await prisma.stocktransaction.findFirstOrThrow({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findFirstOrThrow<T extends StockTransactionFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, StockTransactionFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__StockTransactionClient<runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  findFirstOrThrow<T extends stocktransactionFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, stocktransactionFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__stocktransactionClient<runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find zero or more StockTransactions that matches the filter.
+   * Find zero or more Stocktransactions that matches the filter.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {StockTransactionFindManyArgs} args - Arguments to filter and select certain fields only.
+   * @param {stocktransactionFindManyArgs} args - Arguments to filter and select certain fields only.
    * @example
-   * // Get all StockTransactions
-   * const stockTransactions = await prisma.stockTransaction.findMany()
+   * // Get all Stocktransactions
+   * const stocktransactions = await prisma.stocktransaction.findMany()
    * 
-   * // Get first 10 StockTransactions
-   * const stockTransactions = await prisma.stockTransaction.findMany({ take: 10 })
+   * // Get first 10 Stocktransactions
+   * const stocktransactions = await prisma.stocktransaction.findMany({ take: 10 })
    * 
    * // Only select the `id`
-   * const stockTransactionWithIdOnly = await prisma.stockTransaction.findMany({ select: { id: true } })
+   * const stocktransactionWithIdOnly = await prisma.stocktransaction.findMany({ select: { id: true } })
    * 
    */
-  findMany<T extends StockTransactionFindManyArgs>(args?: Prisma.SelectSubset<T, StockTransactionFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+  findMany<T extends stocktransactionFindManyArgs>(args?: Prisma.SelectSubset<T, stocktransactionFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
   /**
-   * Create a StockTransaction.
-   * @param {StockTransactionCreateArgs} args - Arguments to create a StockTransaction.
+   * Create a Stocktransaction.
+   * @param {stocktransactionCreateArgs} args - Arguments to create a Stocktransaction.
    * @example
-   * // Create one StockTransaction
-   * const StockTransaction = await prisma.stockTransaction.create({
+   * // Create one Stocktransaction
+   * const Stocktransaction = await prisma.stocktransaction.create({
    *   data: {
-   *     // ... data to create a StockTransaction
+   *     // ... data to create a Stocktransaction
    *   }
    * })
    * 
    */
-  create<T extends StockTransactionCreateArgs>(args: Prisma.SelectSubset<T, StockTransactionCreateArgs<ExtArgs>>): Prisma.Prisma__StockTransactionClient<runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  create<T extends stocktransactionCreateArgs>(args: Prisma.SelectSubset<T, stocktransactionCreateArgs<ExtArgs>>): Prisma.Prisma__stocktransactionClient<runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Create many StockTransactions.
-   * @param {StockTransactionCreateManyArgs} args - Arguments to create many StockTransactions.
+   * Create many Stocktransactions.
+   * @param {stocktransactionCreateManyArgs} args - Arguments to create many Stocktransactions.
    * @example
-   * // Create many StockTransactions
-   * const stockTransaction = await prisma.stockTransaction.createMany({
+   * // Create many Stocktransactions
+   * const stocktransaction = await prisma.stocktransaction.createMany({
    *   data: [
    *     // ... provide data here
    *   ]
    * })
    *     
    */
-  createMany<T extends StockTransactionCreateManyArgs>(args?: Prisma.SelectSubset<T, StockTransactionCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  createMany<T extends stocktransactionCreateManyArgs>(args?: Prisma.SelectSubset<T, stocktransactionCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
-   * Delete a StockTransaction.
-   * @param {StockTransactionDeleteArgs} args - Arguments to delete one StockTransaction.
+   * Delete a Stocktransaction.
+   * @param {stocktransactionDeleteArgs} args - Arguments to delete one Stocktransaction.
    * @example
-   * // Delete one StockTransaction
-   * const StockTransaction = await prisma.stockTransaction.delete({
+   * // Delete one Stocktransaction
+   * const Stocktransaction = await prisma.stocktransaction.delete({
    *   where: {
-   *     // ... filter to delete one StockTransaction
+   *     // ... filter to delete one Stocktransaction
    *   }
    * })
    * 
    */
-  delete<T extends StockTransactionDeleteArgs>(args: Prisma.SelectSubset<T, StockTransactionDeleteArgs<ExtArgs>>): Prisma.Prisma__StockTransactionClient<runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  delete<T extends stocktransactionDeleteArgs>(args: Prisma.SelectSubset<T, stocktransactionDeleteArgs<ExtArgs>>): Prisma.Prisma__stocktransactionClient<runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Update one StockTransaction.
-   * @param {StockTransactionUpdateArgs} args - Arguments to update one StockTransaction.
+   * Update one Stocktransaction.
+   * @param {stocktransactionUpdateArgs} args - Arguments to update one Stocktransaction.
    * @example
-   * // Update one StockTransaction
-   * const stockTransaction = await prisma.stockTransaction.update({
+   * // Update one Stocktransaction
+   * const stocktransaction = await prisma.stocktransaction.update({
    *   where: {
    *     // ... provide filter here
    *   },
@@ -903,30 +903,30 @@ export interface StockTransactionDelegate<ExtArgs extends runtime.Types.Extensio
    * })
    * 
    */
-  update<T extends StockTransactionUpdateArgs>(args: Prisma.SelectSubset<T, StockTransactionUpdateArgs<ExtArgs>>): Prisma.Prisma__StockTransactionClient<runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  update<T extends stocktransactionUpdateArgs>(args: Prisma.SelectSubset<T, stocktransactionUpdateArgs<ExtArgs>>): Prisma.Prisma__stocktransactionClient<runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Delete zero or more StockTransactions.
-   * @param {StockTransactionDeleteManyArgs} args - Arguments to filter StockTransactions to delete.
+   * Delete zero or more Stocktransactions.
+   * @param {stocktransactionDeleteManyArgs} args - Arguments to filter Stocktransactions to delete.
    * @example
-   * // Delete a few StockTransactions
-   * const { count } = await prisma.stockTransaction.deleteMany({
+   * // Delete a few Stocktransactions
+   * const { count } = await prisma.stocktransaction.deleteMany({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    * 
    */
-  deleteMany<T extends StockTransactionDeleteManyArgs>(args?: Prisma.SelectSubset<T, StockTransactionDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  deleteMany<T extends stocktransactionDeleteManyArgs>(args?: Prisma.SelectSubset<T, stocktransactionDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
-   * Update zero or more StockTransactions.
+   * Update zero or more Stocktransactions.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {StockTransactionUpdateManyArgs} args - Arguments to update one or more rows.
+   * @param {stocktransactionUpdateManyArgs} args - Arguments to update one or more rows.
    * @example
-   * // Update many StockTransactions
-   * const stockTransaction = await prisma.stockTransaction.updateMany({
+   * // Update many Stocktransactions
+   * const stocktransaction = await prisma.stocktransaction.updateMany({
    *   where: {
    *     // ... provide filter here
    *   },
@@ -936,56 +936,56 @@ export interface StockTransactionDelegate<ExtArgs extends runtime.Types.Extensio
    * })
    * 
    */
-  updateMany<T extends StockTransactionUpdateManyArgs>(args: Prisma.SelectSubset<T, StockTransactionUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  updateMany<T extends stocktransactionUpdateManyArgs>(args: Prisma.SelectSubset<T, stocktransactionUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
-   * Create or update one StockTransaction.
-   * @param {StockTransactionUpsertArgs} args - Arguments to update or create a StockTransaction.
+   * Create or update one Stocktransaction.
+   * @param {stocktransactionUpsertArgs} args - Arguments to update or create a Stocktransaction.
    * @example
-   * // Update or create a StockTransaction
-   * const stockTransaction = await prisma.stockTransaction.upsert({
+   * // Update or create a Stocktransaction
+   * const stocktransaction = await prisma.stocktransaction.upsert({
    *   create: {
-   *     // ... data to create a StockTransaction
+   *     // ... data to create a Stocktransaction
    *   },
    *   update: {
    *     // ... in case it already exists, update
    *   },
    *   where: {
-   *     // ... the filter for the StockTransaction we want to update
+   *     // ... the filter for the Stocktransaction we want to update
    *   }
    * })
    */
-  upsert<T extends StockTransactionUpsertArgs>(args: Prisma.SelectSubset<T, StockTransactionUpsertArgs<ExtArgs>>): Prisma.Prisma__StockTransactionClient<runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  upsert<T extends stocktransactionUpsertArgs>(args: Prisma.SelectSubset<T, stocktransactionUpsertArgs<ExtArgs>>): Prisma.Prisma__stocktransactionClient<runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
   /**
-   * Count the number of StockTransactions.
+   * Count the number of Stocktransactions.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {StockTransactionCountArgs} args - Arguments to filter StockTransactions to count.
+   * @param {stocktransactionCountArgs} args - Arguments to filter Stocktransactions to count.
    * @example
-   * // Count the number of StockTransactions
-   * const count = await prisma.stockTransaction.count({
+   * // Count the number of Stocktransactions
+   * const count = await prisma.stocktransaction.count({
    *   where: {
-   *     // ... the filter for the StockTransactions we want to count
+   *     // ... the filter for the Stocktransactions we want to count
    *   }
    * })
   **/
-  count<T extends StockTransactionCountArgs>(
-    args?: Prisma.Subset<T, StockTransactionCountArgs>,
+  count<T extends stocktransactionCountArgs>(
+    args?: Prisma.Subset<T, stocktransactionCountArgs>,
   ): Prisma.PrismaPromise<
     T extends runtime.Types.Utils.Record<'select', any>
       ? T['select'] extends true
         ? number
-        : Prisma.GetScalarType<T['select'], StockTransactionCountAggregateOutputType>
+        : Prisma.GetScalarType<T['select'], StocktransactionCountAggregateOutputType>
       : number
   >
 
   /**
-   * Allows you to perform aggregations operations on a StockTransaction.
+   * Allows you to perform aggregations operations on a Stocktransaction.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {StockTransactionAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+   * @param {StocktransactionAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
    * @example
    * // Ordered by age ascending
    * // Where email contains prisma.io
@@ -1005,13 +1005,13 @@ export interface StockTransactionDelegate<ExtArgs extends runtime.Types.Extensio
    *   take: 10,
    * })
   **/
-  aggregate<T extends StockTransactionAggregateArgs>(args: Prisma.Subset<T, StockTransactionAggregateArgs>): Prisma.PrismaPromise<GetStockTransactionAggregateType<T>>
+  aggregate<T extends StocktransactionAggregateArgs>(args: Prisma.Subset<T, StocktransactionAggregateArgs>): Prisma.PrismaPromise<GetStocktransactionAggregateType<T>>
 
   /**
-   * Group by StockTransaction.
+   * Group by Stocktransaction.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {StockTransactionGroupByArgs} args - Group by arguments.
+   * @param {stocktransactionGroupByArgs} args - Group by arguments.
    * @example
    * // Group by city, order by createdAt, get count
    * const result = await prisma.user.groupBy({
@@ -1026,14 +1026,14 @@ export interface StockTransactionDelegate<ExtArgs extends runtime.Types.Extensio
    * 
   **/
   groupBy<
-    T extends StockTransactionGroupByArgs,
+    T extends stocktransactionGroupByArgs,
     HasSelectOrTake extends Prisma.Or<
       Prisma.Extends<'skip', Prisma.Keys<T>>,
       Prisma.Extends<'take', Prisma.Keys<T>>
     >,
     OrderByArg extends Prisma.True extends HasSelectOrTake
-      ? { orderBy: StockTransactionGroupByArgs['orderBy'] }
-      : { orderBy?: StockTransactionGroupByArgs['orderBy'] },
+      ? { orderBy: stocktransactionGroupByArgs['orderBy'] }
+      : { orderBy?: stocktransactionGroupByArgs['orderBy'] },
     OrderFields extends Prisma.ExcludeUnderscoreKeys<Prisma.Keys<Prisma.MaybeTupleToUnion<T['orderBy']>>>,
     ByFields extends Prisma.MaybeTupleToUnion<T['by']>,
     ByValid extends Prisma.Has<ByFields, OrderFields>,
@@ -1082,22 +1082,22 @@ export interface StockTransactionDelegate<ExtArgs extends runtime.Types.Extensio
           ? never
           : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
       }[OrderFields]
-  >(args: Prisma.SubsetIntersection<T, StockTransactionGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetStockTransactionGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  >(args: Prisma.SubsetIntersection<T, stocktransactionGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetStocktransactionGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
 /**
- * Fields of the StockTransaction model
+ * Fields of the stocktransaction model
  */
-readonly fields: StockTransactionFieldRefs;
+readonly fields: stocktransactionFieldRefs;
 }
 
 /**
- * The delegate class that acts as a "Promise-like" for StockTransaction.
+ * The delegate class that acts as a "Promise-like" for stocktransaction.
  * Why is this prefixed with `Prisma__`?
  * Because we want to prevent naming conflicts as mentioned in
  * https://github.com/prisma/prisma-client-js/issues/707
  */
-export interface Prisma__StockTransactionClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+export interface Prisma__stocktransactionClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  product<T extends Prisma.ProductDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ProductDefaultArgs<ExtArgs>>): Prisma.Prisma__ProductClient<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  product<T extends Prisma.productDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.productDefaultArgs<ExtArgs>>): Prisma.Prisma__productClient<runtime.Types.Result.GetResult<Prisma.$productPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1124,381 +1124,381 @@ export interface Prisma__StockTransactionClient<T, Null = never, ExtArgs extends
 
 
 /**
- * Fields of the StockTransaction model
+ * Fields of the stocktransaction model
  */
-export interface StockTransactionFieldRefs {
-  readonly id: Prisma.FieldRef<"StockTransaction", 'Int'>
-  readonly productId: Prisma.FieldRef<"StockTransaction", 'Int'>
-  readonly transactionType: Prisma.FieldRef<"StockTransaction", 'String'>
-  readonly quantity: Prisma.FieldRef<"StockTransaction", 'Int'>
-  readonly grossWeight: Prisma.FieldRef<"StockTransaction", 'Decimal'>
-  readonly stoneWeight: Prisma.FieldRef<"StockTransaction", 'Decimal'>
-  readonly netWeight: Prisma.FieldRef<"StockTransaction", 'Decimal'>
-  readonly referenceType: Prisma.FieldRef<"StockTransaction", 'String'>
-  readonly referenceId: Prisma.FieldRef<"StockTransaction", 'Int'>
-  readonly note: Prisma.FieldRef<"StockTransaction", 'String'>
-  readonly createdAt: Prisma.FieldRef<"StockTransaction", 'DateTime'>
+export interface stocktransactionFieldRefs {
+  readonly id: Prisma.FieldRef<"stocktransaction", 'Int'>
+  readonly productId: Prisma.FieldRef<"stocktransaction", 'Int'>
+  readonly transactionType: Prisma.FieldRef<"stocktransaction", 'String'>
+  readonly quantity: Prisma.FieldRef<"stocktransaction", 'Int'>
+  readonly referenceType: Prisma.FieldRef<"stocktransaction", 'String'>
+  readonly referenceId: Prisma.FieldRef<"stocktransaction", 'Int'>
+  readonly note: Prisma.FieldRef<"stocktransaction", 'String'>
+  readonly createdAt: Prisma.FieldRef<"stocktransaction", 'DateTime'>
+  readonly grossWeight: Prisma.FieldRef<"stocktransaction", 'Decimal'>
+  readonly netWeight: Prisma.FieldRef<"stocktransaction", 'Decimal'>
+  readonly stoneWeight: Prisma.FieldRef<"stocktransaction", 'Decimal'>
 }
     
 
 // Custom InputTypes
 /**
- * StockTransaction findUnique
+ * stocktransaction findUnique
  */
-export type StockTransactionFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
   /**
-   * Filter, which StockTransaction to fetch.
+   * Filter, which stocktransaction to fetch.
    */
-  where: Prisma.StockTransactionWhereUniqueInput
+  where: Prisma.stocktransactionWhereUniqueInput
 }
 
 /**
- * StockTransaction findUniqueOrThrow
+ * stocktransaction findUniqueOrThrow
  */
-export type StockTransactionFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
   /**
-   * Filter, which StockTransaction to fetch.
+   * Filter, which stocktransaction to fetch.
    */
-  where: Prisma.StockTransactionWhereUniqueInput
+  where: Prisma.stocktransactionWhereUniqueInput
 }
 
 /**
- * StockTransaction findFirst
+ * stocktransaction findFirst
  */
-export type StockTransactionFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
   /**
-   * Filter, which StockTransaction to fetch.
+   * Filter, which stocktransaction to fetch.
    */
-  where?: Prisma.StockTransactionWhereInput
+  where?: Prisma.stocktransactionWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of StockTransactions to fetch.
+   * Determine the order of stocktransactions to fetch.
    */
-  orderBy?: Prisma.StockTransactionOrderByWithRelationInput | Prisma.StockTransactionOrderByWithRelationInput[]
+  orderBy?: Prisma.stocktransactionOrderByWithRelationInput | Prisma.stocktransactionOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for searching for StockTransactions.
+   * Sets the position for searching for stocktransactions.
    */
-  cursor?: Prisma.StockTransactionWhereUniqueInput
+  cursor?: Prisma.stocktransactionWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` StockTransactions from the position of the cursor.
+   * Take `±n` stocktransactions from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` StockTransactions.
+   * Skip the first `n` stocktransactions.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of StockTransactions.
+   * Filter by unique combinations of stocktransactions.
    */
-  distinct?: Prisma.StockTransactionScalarFieldEnum | Prisma.StockTransactionScalarFieldEnum[]
+  distinct?: Prisma.StocktransactionScalarFieldEnum | Prisma.StocktransactionScalarFieldEnum[]
 }
 
 /**
- * StockTransaction findFirstOrThrow
+ * stocktransaction findFirstOrThrow
  */
-export type StockTransactionFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
   /**
-   * Filter, which StockTransaction to fetch.
+   * Filter, which stocktransaction to fetch.
    */
-  where?: Prisma.StockTransactionWhereInput
+  where?: Prisma.stocktransactionWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of StockTransactions to fetch.
+   * Determine the order of stocktransactions to fetch.
    */
-  orderBy?: Prisma.StockTransactionOrderByWithRelationInput | Prisma.StockTransactionOrderByWithRelationInput[]
+  orderBy?: Prisma.stocktransactionOrderByWithRelationInput | Prisma.stocktransactionOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for searching for StockTransactions.
+   * Sets the position for searching for stocktransactions.
    */
-  cursor?: Prisma.StockTransactionWhereUniqueInput
+  cursor?: Prisma.stocktransactionWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` StockTransactions from the position of the cursor.
+   * Take `±n` stocktransactions from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` StockTransactions.
+   * Skip the first `n` stocktransactions.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of StockTransactions.
+   * Filter by unique combinations of stocktransactions.
    */
-  distinct?: Prisma.StockTransactionScalarFieldEnum | Prisma.StockTransactionScalarFieldEnum[]
+  distinct?: Prisma.StocktransactionScalarFieldEnum | Prisma.StocktransactionScalarFieldEnum[]
 }
 
 /**
- * StockTransaction findMany
+ * stocktransaction findMany
  */
-export type StockTransactionFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
   /**
-   * Filter, which StockTransactions to fetch.
+   * Filter, which stocktransactions to fetch.
    */
-  where?: Prisma.StockTransactionWhereInput
+  where?: Prisma.stocktransactionWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of StockTransactions to fetch.
+   * Determine the order of stocktransactions to fetch.
    */
-  orderBy?: Prisma.StockTransactionOrderByWithRelationInput | Prisma.StockTransactionOrderByWithRelationInput[]
+  orderBy?: Prisma.stocktransactionOrderByWithRelationInput | Prisma.stocktransactionOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for listing StockTransactions.
+   * Sets the position for listing stocktransactions.
    */
-  cursor?: Prisma.StockTransactionWhereUniqueInput
+  cursor?: Prisma.stocktransactionWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` StockTransactions from the position of the cursor.
+   * Take `±n` stocktransactions from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` StockTransactions.
+   * Skip the first `n` stocktransactions.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of StockTransactions.
+   * Filter by unique combinations of stocktransactions.
    */
-  distinct?: Prisma.StockTransactionScalarFieldEnum | Prisma.StockTransactionScalarFieldEnum[]
+  distinct?: Prisma.StocktransactionScalarFieldEnum | Prisma.StocktransactionScalarFieldEnum[]
 }
 
 /**
- * StockTransaction create
+ * stocktransaction create
  */
-export type StockTransactionCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
   /**
-   * The data needed to create a StockTransaction.
+   * The data needed to create a stocktransaction.
    */
-  data: Prisma.XOR<Prisma.StockTransactionCreateInput, Prisma.StockTransactionUncheckedCreateInput>
+  data: Prisma.XOR<Prisma.stocktransactionCreateInput, Prisma.stocktransactionUncheckedCreateInput>
 }
 
 /**
- * StockTransaction createMany
+ * stocktransaction createMany
  */
-export type StockTransactionCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * The data used to create many StockTransactions.
+   * The data used to create many stocktransactions.
    */
-  data: Prisma.StockTransactionCreateManyInput | Prisma.StockTransactionCreateManyInput[]
+  data: Prisma.stocktransactionCreateManyInput | Prisma.stocktransactionCreateManyInput[]
   skipDuplicates?: boolean
 }
 
 /**
- * StockTransaction update
+ * stocktransaction update
  */
-export type StockTransactionUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
   /**
-   * The data needed to update a StockTransaction.
+   * The data needed to update a stocktransaction.
    */
-  data: Prisma.XOR<Prisma.StockTransactionUpdateInput, Prisma.StockTransactionUncheckedUpdateInput>
+  data: Prisma.XOR<Prisma.stocktransactionUpdateInput, Prisma.stocktransactionUncheckedUpdateInput>
   /**
-   * Choose, which StockTransaction to update.
+   * Choose, which stocktransaction to update.
    */
-  where: Prisma.StockTransactionWhereUniqueInput
+  where: Prisma.stocktransactionWhereUniqueInput
 }
 
 /**
- * StockTransaction updateMany
+ * stocktransaction updateMany
  */
-export type StockTransactionUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * The data used to update StockTransactions.
+   * The data used to update stocktransactions.
    */
-  data: Prisma.XOR<Prisma.StockTransactionUpdateManyMutationInput, Prisma.StockTransactionUncheckedUpdateManyInput>
+  data: Prisma.XOR<Prisma.stocktransactionUpdateManyMutationInput, Prisma.stocktransactionUncheckedUpdateManyInput>
   /**
-   * Filter which StockTransactions to update
+   * Filter which stocktransactions to update
    */
-  where?: Prisma.StockTransactionWhereInput
+  where?: Prisma.stocktransactionWhereInput
   /**
-   * Limit how many StockTransactions to update.
+   * Limit how many stocktransactions to update.
    */
   limit?: number
 }
 
 /**
- * StockTransaction upsert
+ * stocktransaction upsert
  */
-export type StockTransactionUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
   /**
-   * The filter to search for the StockTransaction to update in case it exists.
+   * The filter to search for the stocktransaction to update in case it exists.
    */
-  where: Prisma.StockTransactionWhereUniqueInput
+  where: Prisma.stocktransactionWhereUniqueInput
   /**
-   * In case the StockTransaction found by the `where` argument doesn't exist, create a new StockTransaction with this data.
+   * In case the stocktransaction found by the `where` argument doesn't exist, create a new stocktransaction with this data.
    */
-  create: Prisma.XOR<Prisma.StockTransactionCreateInput, Prisma.StockTransactionUncheckedCreateInput>
+  create: Prisma.XOR<Prisma.stocktransactionCreateInput, Prisma.stocktransactionUncheckedCreateInput>
   /**
-   * In case the StockTransaction was found with the provided `where` argument, update it with this data.
+   * In case the stocktransaction was found with the provided `where` argument, update it with this data.
    */
-  update: Prisma.XOR<Prisma.StockTransactionUpdateInput, Prisma.StockTransactionUncheckedUpdateInput>
+  update: Prisma.XOR<Prisma.stocktransactionUpdateInput, Prisma.stocktransactionUncheckedUpdateInput>
 }
 
 /**
- * StockTransaction delete
+ * stocktransaction delete
  */
-export type StockTransactionDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
   /**
-   * Filter which StockTransaction to delete.
+   * Filter which stocktransaction to delete.
    */
-  where: Prisma.StockTransactionWhereUniqueInput
+  where: Prisma.stocktransactionWhereUniqueInput
 }
 
 /**
- * StockTransaction deleteMany
+ * stocktransaction deleteMany
  */
-export type StockTransactionDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Filter which StockTransactions to delete
+   * Filter which stocktransactions to delete
    */
-  where?: Prisma.StockTransactionWhereInput
+  where?: Prisma.stocktransactionWhereInput
   /**
-   * Limit how many StockTransactions to delete.
+   * Limit how many stocktransactions to delete.
    */
   limit?: number
 }
 
 /**
- * StockTransaction without action
+ * stocktransaction without action
  */
-export type StockTransactionDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type stocktransactionDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
 }

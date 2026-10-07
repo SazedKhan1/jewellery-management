@@ -7,269 +7,201 @@ datasource db {
   provider = "mysql"
 }
 
-// =====================================================
-// CATEGORY
-// =====================================================
-
-model Category {
+model category {
   id          Int       @id @default(autoincrement())
-  name        String    @unique
+  name        String    @unique(map: "Category_name_key")
   description String?   @db.Text
   status      Boolean   @default(true)
-
-  products    Product[]
-
   createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  updatedAt   DateTime
+  product     product[]
 }
 
-// =====================================================
-// PRODUCT
-// =====================================================
+model product {
+  id                 Int                  @id @default(autoincrement())
+  productCode        String               @unique(map: "Product_productCode_key")
+  barcode            String?              @unique(map: "Product_barcode_key")
+  name               String
+  categoryId         Int
+  jewelleryType      String?
+  karat              String?
+  purity             Decimal?             @db.Decimal(8, 3)
+  grossWeight        Decimal              @default(0.000) @db.Decimal(10, 3)
+  stoneWeight        Decimal              @default(0.000) @db.Decimal(10, 3)
+  netWeight          Decimal              @default(0.000) @db.Decimal(10, 3)
+  wastagePercent     Decimal              @default(0.000) @db.Decimal(8, 3)
+  makingCharge       Decimal              @default(0.00) @db.Decimal(12, 2)
+  stoneCharge        Decimal              @default(0.00) @db.Decimal(12, 2)
+  purchasePrice      Decimal              @default(0.00) @db.Decimal(12, 2)
+  sellingPrice       Decimal              @default(0.00) @db.Decimal(12, 2)
+  stockQuantity      Int                  @default(0)
+  status             Boolean              @default(true)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime
+  category           category             @relation(fields: [categoryId], references: [id], map: "Product_categoryId_fkey")
+  purchaseitem       purchaseitem[]
+  purchasereturnitem purchasereturnitem[]
+  stocktransaction   stocktransaction[]
 
-model Product {
-  id              Int       @id @default(autoincrement())
-
-  productCode     String    @unique
-  barcode         String?   @unique
-
-  name            String
-
-  categoryId      Int
-  category        Category  @relation(fields: [categoryId], references: [id])
-
-  jewelleryType   String?
-
-  karat           String?
-  purity          Decimal?  @db.Decimal(8, 3)
-
-  grossWeight     Decimal   @default(0) @db.Decimal(10, 3)
-  stoneWeight     Decimal   @default(0) @db.Decimal(10, 3)
-  netWeight       Decimal   @default(0) @db.Decimal(10, 3)
-
-  wastagePercent  Decimal   @default(0) @db.Decimal(8, 3)
-
-  makingCharge    Decimal   @default(0) @db.Decimal(12, 2)
-  stoneCharge     Decimal   @default(0) @db.Decimal(12, 2)
-
-  purchasePrice   Decimal   @default(0) @db.Decimal(12, 2)
-  sellingPrice    Decimal   @default(0) @db.Decimal(12, 2)
-
-  stockQuantity   Int       @default(0)
-
-  status          Boolean   @default(true)
-
-  stockTransactions StockTransaction[]
-  purchases         PurchaseItem[]
-  purchaseReturns   PurchaseReturnItem[]
-
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  @@index([categoryId], map: "Product_categoryId_fkey")
 }
 
-// =====================================================
-// STOCK TRANSACTION
-// =====================================================
+model purchase {
+  id             Int              @id @default(autoincrement())
+  purchaseNo     String           @unique(map: "Purchase_purchaseNo_key")
+  supplierId     Int
+  purchaseDate   DateTime         @default(now())
+  subtotal       Decimal          @default(0.00) @db.Decimal(12, 2)
+  discount       Decimal          @default(0.00) @db.Decimal(12, 2)
+  vat            Decimal          @default(0.00) @db.Decimal(12, 2)
+  totalAmount    Decimal          @default(0.00) @db.Decimal(12, 2)
+  paidAmount     Decimal          @default(0.00) @db.Decimal(12, 2)
+  dueAmount      Decimal          @default(0.00) @db.Decimal(12, 2)
+  note           String?          @db.Text
+  status         String           @default("COMPLETED")
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime
+  supplier       supplier         @relation(fields: [supplierId], references: [id], map: "Purchase_supplierId_fkey")
+  purchaseitem   purchaseitem[]
+  purchasereturn purchasereturn[]
 
-model StockTransaction {
+  @@index([supplierId], map: "Purchase_supplierId_fkey")
+}
+
+model purchaseitem {
+  id                 Int                  @id @default(autoincrement())
+  purchaseId         Int
+  productId          Int
+  quantity           Int                  @default(1)
+  grossWeight        Decimal              @default(0.000) @db.Decimal(10, 3)
+  stoneWeight        Decimal              @default(0.000) @db.Decimal(10, 3)
+  netWeight          Decimal              @default(0.000) @db.Decimal(10, 3)
+  karat              String?
+  rate               Decimal              @default(0.00) @db.Decimal(12, 2)
+  makingCharge       Decimal              @default(0.00) @db.Decimal(12, 2)
+  stoneCharge        Decimal              @default(0.00) @db.Decimal(12, 2)
+  totalAmount        Decimal              @default(0.00) @db.Decimal(12, 2)
+  createdAt          DateTime             @default(now())
+  product            product              @relation(fields: [productId], references: [id], map: "PurchaseItem_productId_fkey")
+  purchase           purchase             @relation(fields: [purchaseId], references: [id], onDelete: Cascade, map: "PurchaseItem_purchaseId_fkey")
+  purchasereturnitem purchasereturnitem[]
+
+  @@index([productId], map: "PurchaseItem_productId_fkey")
+  @@index([purchaseId], map: "PurchaseItem_purchaseId_fkey")
+}
+
+model purchasereturn {
+  id                 Int                  @id @default(autoincrement())
+  returnNo           String               @unique(map: "PurchaseReturn_returnNo_key")
+  purchaseId         Int
+  supplierId         Int
+  returnDate         DateTime             @default(now())
+  subtotal           Decimal              @default(0.00) @db.Decimal(12, 2)
+  totalAmount        Decimal              @default(0.00) @db.Decimal(12, 2)
+  note               String?              @db.Text
+  status             String               @default("COMPLETED")
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime
+  purchase           purchase             @relation(fields: [purchaseId], references: [id], map: "PurchaseReturn_purchaseId_fkey")
+  supplier           supplier             @relation(fields: [supplierId], references: [id], map: "PurchaseReturn_supplierId_fkey")
+  purchasereturnitem purchasereturnitem[]
+
+  @@index([purchaseId], map: "PurchaseReturn_purchaseId_fkey")
+  @@index([supplierId], map: "PurchaseReturn_supplierId_fkey")
+}
+
+model purchasereturnitem {
+  id               Int            @id @default(autoincrement())
+  purchaseReturnId Int
+  purchaseItemId   Int
+  productId        Int
+  quantity         Int            @default(1)
+  grossWeight      Decimal        @default(0.000) @db.Decimal(10, 3)
+  stoneWeight      Decimal        @default(0.000) @db.Decimal(10, 3)
+  netWeight        Decimal        @default(0.000) @db.Decimal(10, 3)
+  rate             Decimal        @default(0.00) @db.Decimal(12, 2)
+  makingCharge     Decimal        @default(0.00) @db.Decimal(12, 2)
+  stoneCharge      Decimal        @default(0.00) @db.Decimal(12, 2)
+  totalAmount      Decimal        @default(0.00) @db.Decimal(12, 2)
+  createdAt        DateTime       @default(now())
+  product          product        @relation(fields: [productId], references: [id], map: "PurchaseReturnItem_productId_fkey")
+  purchaseitem     purchaseitem   @relation(fields: [purchaseItemId], references: [id], map: "PurchaseReturnItem_purchaseItemId_fkey")
+  purchasereturn   purchasereturn @relation(fields: [purchaseReturnId], references: [id], onDelete: Cascade, map: "PurchaseReturnItem_purchaseReturnId_fkey")
+
+  @@index([productId], map: "PurchaseReturnItem_productId_fkey")
+  @@index([purchaseItemId], map: "PurchaseReturnItem_purchaseItemId_fkey")
+  @@index([purchaseReturnId], map: "PurchaseReturnItem_purchaseReturnId_fkey")
+}
+
+model stocktransaction {
   id              Int      @id @default(autoincrement())
-
   productId       Int
-  product         Product  @relation(fields: [productId], references: [id])
-
   transactionType String
-
   quantity        Int      @default(0)
-
-  grossWeight     Decimal  @default(0) @db.Decimal(10, 3)
-  stoneWeight     Decimal  @default(0) @db.Decimal(10, 3)
-  netWeight       Decimal  @default(0) @db.Decimal(10, 3)
-
   referenceType   String?
   referenceId     Int?
-
   note            String?  @db.Text
-
   createdAt       DateTime @default(now())
+  grossWeight     Decimal  @default(0.000) @db.Decimal(10, 3)
+  netWeight       Decimal  @default(0.000) @db.Decimal(10, 3)
+  stoneWeight     Decimal  @default(0.000) @db.Decimal(10, 3)
+  product         product  @relation(fields: [productId], references: [id], map: "StockTransaction_productId_fkey")
+
+  @@index([productId], map: "StockTransaction_productId_fkey")
 }
 
-// =====================================================
-// SUPPLIER
-// =====================================================
-
-model Supplier {
-  id           Int       @id @default(autoincrement())
-
-  supplierCode String    @unique
-  name         String
-
-  phone        String?
-  email        String?
-  address      String?   @db.Text
-
-  openingDue   Decimal   @default(0) @db.Decimal(12, 2)
-
-  status       Boolean   @default(true)
-
-  purchases    Purchase[]
-  returns      PurchaseReturn[]
-  payments     SupplierPayment[]
-
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
+model supplier {
+  id              Int               @id @default(autoincrement())
+  supplierCode    String            @unique(map: "Supplier_supplierCode_key")
+  name            String
+  phone           String?
+  email           String?
+  address         String?           @db.Text
+  openingDue      Decimal           @default(0.00) @db.Decimal(12, 2)
+  status          Boolean           @default(true)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime
+  purchase        purchase[]
+  purchasereturn  purchasereturn[]
+  supplierpayment supplierpayment[]
 }
 
-// =====================================================
-// PURCHASE
-// =====================================================
+model supplierpayment {
+  id               Int      @id @default(autoincrement())
+  paymentNo        String   @unique(map: "SupplierPayment_paymentNo_key")
+  supplierId       Int
+  paymentDate      DateTime @default(now())
+  amount           Decimal  @default(0.00) @db.Decimal(12, 2)
+  paymentMethod    String   @default("CASH")
+  referenceNo      String?
+  note             String?  @db.Text
+  status           String   @default("COMPLETED")
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime
+  paymentBreakdown String?  @db.LongText
+  supplier         supplier @relation(fields: [supplierId], references: [id], map: "SupplierPayment_supplierId_fkey")
 
-model Purchase {
-  id            Int           @id @default(autoincrement())
-
-  purchaseNo    String        @unique
-
-  supplierId    Int
-  supplier      Supplier      @relation(fields: [supplierId], references: [id])
-
-  purchaseDate  DateTime      @default(now())
-
-  subtotal      Decimal       @default(0) @db.Decimal(12, 2)
-  discount      Decimal       @default(0) @db.Decimal(12, 2)
-  vat           Decimal       @default(0) @db.Decimal(12, 2)
-  totalAmount   Decimal       @default(0) @db.Decimal(12, 2)
-
-  paidAmount    Decimal       @default(0) @db.Decimal(12, 2)
-  dueAmount     Decimal       @default(0) @db.Decimal(12, 2)
-
-  note          String?       @db.Text
-
-  status        String        @default("COMPLETED")
-
-  items         PurchaseItem[]
-  returns       PurchaseReturn[]
-
-  createdAt     DateTime      @default(now())
-  updatedAt     DateTime      @updatedAt
+  @@index([supplierId], map: "SupplierPayment_supplierId_fkey")
 }
-
 // =====================================================
-// PURCHASE ITEM
-// =====================================================
-
-model PurchaseItem {
-  id              Int       @id @default(autoincrement())
-
-  purchaseId      Int
-  purchase        Purchase  @relation(fields: [purchaseId], references: [id], onDelete: Cascade)
-
-  productId       Int
-  product         Product   @relation(fields: [productId], references: [id])
-
-  quantity        Int       @default(1)
-
-  grossWeight     Decimal   @default(0) @db.Decimal(10, 3)
-  stoneWeight     Decimal   @default(0) @db.Decimal(10, 3)
-  netWeight       Decimal   @default(0) @db.Decimal(10, 3)
-
-  karat           String?
-  rate            Decimal   @default(0) @db.Decimal(12, 2)
-
-  makingCharge    Decimal   @default(0) @db.Decimal(12, 2)
-  stoneCharge     Decimal   @default(0) @db.Decimal(12, 2)
-
-  totalAmount     Decimal   @default(0) @db.Decimal(12, 2)
-
-  returns         PurchaseReturnItem[]
-
-  createdAt       DateTime  @default(now())
-}
-
-// =====================================================
-// PURCHASE RETURN
+// CUSTOMER
 // =====================================================
 
-model PurchaseReturn {
-  id            Int                 @id @default(autoincrement())
+model Customer {
+  id             Int       @id @default(autoincrement())
 
-  returnNo      String              @unique
+  customerCode   String    @unique
+  name           String
 
-  purchaseId    Int
-  purchase      Purchase            @relation(fields: [purchaseId], references: [id])
+  phone          String?
+  email          String?
+  address        String?   @db.Text
 
-  supplierId    Int
-  supplier      Supplier            @relation(fields: [supplierId], references: [id])
+  openingDue     Decimal   @default(0) @db.Decimal(12, 2)
+  openingAdvance Decimal   @default(0) @db.Decimal(12, 2)
 
-  returnDate    DateTime            @default(now())
+  status         Boolean   @default(true)
 
-  subtotal      Decimal             @default(0) @db.Decimal(12, 2)
-  totalAmount   Decimal             @default(0) @db.Decimal(12, 2)
-
-  note          String?             @db.Text
-
-  status        String              @default("COMPLETED")
-
-  items         PurchaseReturnItem[]
-
-  createdAt     DateTime            @default(now())
-  updatedAt     DateTime            @updatedAt
-}
-
-// =====================================================
-// PURCHASE RETURN ITEM
-// =====================================================
-
-model PurchaseReturnItem {
-  id              Int             @id @default(autoincrement())
-
-  purchaseReturnId Int
-  purchaseReturn  PurchaseReturn  @relation(fields: [purchaseReturnId], references: [id], onDelete: Cascade)
-
-  purchaseItemId  Int
-  purchaseItem    PurchaseItem    @relation(fields: [purchaseItemId], references: [id])
-
-  productId       Int
-  product         Product         @relation(fields: [productId], references: [id])
-
-  quantity        Int             @default(1)
-
-  grossWeight     Decimal         @default(0) @db.Decimal(10, 3)
-  stoneWeight     Decimal         @default(0) @db.Decimal(10, 3)
-  netWeight       Decimal         @default(0) @db.Decimal(10, 3)
-
-  rate            Decimal         @default(0) @db.Decimal(12, 2)
-
-  makingCharge    Decimal         @default(0) @db.Decimal(12, 2)
-  stoneCharge     Decimal         @default(0) @db.Decimal(12, 2)
-
-  totalAmount     Decimal         @default(0) @db.Decimal(12, 2)
-
-  createdAt       DateTime        @default(now())
-}
-
-// =====================================================
-// SUPPLIER PAYMENT
-// =====================================================
-
-model SupplierPayment {
-  id              Int       @id @default(autoincrement())
-
-  paymentNo       String    @unique
-
-  supplierId      Int
-  supplier        Supplier  @relation(fields: [supplierId], references: [id])
-
-  paymentDate     DateTime  @default(now())
-
-  amount          Decimal   @default(0) @db.Decimal(12, 2)
-
-  paymentMethod   String    @default("CASH")
-
-  referenceNo     String?
-
-  note            String?   @db.Text
-
-  status          String    @default("COMPLETED")
-
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
 }

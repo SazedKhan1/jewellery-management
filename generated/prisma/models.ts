@@ -8,13 +8,14 @@
  *
  * 🟢 You can import this file directly.
  */
-export type * from './models/Category.ts'
-export type * from './models/Product.ts'
-export type * from './models/StockTransaction.ts'
-export type * from './models/Supplier.ts'
-export type * from './models/Purchase.ts'
-export type * from './models/PurchaseItem.ts'
-export type * from './models/PurchaseReturn.ts'
-export type * from './models/PurchaseReturnItem.ts'
-export type * from './models/SupplierPayment.ts'
+export type * from './models/category.ts'
+export type * from './models/product.ts'
+export type * from './models/purchase.ts'
+export type * from './models/purchaseitem.ts'
+export type * from './models/purchasereturn.ts'
+export type * from './models/purchasereturnitem.ts'
+export type * from './models/stocktransaction.ts'
+export type * from './models/supplier.ts'
+export type * from './models/supplierpayment.ts'
+export type * from './models/Customer.ts'
 export type * from './commonInputTypes.ts'

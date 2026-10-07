@@ -42,47 +42,52 @@ export type PrismaClient<LogOpts extends Prisma.LogLevel = never, OmitOpts exten
 export { Prisma }
 
 /**
- * Model Category
+ * Model category
  * 
  */
-export type Category = Prisma.CategoryModel
+export type category = Prisma.categoryModel
 /**
- * Model Product
+ * Model product
  * 
  */
-export type Product = Prisma.ProductModel
+export type product = Prisma.productModel
 /**
- * Model StockTransaction
+ * Model purchase
  * 
  */
-export type StockTransaction = Prisma.StockTransactionModel
+export type purchase = Prisma.purchaseModel
 /**
- * Model Supplier
+ * Model purchaseitem
  * 
  */
-export type Supplier = Prisma.SupplierModel
+export type purchaseitem = Prisma.purchaseitemModel
 /**
- * Model Purchase
+ * Model purchasereturn
  * 
  */
-export type Purchase = Prisma.PurchaseModel
+export type purchasereturn = Prisma.purchasereturnModel
 /**
- * Model PurchaseItem
+ * Model purchasereturnitem
  * 
  */
-export type PurchaseItem = Prisma.PurchaseItemModel
+export type purchasereturnitem = Prisma.purchasereturnitemModel
 /**
- * Model PurchaseReturn
+ * Model stocktransaction
  * 
  */
-export type PurchaseReturn = Prisma.PurchaseReturnModel
+export type stocktransaction = Prisma.stocktransactionModel
 /**
- * Model PurchaseReturnItem
+ * Model supplier
  * 
  */
-export type PurchaseReturnItem = Prisma.PurchaseReturnItemModel
+export type supplier = Prisma.supplierModel
 /**
- * Model SupplierPayment
+ * Model supplierpayment
  * 
  */
-export type SupplierPayment = Prisma.SupplierPaymentModel
+export type supplierpayment = Prisma.supplierpaymentModel
+/**
+ * Model Customer
+ * 
+ */
+export type Customer = Prisma.CustomerModel

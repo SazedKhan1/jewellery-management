@@ -4,7 +4,7 @@
 // biome-ignore-all lint: generated file
 // @ts-nocheck 
 /*
- * This file exports the `PurchaseReturn` model and its related types.
+ * This file exports the `purchasereturn` model and its related types.
  *
  * 🟢 You can import this file directly.
  */
@@ -13,20 +13,20 @@ import type * as $Enums from "../enums.ts"
 import type * as Prisma from "../internal/prismaNamespace.ts"
 
 /**
- * Model PurchaseReturn
+ * Model purchasereturn
  * 
  */
-export type PurchaseReturnModel = runtime.Types.Result.DefaultSelection<Prisma.$PurchaseReturnPayload>
+export type purchasereturnModel = runtime.Types.Result.DefaultSelection<Prisma.$purchasereturnPayload>
 
-export type AggregatePurchaseReturn = {
-  _count: PurchaseReturnCountAggregateOutputType | null
-  _avg: PurchaseReturnAvgAggregateOutputType | null
-  _sum: PurchaseReturnSumAggregateOutputType | null
-  _min: PurchaseReturnMinAggregateOutputType | null
-  _max: PurchaseReturnMaxAggregateOutputType | null
+export type AggregatePurchasereturn = {
+  _count: PurchasereturnCountAggregateOutputType | null
+  _avg: PurchasereturnAvgAggregateOutputType | null
+  _sum: PurchasereturnSumAggregateOutputType | null
+  _min: PurchasereturnMinAggregateOutputType | null
+  _max: PurchasereturnMaxAggregateOutputType | null
 }
 
-export type PurchaseReturnAvgAggregateOutputType = {
+export type PurchasereturnAvgAggregateOutputType = {
   id: number | null
   purchaseId: number | null
   supplierId: number | null
@@ -34,7 +34,7 @@ export type PurchaseReturnAvgAggregateOutputType = {
   totalAmount: runtime.Decimal | null
 }
 
-export type PurchaseReturnSumAggregateOutputType = {
+export type PurchasereturnSumAggregateOutputType = {
   id: number | null
   purchaseId: number | null
   supplierId: number | null
@@ -42,21 +42,7 @@ export type PurchaseReturnSumAggregateOutputType = {
   totalAmount: runtime.Decimal | null
 }
 
-export type PurchaseReturnMinAggregateOutputType = {
-  id: number | null
-  returnNo: string | null
-  purchaseId: number | null
-  supplierId: number | null
-  returnDate: Date | null
-  subtotal: runtime.Decimal | null
-  totalAmount: runtime.Decimal | null
-  note: string | null
-  status: string | null
-  createdAt: Date | null
-  updatedAt: Date | null
-}
-
-export type PurchaseReturnMaxAggregateOutputType = {
+export type PurchasereturnMinAggregateOutputType = {
   id: number | null
   returnNo: string | null
   purchaseId: number | null
@@ -70,7 +56,21 @@ export type PurchaseReturnMaxAggregateOutputType = {
   updatedAt: Date | null
 }
 
-export type PurchaseReturnCountAggregateOutputType = {
+export type PurchasereturnMaxAggregateOutputType = {
+  id: number | null
+  returnNo: string | null
+  purchaseId: number | null
+  supplierId: number | null
+  returnDate: Date | null
+  subtotal: runtime.Decimal | null
+  totalAmount: runtime.Decimal | null
+  note: string | null
+  status: string | null
+  createdAt: Date | null
+  updatedAt: Date | null
+}
+
+export type PurchasereturnCountAggregateOutputType = {
   id: number
   returnNo: number
   purchaseId: number
@@ -86,7 +86,7 @@ export type PurchaseReturnCountAggregateOutputType = {
 }
 
 
-export type PurchaseReturnAvgAggregateInputType = {
+export type PurchasereturnAvgAggregateInputType = {
   id?: true
   purchaseId?: true
   supplierId?: true
@@ -94,7 +94,7 @@ export type PurchaseReturnAvgAggregateInputType = {
   totalAmount?: true
 }
 
-export type PurchaseReturnSumAggregateInputType = {
+export type PurchasereturnSumAggregateInputType = {
   id?: true
   purchaseId?: true
   supplierId?: true
@@ -102,21 +102,7 @@ export type PurchaseReturnSumAggregateInputType = {
   totalAmount?: true
 }
 
-export type PurchaseReturnMinAggregateInputType = {
-  id?: true
-  returnNo?: true
-  purchaseId?: true
-  supplierId?: true
-  returnDate?: true
-  subtotal?: true
-  totalAmount?: true
-  note?: true
-  status?: true
-  createdAt?: true
-  updatedAt?: true
-}
-
-export type PurchaseReturnMaxAggregateInputType = {
+export type PurchasereturnMinAggregateInputType = {
   id?: true
   returnNo?: true
   purchaseId?: true
@@ -130,7 +116,21 @@ export type PurchaseReturnMaxAggregateInputType = {
   updatedAt?: true
 }
 
-export type PurchaseReturnCountAggregateInputType = {
+export type PurchasereturnMaxAggregateInputType = {
+  id?: true
+  returnNo?: true
+  purchaseId?: true
+  supplierId?: true
+  returnDate?: true
+  subtotal?: true
+  totalAmount?: true
+  note?: true
+  status?: true
+  createdAt?: true
+  updatedAt?: true
+}
+
+export type PurchasereturnCountAggregateInputType = {
   id?: true
   returnNo?: true
   purchaseId?: true
@@ -145,93 +145,93 @@ export type PurchaseReturnCountAggregateInputType = {
   _all?: true
 }
 
-export type PurchaseReturnAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type PurchasereturnAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Filter which PurchaseReturn to aggregate.
+   * Filter which purchasereturn to aggregate.
    */
-  where?: Prisma.PurchaseReturnWhereInput
+  where?: Prisma.purchasereturnWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of PurchaseReturns to fetch.
+   * Determine the order of purchasereturns to fetch.
    */
-  orderBy?: Prisma.PurchaseReturnOrderByWithRelationInput | Prisma.PurchaseReturnOrderByWithRelationInput[]
+  orderBy?: Prisma.purchasereturnOrderByWithRelationInput | Prisma.purchasereturnOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
    * Sets the start position
    */
-  cursor?: Prisma.PurchaseReturnWhereUniqueInput
+  cursor?: Prisma.purchasereturnWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` PurchaseReturns from the position of the cursor.
+   * Take `±n` purchasereturns from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` PurchaseReturns.
+   * Skip the first `n` purchasereturns.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
-   * Count returned PurchaseReturns
+   * Count returned purchasereturns
   **/
-  _count?: true | PurchaseReturnCountAggregateInputType
+  _count?: true | PurchasereturnCountAggregateInputType
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
    * Select which fields to average
   **/
-  _avg?: PurchaseReturnAvgAggregateInputType
+  _avg?: PurchasereturnAvgAggregateInputType
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
    * Select which fields to sum
   **/
-  _sum?: PurchaseReturnSumAggregateInputType
+  _sum?: PurchasereturnSumAggregateInputType
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
    * Select which fields to find the minimum value
   **/
-  _min?: PurchaseReturnMinAggregateInputType
+  _min?: PurchasereturnMinAggregateInputType
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
    * Select which fields to find the maximum value
   **/
-  _max?: PurchaseReturnMaxAggregateInputType
+  _max?: PurchasereturnMaxAggregateInputType
 }
 
-export type GetPurchaseReturnAggregateType<T extends PurchaseReturnAggregateArgs> = {
-      [P in keyof T & keyof AggregatePurchaseReturn]: P extends '_count' | 'count'
+export type GetPurchasereturnAggregateType<T extends PurchasereturnAggregateArgs> = {
+      [P in keyof T & keyof AggregatePurchasereturn]: P extends '_count' | 'count'
     ? T[P] extends true
       ? number
-      : Prisma.GetScalarType<T[P], AggregatePurchaseReturn[P]>
-    : Prisma.GetScalarType<T[P], AggregatePurchaseReturn[P]>
+      : Prisma.GetScalarType<T[P], AggregatePurchasereturn[P]>
+    : Prisma.GetScalarType<T[P], AggregatePurchasereturn[P]>
 }
 
 
 
 
-export type PurchaseReturnGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.PurchaseReturnWhereInput
-  orderBy?: Prisma.PurchaseReturnOrderByWithAggregationInput | Prisma.PurchaseReturnOrderByWithAggregationInput[]
-  by: Prisma.PurchaseReturnScalarFieldEnum[] | Prisma.PurchaseReturnScalarFieldEnum
-  having?: Prisma.PurchaseReturnScalarWhereWithAggregatesInput
+export type purchasereturnGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.purchasereturnWhereInput
+  orderBy?: Prisma.purchasereturnOrderByWithAggregationInput | Prisma.purchasereturnOrderByWithAggregationInput[]
+  by: Prisma.PurchasereturnScalarFieldEnum[] | Prisma.PurchasereturnScalarFieldEnum
+  having?: Prisma.purchasereturnScalarWhereWithAggregatesInput
   take?: number
   skip?: number
-  _count?: PurchaseReturnCountAggregateInputType | true
-  _avg?: PurchaseReturnAvgAggregateInputType
-  _sum?: PurchaseReturnSumAggregateInputType
-  _min?: PurchaseReturnMinAggregateInputType
-  _max?: PurchaseReturnMaxAggregateInputType
+  _count?: PurchasereturnCountAggregateInputType | true
+  _avg?: PurchasereturnAvgAggregateInputType
+  _sum?: PurchasereturnSumAggregateInputType
+  _min?: PurchasereturnMinAggregateInputType
+  _max?: PurchasereturnMaxAggregateInputType
 }
 
-export type PurchaseReturnGroupByOutputType = {
+export type PurchasereturnGroupByOutputType = {
   id: number
   returnNo: string
   purchaseId: number
@@ -243,49 +243,49 @@ export type PurchaseReturnGroupByOutputType = {
   status: string
   createdAt: Date
   updatedAt: Date
-  _count: PurchaseReturnCountAggregateOutputType | null
-  _avg: PurchaseReturnAvgAggregateOutputType | null
-  _sum: PurchaseReturnSumAggregateOutputType | null
-  _min: PurchaseReturnMinAggregateOutputType | null
-  _max: PurchaseReturnMaxAggregateOutputType | null
+  _count: PurchasereturnCountAggregateOutputType | null
+  _avg: PurchasereturnAvgAggregateOutputType | null
+  _sum: PurchasereturnSumAggregateOutputType | null
+  _min: PurchasereturnMinAggregateOutputType | null
+  _max: PurchasereturnMaxAggregateOutputType | null
 }
 
-export type GetPurchaseReturnGroupByPayload<T extends PurchaseReturnGroupByArgs> = Prisma.PrismaPromise<
+export type GetPurchasereturnGroupByPayload<T extends purchasereturnGroupByArgs> = Prisma.PrismaPromise<
   Array<
-    Prisma.PickEnumerable<PurchaseReturnGroupByOutputType, T['by']> &
+    Prisma.PickEnumerable<PurchasereturnGroupByOutputType, T['by']> &
       {
-        [P in ((keyof T) & (keyof PurchaseReturnGroupByOutputType))]: P extends '_count'
+        [P in ((keyof T) & (keyof PurchasereturnGroupByOutputType))]: P extends '_count'
           ? T[P] extends boolean
             ? number
-            : Prisma.GetScalarType<T[P], PurchaseReturnGroupByOutputType[P]>
-          : Prisma.GetScalarType<T[P], PurchaseReturnGroupByOutputType[P]>
+            : Prisma.GetScalarType<T[P], PurchasereturnGroupByOutputType[P]>
+          : Prisma.GetScalarType<T[P], PurchasereturnGroupByOutputType[P]>
       }
     >
   >
 
 
 
-export type PurchaseReturnWhereInput = {
-  AND?: Prisma.PurchaseReturnWhereInput | Prisma.PurchaseReturnWhereInput[]
-  OR?: Prisma.PurchaseReturnWhereInput[]
-  NOT?: Prisma.PurchaseReturnWhereInput | Prisma.PurchaseReturnWhereInput[]
-  id?: Prisma.IntFilter<"PurchaseReturn"> | number
-  returnNo?: Prisma.StringFilter<"PurchaseReturn"> | string
-  purchaseId?: Prisma.IntFilter<"PurchaseReturn"> | number
-  supplierId?: Prisma.IntFilter<"PurchaseReturn"> | number
-  returnDate?: Prisma.DateTimeFilter<"PurchaseReturn"> | Date | string
-  subtotal?: Prisma.DecimalFilter<"PurchaseReturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: Prisma.DecimalFilter<"PurchaseReturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: Prisma.StringNullableFilter<"PurchaseReturn"> | string | null
-  status?: Prisma.StringFilter<"PurchaseReturn"> | string
-  createdAt?: Prisma.DateTimeFilter<"PurchaseReturn"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"PurchaseReturn"> | Date | string
-  purchase?: Prisma.XOR<Prisma.PurchaseScalarRelationFilter, Prisma.PurchaseWhereInput>
-  supplier?: Prisma.XOR<Prisma.SupplierScalarRelationFilter, Prisma.SupplierWhereInput>
-  items?: Prisma.PurchaseReturnItemListRelationFilter
+export type purchasereturnWhereInput = {
+  AND?: Prisma.purchasereturnWhereInput | Prisma.purchasereturnWhereInput[]
+  OR?: Prisma.purchasereturnWhereInput[]
+  NOT?: Prisma.purchasereturnWhereInput | Prisma.purchasereturnWhereInput[]
+  id?: Prisma.IntFilter<"purchasereturn"> | number
+  returnNo?: Prisma.StringFilter<"purchasereturn"> | string
+  purchaseId?: Prisma.IntFilter<"purchasereturn"> | number
+  supplierId?: Prisma.IntFilter<"purchasereturn"> | number
+  returnDate?: Prisma.DateTimeFilter<"purchasereturn"> | Date | string
+  subtotal?: Prisma.DecimalFilter<"purchasereturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: Prisma.DecimalFilter<"purchasereturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: Prisma.StringNullableFilter<"purchasereturn"> | string | null
+  status?: Prisma.StringFilter<"purchasereturn"> | string
+  createdAt?: Prisma.DateTimeFilter<"purchasereturn"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"purchasereturn"> | Date | string
+  purchase?: Prisma.XOR<Prisma.PurchaseScalarRelationFilter, Prisma.purchaseWhereInput>
+  supplier?: Prisma.XOR<Prisma.SupplierScalarRelationFilter, Prisma.supplierWhereInput>
+  purchasereturnitem?: Prisma.PurchasereturnitemListRelationFilter
 }
 
-export type PurchaseReturnOrderByWithRelationInput = {
+export type purchasereturnOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   returnNo?: Prisma.SortOrder
   purchaseId?: Prisma.SortOrder
@@ -297,33 +297,33 @@ export type PurchaseReturnOrderByWithRelationInput = {
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  purchase?: Prisma.PurchaseOrderByWithRelationInput
-  supplier?: Prisma.SupplierOrderByWithRelationInput
-  items?: Prisma.PurchaseReturnItemOrderByRelationAggregateInput
-  _relevance?: Prisma.PurchaseReturnOrderByRelevanceInput
+  purchase?: Prisma.purchaseOrderByWithRelationInput
+  supplier?: Prisma.supplierOrderByWithRelationInput
+  purchasereturnitem?: Prisma.purchasereturnitemOrderByRelationAggregateInput
+  _relevance?: Prisma.purchasereturnOrderByRelevanceInput
 }
 
-export type PurchaseReturnWhereUniqueInput = Prisma.AtLeast<{
+export type purchasereturnWhereUniqueInput = Prisma.AtLeast<{
   id?: number
   returnNo?: string
-  AND?: Prisma.PurchaseReturnWhereInput | Prisma.PurchaseReturnWhereInput[]
-  OR?: Prisma.PurchaseReturnWhereInput[]
-  NOT?: Prisma.PurchaseReturnWhereInput | Prisma.PurchaseReturnWhereInput[]
-  purchaseId?: Prisma.IntFilter<"PurchaseReturn"> | number
-  supplierId?: Prisma.IntFilter<"PurchaseReturn"> | number
-  returnDate?: Prisma.DateTimeFilter<"PurchaseReturn"> | Date | string
-  subtotal?: Prisma.DecimalFilter<"PurchaseReturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: Prisma.DecimalFilter<"PurchaseReturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: Prisma.StringNullableFilter<"PurchaseReturn"> | string | null
-  status?: Prisma.StringFilter<"PurchaseReturn"> | string
-  createdAt?: Prisma.DateTimeFilter<"PurchaseReturn"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"PurchaseReturn"> | Date | string
-  purchase?: Prisma.XOR<Prisma.PurchaseScalarRelationFilter, Prisma.PurchaseWhereInput>
-  supplier?: Prisma.XOR<Prisma.SupplierScalarRelationFilter, Prisma.SupplierWhereInput>
-  items?: Prisma.PurchaseReturnItemListRelationFilter
+  AND?: Prisma.purchasereturnWhereInput | Prisma.purchasereturnWhereInput[]
+  OR?: Prisma.purchasereturnWhereInput[]
+  NOT?: Prisma.purchasereturnWhereInput | Prisma.purchasereturnWhereInput[]
+  purchaseId?: Prisma.IntFilter<"purchasereturn"> | number
+  supplierId?: Prisma.IntFilter<"purchasereturn"> | number
+  returnDate?: Prisma.DateTimeFilter<"purchasereturn"> | Date | string
+  subtotal?: Prisma.DecimalFilter<"purchasereturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: Prisma.DecimalFilter<"purchasereturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: Prisma.StringNullableFilter<"purchasereturn"> | string | null
+  status?: Prisma.StringFilter<"purchasereturn"> | string
+  createdAt?: Prisma.DateTimeFilter<"purchasereturn"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"purchasereturn"> | Date | string
+  purchase?: Prisma.XOR<Prisma.PurchaseScalarRelationFilter, Prisma.purchaseWhereInput>
+  supplier?: Prisma.XOR<Prisma.SupplierScalarRelationFilter, Prisma.supplierWhereInput>
+  purchasereturnitem?: Prisma.PurchasereturnitemListRelationFilter
 }, "id" | "returnNo">
 
-export type PurchaseReturnOrderByWithAggregationInput = {
+export type purchasereturnOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   returnNo?: Prisma.SortOrder
   purchaseId?: Prisma.SortOrder
@@ -335,31 +335,31 @@ export type PurchaseReturnOrderByWithAggregationInput = {
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  _count?: Prisma.PurchaseReturnCountOrderByAggregateInput
-  _avg?: Prisma.PurchaseReturnAvgOrderByAggregateInput
-  _max?: Prisma.PurchaseReturnMaxOrderByAggregateInput
-  _min?: Prisma.PurchaseReturnMinOrderByAggregateInput
-  _sum?: Prisma.PurchaseReturnSumOrderByAggregateInput
+  _count?: Prisma.purchasereturnCountOrderByAggregateInput
+  _avg?: Prisma.purchasereturnAvgOrderByAggregateInput
+  _max?: Prisma.purchasereturnMaxOrderByAggregateInput
+  _min?: Prisma.purchasereturnMinOrderByAggregateInput
+  _sum?: Prisma.purchasereturnSumOrderByAggregateInput
 }
 
-export type PurchaseReturnScalarWhereWithAggregatesInput = {
-  AND?: Prisma.PurchaseReturnScalarWhereWithAggregatesInput | Prisma.PurchaseReturnScalarWhereWithAggregatesInput[]
-  OR?: Prisma.PurchaseReturnScalarWhereWithAggregatesInput[]
-  NOT?: Prisma.PurchaseReturnScalarWhereWithAggregatesInput | Prisma.PurchaseReturnScalarWhereWithAggregatesInput[]
-  id?: Prisma.IntWithAggregatesFilter<"PurchaseReturn"> | number
-  returnNo?: Prisma.StringWithAggregatesFilter<"PurchaseReturn"> | string
-  purchaseId?: Prisma.IntWithAggregatesFilter<"PurchaseReturn"> | number
-  supplierId?: Prisma.IntWithAggregatesFilter<"PurchaseReturn"> | number
-  returnDate?: Prisma.DateTimeWithAggregatesFilter<"PurchaseReturn"> | Date | string
-  subtotal?: Prisma.DecimalWithAggregatesFilter<"PurchaseReturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: Prisma.DecimalWithAggregatesFilter<"PurchaseReturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: Prisma.StringNullableWithAggregatesFilter<"PurchaseReturn"> | string | null
-  status?: Prisma.StringWithAggregatesFilter<"PurchaseReturn"> | string
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"PurchaseReturn"> | Date | string
-  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"PurchaseReturn"> | Date | string
+export type purchasereturnScalarWhereWithAggregatesInput = {
+  AND?: Prisma.purchasereturnScalarWhereWithAggregatesInput | Prisma.purchasereturnScalarWhereWithAggregatesInput[]
+  OR?: Prisma.purchasereturnScalarWhereWithAggregatesInput[]
+  NOT?: Prisma.purchasereturnScalarWhereWithAggregatesInput | Prisma.purchasereturnScalarWhereWithAggregatesInput[]
+  id?: Prisma.IntWithAggregatesFilter<"purchasereturn"> | number
+  returnNo?: Prisma.StringWithAggregatesFilter<"purchasereturn"> | string
+  purchaseId?: Prisma.IntWithAggregatesFilter<"purchasereturn"> | number
+  supplierId?: Prisma.IntWithAggregatesFilter<"purchasereturn"> | number
+  returnDate?: Prisma.DateTimeWithAggregatesFilter<"purchasereturn"> | Date | string
+  subtotal?: Prisma.DecimalWithAggregatesFilter<"purchasereturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: Prisma.DecimalWithAggregatesFilter<"purchasereturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: Prisma.StringNullableWithAggregatesFilter<"purchasereturn"> | string | null
+  status?: Prisma.StringWithAggregatesFilter<"purchasereturn"> | string
+  createdAt?: Prisma.DateTimeWithAggregatesFilter<"purchasereturn"> | Date | string
+  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"purchasereturn"> | Date | string
 }
 
-export type PurchaseReturnCreateInput = {
+export type purchasereturnCreateInput = {
   returnNo: string
   returnDate?: Date | string
   subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -367,13 +367,13 @@ export type PurchaseReturnCreateInput = {
   note?: string | null
   status?: string
   createdAt?: Date | string
-  updatedAt?: Date | string
-  purchase: Prisma.PurchaseCreateNestedOneWithoutReturnsInput
-  supplier: Prisma.SupplierCreateNestedOneWithoutReturnsInput
-  items?: Prisma.PurchaseReturnItemCreateNestedManyWithoutPurchaseReturnInput
+  updatedAt: Date | string
+  purchase: Prisma.purchaseCreateNestedOneWithoutPurchasereturnInput
+  supplier: Prisma.supplierCreateNestedOneWithoutPurchasereturnInput
+  purchasereturnitem?: Prisma.purchasereturnitemCreateNestedManyWithoutPurchasereturnInput
 }
 
-export type PurchaseReturnUncheckedCreateInput = {
+export type purchasereturnUncheckedCreateInput = {
   id?: number
   returnNo: string
   purchaseId: number
@@ -384,11 +384,11 @@ export type PurchaseReturnUncheckedCreateInput = {
   note?: string | null
   status?: string
   createdAt?: Date | string
-  updatedAt?: Date | string
-  items?: Prisma.PurchaseReturnItemUncheckedCreateNestedManyWithoutPurchaseReturnInput
+  updatedAt: Date | string
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedCreateNestedManyWithoutPurchasereturnInput
 }
 
-export type PurchaseReturnUpdateInput = {
+export type purchasereturnUpdateInput = {
   returnNo?: Prisma.StringFieldUpdateOperationsInput | string
   returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -397,12 +397,12 @@ export type PurchaseReturnUpdateInput = {
   status?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  purchase?: Prisma.PurchaseUpdateOneRequiredWithoutReturnsNestedInput
-  supplier?: Prisma.SupplierUpdateOneRequiredWithoutReturnsNestedInput
-  items?: Prisma.PurchaseReturnItemUpdateManyWithoutPurchaseReturnNestedInput
+  purchase?: Prisma.purchaseUpdateOneRequiredWithoutPurchasereturnNestedInput
+  supplier?: Prisma.supplierUpdateOneRequiredWithoutPurchasereturnNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUpdateManyWithoutPurchasereturnNestedInput
 }
 
-export type PurchaseReturnUncheckedUpdateInput = {
+export type purchasereturnUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   returnNo?: Prisma.StringFieldUpdateOperationsInput | string
   purchaseId?: Prisma.IntFieldUpdateOperationsInput | number
@@ -414,10 +414,10 @@ export type PurchaseReturnUncheckedUpdateInput = {
   status?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  items?: Prisma.PurchaseReturnItemUncheckedUpdateManyWithoutPurchaseReturnNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedUpdateManyWithoutPurchasereturnNestedInput
 }
 
-export type PurchaseReturnCreateManyInput = {
+export type purchasereturnCreateManyInput = {
   id?: number
   returnNo: string
   purchaseId: number
@@ -428,10 +428,10 @@ export type PurchaseReturnCreateManyInput = {
   note?: string | null
   status?: string
   createdAt?: Date | string
-  updatedAt?: Date | string
+  updatedAt: Date | string
 }
 
-export type PurchaseReturnUpdateManyMutationInput = {
+export type purchasereturnUpdateManyMutationInput = {
   returnNo?: Prisma.StringFieldUpdateOperationsInput | string
   returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -442,7 +442,7 @@ export type PurchaseReturnUpdateManyMutationInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type PurchaseReturnUncheckedUpdateManyInput = {
+export type purchasereturnUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   returnNo?: Prisma.StringFieldUpdateOperationsInput | string
   purchaseId?: Prisma.IntFieldUpdateOperationsInput | number
@@ -456,23 +456,23 @@ export type PurchaseReturnUncheckedUpdateManyInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type PurchaseReturnListRelationFilter = {
-  every?: Prisma.PurchaseReturnWhereInput
-  some?: Prisma.PurchaseReturnWhereInput
-  none?: Prisma.PurchaseReturnWhereInput
+export type PurchasereturnListRelationFilter = {
+  every?: Prisma.purchasereturnWhereInput
+  some?: Prisma.purchasereturnWhereInput
+  none?: Prisma.purchasereturnWhereInput
 }
 
-export type PurchaseReturnOrderByRelationAggregateInput = {
+export type purchasereturnOrderByRelationAggregateInput = {
   _count?: Prisma.SortOrder
 }
 
-export type PurchaseReturnOrderByRelevanceInput = {
-  fields: Prisma.PurchaseReturnOrderByRelevanceFieldEnum | Prisma.PurchaseReturnOrderByRelevanceFieldEnum[]
+export type purchasereturnOrderByRelevanceInput = {
+  fields: Prisma.purchasereturnOrderByRelevanceFieldEnum | Prisma.purchasereturnOrderByRelevanceFieldEnum[]
   sort: Prisma.SortOrder
   search: string
 }
 
-export type PurchaseReturnCountOrderByAggregateInput = {
+export type purchasereturnCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   returnNo?: Prisma.SortOrder
   purchaseId?: Prisma.SortOrder
@@ -486,7 +486,7 @@ export type PurchaseReturnCountOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
 }
 
-export type PurchaseReturnAvgOrderByAggregateInput = {
+export type purchasereturnAvgOrderByAggregateInput = {
   id?: Prisma.SortOrder
   purchaseId?: Prisma.SortOrder
   supplierId?: Prisma.SortOrder
@@ -494,21 +494,7 @@ export type PurchaseReturnAvgOrderByAggregateInput = {
   totalAmount?: Prisma.SortOrder
 }
 
-export type PurchaseReturnMaxOrderByAggregateInput = {
-  id?: Prisma.SortOrder
-  returnNo?: Prisma.SortOrder
-  purchaseId?: Prisma.SortOrder
-  supplierId?: Prisma.SortOrder
-  returnDate?: Prisma.SortOrder
-  subtotal?: Prisma.SortOrder
-  totalAmount?: Prisma.SortOrder
-  note?: Prisma.SortOrder
-  status?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-}
-
-export type PurchaseReturnMinOrderByAggregateInput = {
+export type purchasereturnMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   returnNo?: Prisma.SortOrder
   purchaseId?: Prisma.SortOrder
@@ -522,7 +508,21 @@ export type PurchaseReturnMinOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
 }
 
-export type PurchaseReturnSumOrderByAggregateInput = {
+export type purchasereturnMinOrderByAggregateInput = {
+  id?: Prisma.SortOrder
+  returnNo?: Prisma.SortOrder
+  purchaseId?: Prisma.SortOrder
+  supplierId?: Prisma.SortOrder
+  returnDate?: Prisma.SortOrder
+  subtotal?: Prisma.SortOrder
+  totalAmount?: Prisma.SortOrder
+  note?: Prisma.SortOrder
+  status?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
+}
+
+export type purchasereturnSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
   purchaseId?: Prisma.SortOrder
   supplierId?: Prisma.SortOrder
@@ -530,110 +530,110 @@ export type PurchaseReturnSumOrderByAggregateInput = {
   totalAmount?: Prisma.SortOrder
 }
 
-export type PurchaseReturnScalarRelationFilter = {
-  is?: Prisma.PurchaseReturnWhereInput
-  isNot?: Prisma.PurchaseReturnWhereInput
+export type PurchasereturnScalarRelationFilter = {
+  is?: Prisma.purchasereturnWhereInput
+  isNot?: Prisma.purchasereturnWhereInput
 }
 
-export type PurchaseReturnCreateNestedManyWithoutSupplierInput = {
-  create?: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutSupplierInput, Prisma.PurchaseReturnUncheckedCreateWithoutSupplierInput> | Prisma.PurchaseReturnCreateWithoutSupplierInput[] | Prisma.PurchaseReturnUncheckedCreateWithoutSupplierInput[]
-  connectOrCreate?: Prisma.PurchaseReturnCreateOrConnectWithoutSupplierInput | Prisma.PurchaseReturnCreateOrConnectWithoutSupplierInput[]
-  createMany?: Prisma.PurchaseReturnCreateManySupplierInputEnvelope
-  connect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
+export type purchasereturnCreateNestedManyWithoutPurchaseInput = {
+  create?: Prisma.XOR<Prisma.purchasereturnCreateWithoutPurchaseInput, Prisma.purchasereturnUncheckedCreateWithoutPurchaseInput> | Prisma.purchasereturnCreateWithoutPurchaseInput[] | Prisma.purchasereturnUncheckedCreateWithoutPurchaseInput[]
+  connectOrCreate?: Prisma.purchasereturnCreateOrConnectWithoutPurchaseInput | Prisma.purchasereturnCreateOrConnectWithoutPurchaseInput[]
+  createMany?: Prisma.purchasereturnCreateManyPurchaseInputEnvelope
+  connect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
 }
 
-export type PurchaseReturnUncheckedCreateNestedManyWithoutSupplierInput = {
-  create?: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutSupplierInput, Prisma.PurchaseReturnUncheckedCreateWithoutSupplierInput> | Prisma.PurchaseReturnCreateWithoutSupplierInput[] | Prisma.PurchaseReturnUncheckedCreateWithoutSupplierInput[]
-  connectOrCreate?: Prisma.PurchaseReturnCreateOrConnectWithoutSupplierInput | Prisma.PurchaseReturnCreateOrConnectWithoutSupplierInput[]
-  createMany?: Prisma.PurchaseReturnCreateManySupplierInputEnvelope
-  connect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
+export type purchasereturnUncheckedCreateNestedManyWithoutPurchaseInput = {
+  create?: Prisma.XOR<Prisma.purchasereturnCreateWithoutPurchaseInput, Prisma.purchasereturnUncheckedCreateWithoutPurchaseInput> | Prisma.purchasereturnCreateWithoutPurchaseInput[] | Prisma.purchasereturnUncheckedCreateWithoutPurchaseInput[]
+  connectOrCreate?: Prisma.purchasereturnCreateOrConnectWithoutPurchaseInput | Prisma.purchasereturnCreateOrConnectWithoutPurchaseInput[]
+  createMany?: Prisma.purchasereturnCreateManyPurchaseInputEnvelope
+  connect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
 }
 
-export type PurchaseReturnUpdateManyWithoutSupplierNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutSupplierInput, Prisma.PurchaseReturnUncheckedCreateWithoutSupplierInput> | Prisma.PurchaseReturnCreateWithoutSupplierInput[] | Prisma.PurchaseReturnUncheckedCreateWithoutSupplierInput[]
-  connectOrCreate?: Prisma.PurchaseReturnCreateOrConnectWithoutSupplierInput | Prisma.PurchaseReturnCreateOrConnectWithoutSupplierInput[]
-  upsert?: Prisma.PurchaseReturnUpsertWithWhereUniqueWithoutSupplierInput | Prisma.PurchaseReturnUpsertWithWhereUniqueWithoutSupplierInput[]
-  createMany?: Prisma.PurchaseReturnCreateManySupplierInputEnvelope
-  set?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  disconnect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  delete?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  connect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  update?: Prisma.PurchaseReturnUpdateWithWhereUniqueWithoutSupplierInput | Prisma.PurchaseReturnUpdateWithWhereUniqueWithoutSupplierInput[]
-  updateMany?: Prisma.PurchaseReturnUpdateManyWithWhereWithoutSupplierInput | Prisma.PurchaseReturnUpdateManyWithWhereWithoutSupplierInput[]
-  deleteMany?: Prisma.PurchaseReturnScalarWhereInput | Prisma.PurchaseReturnScalarWhereInput[]
+export type purchasereturnUpdateManyWithoutPurchaseNestedInput = {
+  create?: Prisma.XOR<Prisma.purchasereturnCreateWithoutPurchaseInput, Prisma.purchasereturnUncheckedCreateWithoutPurchaseInput> | Prisma.purchasereturnCreateWithoutPurchaseInput[] | Prisma.purchasereturnUncheckedCreateWithoutPurchaseInput[]
+  connectOrCreate?: Prisma.purchasereturnCreateOrConnectWithoutPurchaseInput | Prisma.purchasereturnCreateOrConnectWithoutPurchaseInput[]
+  upsert?: Prisma.purchasereturnUpsertWithWhereUniqueWithoutPurchaseInput | Prisma.purchasereturnUpsertWithWhereUniqueWithoutPurchaseInput[]
+  createMany?: Prisma.purchasereturnCreateManyPurchaseInputEnvelope
+  set?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  disconnect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  delete?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  connect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  update?: Prisma.purchasereturnUpdateWithWhereUniqueWithoutPurchaseInput | Prisma.purchasereturnUpdateWithWhereUniqueWithoutPurchaseInput[]
+  updateMany?: Prisma.purchasereturnUpdateManyWithWhereWithoutPurchaseInput | Prisma.purchasereturnUpdateManyWithWhereWithoutPurchaseInput[]
+  deleteMany?: Prisma.purchasereturnScalarWhereInput | Prisma.purchasereturnScalarWhereInput[]
 }
 
-export type PurchaseReturnUncheckedUpdateManyWithoutSupplierNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutSupplierInput, Prisma.PurchaseReturnUncheckedCreateWithoutSupplierInput> | Prisma.PurchaseReturnCreateWithoutSupplierInput[] | Prisma.PurchaseReturnUncheckedCreateWithoutSupplierInput[]
-  connectOrCreate?: Prisma.PurchaseReturnCreateOrConnectWithoutSupplierInput | Prisma.PurchaseReturnCreateOrConnectWithoutSupplierInput[]
-  upsert?: Prisma.PurchaseReturnUpsertWithWhereUniqueWithoutSupplierInput | Prisma.PurchaseReturnUpsertWithWhereUniqueWithoutSupplierInput[]
-  createMany?: Prisma.PurchaseReturnCreateManySupplierInputEnvelope
-  set?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  disconnect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  delete?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  connect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  update?: Prisma.PurchaseReturnUpdateWithWhereUniqueWithoutSupplierInput | Prisma.PurchaseReturnUpdateWithWhereUniqueWithoutSupplierInput[]
-  updateMany?: Prisma.PurchaseReturnUpdateManyWithWhereWithoutSupplierInput | Prisma.PurchaseReturnUpdateManyWithWhereWithoutSupplierInput[]
-  deleteMany?: Prisma.PurchaseReturnScalarWhereInput | Prisma.PurchaseReturnScalarWhereInput[]
+export type purchasereturnUncheckedUpdateManyWithoutPurchaseNestedInput = {
+  create?: Prisma.XOR<Prisma.purchasereturnCreateWithoutPurchaseInput, Prisma.purchasereturnUncheckedCreateWithoutPurchaseInput> | Prisma.purchasereturnCreateWithoutPurchaseInput[] | Prisma.purchasereturnUncheckedCreateWithoutPurchaseInput[]
+  connectOrCreate?: Prisma.purchasereturnCreateOrConnectWithoutPurchaseInput | Prisma.purchasereturnCreateOrConnectWithoutPurchaseInput[]
+  upsert?: Prisma.purchasereturnUpsertWithWhereUniqueWithoutPurchaseInput | Prisma.purchasereturnUpsertWithWhereUniqueWithoutPurchaseInput[]
+  createMany?: Prisma.purchasereturnCreateManyPurchaseInputEnvelope
+  set?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  disconnect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  delete?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  connect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  update?: Prisma.purchasereturnUpdateWithWhereUniqueWithoutPurchaseInput | Prisma.purchasereturnUpdateWithWhereUniqueWithoutPurchaseInput[]
+  updateMany?: Prisma.purchasereturnUpdateManyWithWhereWithoutPurchaseInput | Prisma.purchasereturnUpdateManyWithWhereWithoutPurchaseInput[]
+  deleteMany?: Prisma.purchasereturnScalarWhereInput | Prisma.purchasereturnScalarWhereInput[]
 }
 
-export type PurchaseReturnCreateNestedManyWithoutPurchaseInput = {
-  create?: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutPurchaseInput, Prisma.PurchaseReturnUncheckedCreateWithoutPurchaseInput> | Prisma.PurchaseReturnCreateWithoutPurchaseInput[] | Prisma.PurchaseReturnUncheckedCreateWithoutPurchaseInput[]
-  connectOrCreate?: Prisma.PurchaseReturnCreateOrConnectWithoutPurchaseInput | Prisma.PurchaseReturnCreateOrConnectWithoutPurchaseInput[]
-  createMany?: Prisma.PurchaseReturnCreateManyPurchaseInputEnvelope
-  connect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
+export type purchasereturnCreateNestedOneWithoutPurchasereturnitemInput = {
+  create?: Prisma.XOR<Prisma.purchasereturnCreateWithoutPurchasereturnitemInput, Prisma.purchasereturnUncheckedCreateWithoutPurchasereturnitemInput>
+  connectOrCreate?: Prisma.purchasereturnCreateOrConnectWithoutPurchasereturnitemInput
+  connect?: Prisma.purchasereturnWhereUniqueInput
 }
 
-export type PurchaseReturnUncheckedCreateNestedManyWithoutPurchaseInput = {
-  create?: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutPurchaseInput, Prisma.PurchaseReturnUncheckedCreateWithoutPurchaseInput> | Prisma.PurchaseReturnCreateWithoutPurchaseInput[] | Prisma.PurchaseReturnUncheckedCreateWithoutPurchaseInput[]
-  connectOrCreate?: Prisma.PurchaseReturnCreateOrConnectWithoutPurchaseInput | Prisma.PurchaseReturnCreateOrConnectWithoutPurchaseInput[]
-  createMany?: Prisma.PurchaseReturnCreateManyPurchaseInputEnvelope
-  connect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
+export type purchasereturnUpdateOneRequiredWithoutPurchasereturnitemNestedInput = {
+  create?: Prisma.XOR<Prisma.purchasereturnCreateWithoutPurchasereturnitemInput, Prisma.purchasereturnUncheckedCreateWithoutPurchasereturnitemInput>
+  connectOrCreate?: Prisma.purchasereturnCreateOrConnectWithoutPurchasereturnitemInput
+  upsert?: Prisma.purchasereturnUpsertWithoutPurchasereturnitemInput
+  connect?: Prisma.purchasereturnWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.purchasereturnUpdateToOneWithWhereWithoutPurchasereturnitemInput, Prisma.purchasereturnUpdateWithoutPurchasereturnitemInput>, Prisma.purchasereturnUncheckedUpdateWithoutPurchasereturnitemInput>
 }
 
-export type PurchaseReturnUpdateManyWithoutPurchaseNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutPurchaseInput, Prisma.PurchaseReturnUncheckedCreateWithoutPurchaseInput> | Prisma.PurchaseReturnCreateWithoutPurchaseInput[] | Prisma.PurchaseReturnUncheckedCreateWithoutPurchaseInput[]
-  connectOrCreate?: Prisma.PurchaseReturnCreateOrConnectWithoutPurchaseInput | Prisma.PurchaseReturnCreateOrConnectWithoutPurchaseInput[]
-  upsert?: Prisma.PurchaseReturnUpsertWithWhereUniqueWithoutPurchaseInput | Prisma.PurchaseReturnUpsertWithWhereUniqueWithoutPurchaseInput[]
-  createMany?: Prisma.PurchaseReturnCreateManyPurchaseInputEnvelope
-  set?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  disconnect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  delete?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  connect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  update?: Prisma.PurchaseReturnUpdateWithWhereUniqueWithoutPurchaseInput | Prisma.PurchaseReturnUpdateWithWhereUniqueWithoutPurchaseInput[]
-  updateMany?: Prisma.PurchaseReturnUpdateManyWithWhereWithoutPurchaseInput | Prisma.PurchaseReturnUpdateManyWithWhereWithoutPurchaseInput[]
-  deleteMany?: Prisma.PurchaseReturnScalarWhereInput | Prisma.PurchaseReturnScalarWhereInput[]
+export type purchasereturnCreateNestedManyWithoutSupplierInput = {
+  create?: Prisma.XOR<Prisma.purchasereturnCreateWithoutSupplierInput, Prisma.purchasereturnUncheckedCreateWithoutSupplierInput> | Prisma.purchasereturnCreateWithoutSupplierInput[] | Prisma.purchasereturnUncheckedCreateWithoutSupplierInput[]
+  connectOrCreate?: Prisma.purchasereturnCreateOrConnectWithoutSupplierInput | Prisma.purchasereturnCreateOrConnectWithoutSupplierInput[]
+  createMany?: Prisma.purchasereturnCreateManySupplierInputEnvelope
+  connect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
 }
 
-export type PurchaseReturnUncheckedUpdateManyWithoutPurchaseNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutPurchaseInput, Prisma.PurchaseReturnUncheckedCreateWithoutPurchaseInput> | Prisma.PurchaseReturnCreateWithoutPurchaseInput[] | Prisma.PurchaseReturnUncheckedCreateWithoutPurchaseInput[]
-  connectOrCreate?: Prisma.PurchaseReturnCreateOrConnectWithoutPurchaseInput | Prisma.PurchaseReturnCreateOrConnectWithoutPurchaseInput[]
-  upsert?: Prisma.PurchaseReturnUpsertWithWhereUniqueWithoutPurchaseInput | Prisma.PurchaseReturnUpsertWithWhereUniqueWithoutPurchaseInput[]
-  createMany?: Prisma.PurchaseReturnCreateManyPurchaseInputEnvelope
-  set?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  disconnect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  delete?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  connect?: Prisma.PurchaseReturnWhereUniqueInput | Prisma.PurchaseReturnWhereUniqueInput[]
-  update?: Prisma.PurchaseReturnUpdateWithWhereUniqueWithoutPurchaseInput | Prisma.PurchaseReturnUpdateWithWhereUniqueWithoutPurchaseInput[]
-  updateMany?: Prisma.PurchaseReturnUpdateManyWithWhereWithoutPurchaseInput | Prisma.PurchaseReturnUpdateManyWithWhereWithoutPurchaseInput[]
-  deleteMany?: Prisma.PurchaseReturnScalarWhereInput | Prisma.PurchaseReturnScalarWhereInput[]
+export type purchasereturnUncheckedCreateNestedManyWithoutSupplierInput = {
+  create?: Prisma.XOR<Prisma.purchasereturnCreateWithoutSupplierInput, Prisma.purchasereturnUncheckedCreateWithoutSupplierInput> | Prisma.purchasereturnCreateWithoutSupplierInput[] | Prisma.purchasereturnUncheckedCreateWithoutSupplierInput[]
+  connectOrCreate?: Prisma.purchasereturnCreateOrConnectWithoutSupplierInput | Prisma.purchasereturnCreateOrConnectWithoutSupplierInput[]
+  createMany?: Prisma.purchasereturnCreateManySupplierInputEnvelope
+  connect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
 }
 
-export type PurchaseReturnCreateNestedOneWithoutItemsInput = {
-  create?: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutItemsInput, Prisma.PurchaseReturnUncheckedCreateWithoutItemsInput>
-  connectOrCreate?: Prisma.PurchaseReturnCreateOrConnectWithoutItemsInput
-  connect?: Prisma.PurchaseReturnWhereUniqueInput
+export type purchasereturnUpdateManyWithoutSupplierNestedInput = {
+  create?: Prisma.XOR<Prisma.purchasereturnCreateWithoutSupplierInput, Prisma.purchasereturnUncheckedCreateWithoutSupplierInput> | Prisma.purchasereturnCreateWithoutSupplierInput[] | Prisma.purchasereturnUncheckedCreateWithoutSupplierInput[]
+  connectOrCreate?: Prisma.purchasereturnCreateOrConnectWithoutSupplierInput | Prisma.purchasereturnCreateOrConnectWithoutSupplierInput[]
+  upsert?: Prisma.purchasereturnUpsertWithWhereUniqueWithoutSupplierInput | Prisma.purchasereturnUpsertWithWhereUniqueWithoutSupplierInput[]
+  createMany?: Prisma.purchasereturnCreateManySupplierInputEnvelope
+  set?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  disconnect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  delete?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  connect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  update?: Prisma.purchasereturnUpdateWithWhereUniqueWithoutSupplierInput | Prisma.purchasereturnUpdateWithWhereUniqueWithoutSupplierInput[]
+  updateMany?: Prisma.purchasereturnUpdateManyWithWhereWithoutSupplierInput | Prisma.purchasereturnUpdateManyWithWhereWithoutSupplierInput[]
+  deleteMany?: Prisma.purchasereturnScalarWhereInput | Prisma.purchasereturnScalarWhereInput[]
 }
 
-export type PurchaseReturnUpdateOneRequiredWithoutItemsNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutItemsInput, Prisma.PurchaseReturnUncheckedCreateWithoutItemsInput>
-  connectOrCreate?: Prisma.PurchaseReturnCreateOrConnectWithoutItemsInput
-  upsert?: Prisma.PurchaseReturnUpsertWithoutItemsInput
-  connect?: Prisma.PurchaseReturnWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.PurchaseReturnUpdateToOneWithWhereWithoutItemsInput, Prisma.PurchaseReturnUpdateWithoutItemsInput>, Prisma.PurchaseReturnUncheckedUpdateWithoutItemsInput>
+export type purchasereturnUncheckedUpdateManyWithoutSupplierNestedInput = {
+  create?: Prisma.XOR<Prisma.purchasereturnCreateWithoutSupplierInput, Prisma.purchasereturnUncheckedCreateWithoutSupplierInput> | Prisma.purchasereturnCreateWithoutSupplierInput[] | Prisma.purchasereturnUncheckedCreateWithoutSupplierInput[]
+  connectOrCreate?: Prisma.purchasereturnCreateOrConnectWithoutSupplierInput | Prisma.purchasereturnCreateOrConnectWithoutSupplierInput[]
+  upsert?: Prisma.purchasereturnUpsertWithWhereUniqueWithoutSupplierInput | Prisma.purchasereturnUpsertWithWhereUniqueWithoutSupplierInput[]
+  createMany?: Prisma.purchasereturnCreateManySupplierInputEnvelope
+  set?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  disconnect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  delete?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  connect?: Prisma.purchasereturnWhereUniqueInput | Prisma.purchasereturnWhereUniqueInput[]
+  update?: Prisma.purchasereturnUpdateWithWhereUniqueWithoutSupplierInput | Prisma.purchasereturnUpdateWithWhereUniqueWithoutSupplierInput[]
+  updateMany?: Prisma.purchasereturnUpdateManyWithWhereWithoutSupplierInput | Prisma.purchasereturnUpdateManyWithWhereWithoutSupplierInput[]
+  deleteMany?: Prisma.purchasereturnScalarWhereInput | Prisma.purchasereturnScalarWhereInput[]
 }
 
-export type PurchaseReturnCreateWithoutSupplierInput = {
+export type purchasereturnCreateWithoutPurchaseInput = {
   returnNo: string
   returnDate?: Date | string
   subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -641,69 +641,69 @@ export type PurchaseReturnCreateWithoutSupplierInput = {
   note?: string | null
   status?: string
   createdAt?: Date | string
-  updatedAt?: Date | string
-  purchase: Prisma.PurchaseCreateNestedOneWithoutReturnsInput
-  items?: Prisma.PurchaseReturnItemCreateNestedManyWithoutPurchaseReturnInput
+  updatedAt: Date | string
+  supplier: Prisma.supplierCreateNestedOneWithoutPurchasereturnInput
+  purchasereturnitem?: Prisma.purchasereturnitemCreateNestedManyWithoutPurchasereturnInput
 }
 
-export type PurchaseReturnUncheckedCreateWithoutSupplierInput = {
+export type purchasereturnUncheckedCreateWithoutPurchaseInput = {
   id?: number
   returnNo: string
-  purchaseId: number
+  supplierId: number
   returnDate?: Date | string
   subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
   totalAmount?: runtime.Decimal | runtime.DecimalJsLike | number | string
   note?: string | null
   status?: string
   createdAt?: Date | string
-  updatedAt?: Date | string
-  items?: Prisma.PurchaseReturnItemUncheckedCreateNestedManyWithoutPurchaseReturnInput
+  updatedAt: Date | string
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedCreateNestedManyWithoutPurchasereturnInput
 }
 
-export type PurchaseReturnCreateOrConnectWithoutSupplierInput = {
-  where: Prisma.PurchaseReturnWhereUniqueInput
-  create: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutSupplierInput, Prisma.PurchaseReturnUncheckedCreateWithoutSupplierInput>
+export type purchasereturnCreateOrConnectWithoutPurchaseInput = {
+  where: Prisma.purchasereturnWhereUniqueInput
+  create: Prisma.XOR<Prisma.purchasereturnCreateWithoutPurchaseInput, Prisma.purchasereturnUncheckedCreateWithoutPurchaseInput>
 }
 
-export type PurchaseReturnCreateManySupplierInputEnvelope = {
-  data: Prisma.PurchaseReturnCreateManySupplierInput | Prisma.PurchaseReturnCreateManySupplierInput[]
+export type purchasereturnCreateManyPurchaseInputEnvelope = {
+  data: Prisma.purchasereturnCreateManyPurchaseInput | Prisma.purchasereturnCreateManyPurchaseInput[]
   skipDuplicates?: boolean
 }
 
-export type PurchaseReturnUpsertWithWhereUniqueWithoutSupplierInput = {
-  where: Prisma.PurchaseReturnWhereUniqueInput
-  update: Prisma.XOR<Prisma.PurchaseReturnUpdateWithoutSupplierInput, Prisma.PurchaseReturnUncheckedUpdateWithoutSupplierInput>
-  create: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutSupplierInput, Prisma.PurchaseReturnUncheckedCreateWithoutSupplierInput>
+export type purchasereturnUpsertWithWhereUniqueWithoutPurchaseInput = {
+  where: Prisma.purchasereturnWhereUniqueInput
+  update: Prisma.XOR<Prisma.purchasereturnUpdateWithoutPurchaseInput, Prisma.purchasereturnUncheckedUpdateWithoutPurchaseInput>
+  create: Prisma.XOR<Prisma.purchasereturnCreateWithoutPurchaseInput, Prisma.purchasereturnUncheckedCreateWithoutPurchaseInput>
 }
 
-export type PurchaseReturnUpdateWithWhereUniqueWithoutSupplierInput = {
-  where: Prisma.PurchaseReturnWhereUniqueInput
-  data: Prisma.XOR<Prisma.PurchaseReturnUpdateWithoutSupplierInput, Prisma.PurchaseReturnUncheckedUpdateWithoutSupplierInput>
+export type purchasereturnUpdateWithWhereUniqueWithoutPurchaseInput = {
+  where: Prisma.purchasereturnWhereUniqueInput
+  data: Prisma.XOR<Prisma.purchasereturnUpdateWithoutPurchaseInput, Prisma.purchasereturnUncheckedUpdateWithoutPurchaseInput>
 }
 
-export type PurchaseReturnUpdateManyWithWhereWithoutSupplierInput = {
-  where: Prisma.PurchaseReturnScalarWhereInput
-  data: Prisma.XOR<Prisma.PurchaseReturnUpdateManyMutationInput, Prisma.PurchaseReturnUncheckedUpdateManyWithoutSupplierInput>
+export type purchasereturnUpdateManyWithWhereWithoutPurchaseInput = {
+  where: Prisma.purchasereturnScalarWhereInput
+  data: Prisma.XOR<Prisma.purchasereturnUpdateManyMutationInput, Prisma.purchasereturnUncheckedUpdateManyWithoutPurchaseInput>
 }
 
-export type PurchaseReturnScalarWhereInput = {
-  AND?: Prisma.PurchaseReturnScalarWhereInput | Prisma.PurchaseReturnScalarWhereInput[]
-  OR?: Prisma.PurchaseReturnScalarWhereInput[]
-  NOT?: Prisma.PurchaseReturnScalarWhereInput | Prisma.PurchaseReturnScalarWhereInput[]
-  id?: Prisma.IntFilter<"PurchaseReturn"> | number
-  returnNo?: Prisma.StringFilter<"PurchaseReturn"> | string
-  purchaseId?: Prisma.IntFilter<"PurchaseReturn"> | number
-  supplierId?: Prisma.IntFilter<"PurchaseReturn"> | number
-  returnDate?: Prisma.DateTimeFilter<"PurchaseReturn"> | Date | string
-  subtotal?: Prisma.DecimalFilter<"PurchaseReturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: Prisma.DecimalFilter<"PurchaseReturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: Prisma.StringNullableFilter<"PurchaseReturn"> | string | null
-  status?: Prisma.StringFilter<"PurchaseReturn"> | string
-  createdAt?: Prisma.DateTimeFilter<"PurchaseReturn"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"PurchaseReturn"> | Date | string
+export type purchasereturnScalarWhereInput = {
+  AND?: Prisma.purchasereturnScalarWhereInput | Prisma.purchasereturnScalarWhereInput[]
+  OR?: Prisma.purchasereturnScalarWhereInput[]
+  NOT?: Prisma.purchasereturnScalarWhereInput | Prisma.purchasereturnScalarWhereInput[]
+  id?: Prisma.IntFilter<"purchasereturn"> | number
+  returnNo?: Prisma.StringFilter<"purchasereturn"> | string
+  purchaseId?: Prisma.IntFilter<"purchasereturn"> | number
+  supplierId?: Prisma.IntFilter<"purchasereturn"> | number
+  returnDate?: Prisma.DateTimeFilter<"purchasereturn"> | Date | string
+  subtotal?: Prisma.DecimalFilter<"purchasereturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: Prisma.DecimalFilter<"purchasereturn"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: Prisma.StringNullableFilter<"purchasereturn"> | string | null
+  status?: Prisma.StringFilter<"purchasereturn"> | string
+  createdAt?: Prisma.DateTimeFilter<"purchasereturn"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"purchasereturn"> | Date | string
 }
 
-export type PurchaseReturnCreateWithoutPurchaseInput = {
+export type purchasereturnCreateWithoutPurchasereturnitemInput = {
   returnNo: string
   returnDate?: Date | string
   subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -711,14 +711,15 @@ export type PurchaseReturnCreateWithoutPurchaseInput = {
   note?: string | null
   status?: string
   createdAt?: Date | string
-  updatedAt?: Date | string
-  supplier: Prisma.SupplierCreateNestedOneWithoutReturnsInput
-  items?: Prisma.PurchaseReturnItemCreateNestedManyWithoutPurchaseReturnInput
+  updatedAt: Date | string
+  purchase: Prisma.purchaseCreateNestedOneWithoutPurchasereturnInput
+  supplier: Prisma.supplierCreateNestedOneWithoutPurchasereturnInput
 }
 
-export type PurchaseReturnUncheckedCreateWithoutPurchaseInput = {
+export type purchasereturnUncheckedCreateWithoutPurchasereturnitemInput = {
   id?: number
   returnNo: string
+  purchaseId: number
   supplierId: number
   returnDate?: Date | string
   subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -726,160 +727,106 @@ export type PurchaseReturnUncheckedCreateWithoutPurchaseInput = {
   note?: string | null
   status?: string
   createdAt?: Date | string
-  updatedAt?: Date | string
-  items?: Prisma.PurchaseReturnItemUncheckedCreateNestedManyWithoutPurchaseReturnInput
+  updatedAt: Date | string
 }
 
-export type PurchaseReturnCreateOrConnectWithoutPurchaseInput = {
-  where: Prisma.PurchaseReturnWhereUniqueInput
-  create: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutPurchaseInput, Prisma.PurchaseReturnUncheckedCreateWithoutPurchaseInput>
+export type purchasereturnCreateOrConnectWithoutPurchasereturnitemInput = {
+  where: Prisma.purchasereturnWhereUniqueInput
+  create: Prisma.XOR<Prisma.purchasereturnCreateWithoutPurchasereturnitemInput, Prisma.purchasereturnUncheckedCreateWithoutPurchasereturnitemInput>
 }
 
-export type PurchaseReturnCreateManyPurchaseInputEnvelope = {
-  data: Prisma.PurchaseReturnCreateManyPurchaseInput | Prisma.PurchaseReturnCreateManyPurchaseInput[]
+export type purchasereturnUpsertWithoutPurchasereturnitemInput = {
+  update: Prisma.XOR<Prisma.purchasereturnUpdateWithoutPurchasereturnitemInput, Prisma.purchasereturnUncheckedUpdateWithoutPurchasereturnitemInput>
+  create: Prisma.XOR<Prisma.purchasereturnCreateWithoutPurchasereturnitemInput, Prisma.purchasereturnUncheckedCreateWithoutPurchasereturnitemInput>
+  where?: Prisma.purchasereturnWhereInput
+}
+
+export type purchasereturnUpdateToOneWithWhereWithoutPurchasereturnitemInput = {
+  where?: Prisma.purchasereturnWhereInput
+  data: Prisma.XOR<Prisma.purchasereturnUpdateWithoutPurchasereturnitemInput, Prisma.purchasereturnUncheckedUpdateWithoutPurchasereturnitemInput>
+}
+
+export type purchasereturnUpdateWithoutPurchasereturnitemInput = {
+  returnNo?: Prisma.StringFieldUpdateOperationsInput | string
+  returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  status?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  purchase?: Prisma.purchaseUpdateOneRequiredWithoutPurchasereturnNestedInput
+  supplier?: Prisma.supplierUpdateOneRequiredWithoutPurchasereturnNestedInput
+}
+
+export type purchasereturnUncheckedUpdateWithoutPurchasereturnitemInput = {
+  id?: Prisma.IntFieldUpdateOperationsInput | number
+  returnNo?: Prisma.StringFieldUpdateOperationsInput | string
+  purchaseId?: Prisma.IntFieldUpdateOperationsInput | number
+  supplierId?: Prisma.IntFieldUpdateOperationsInput | number
+  returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  status?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type purchasereturnCreateWithoutSupplierInput = {
+  returnNo: string
+  returnDate?: Date | string
+  subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: string | null
+  status?: string
+  createdAt?: Date | string
+  updatedAt: Date | string
+  purchase: Prisma.purchaseCreateNestedOneWithoutPurchasereturnInput
+  purchasereturnitem?: Prisma.purchasereturnitemCreateNestedManyWithoutPurchasereturnInput
+}
+
+export type purchasereturnUncheckedCreateWithoutSupplierInput = {
+  id?: number
+  returnNo: string
+  purchaseId: number
+  returnDate?: Date | string
+  subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: string | null
+  status?: string
+  createdAt?: Date | string
+  updatedAt: Date | string
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedCreateNestedManyWithoutPurchasereturnInput
+}
+
+export type purchasereturnCreateOrConnectWithoutSupplierInput = {
+  where: Prisma.purchasereturnWhereUniqueInput
+  create: Prisma.XOR<Prisma.purchasereturnCreateWithoutSupplierInput, Prisma.purchasereturnUncheckedCreateWithoutSupplierInput>
+}
+
+export type purchasereturnCreateManySupplierInputEnvelope = {
+  data: Prisma.purchasereturnCreateManySupplierInput | Prisma.purchasereturnCreateManySupplierInput[]
   skipDuplicates?: boolean
 }
 
-export type PurchaseReturnUpsertWithWhereUniqueWithoutPurchaseInput = {
-  where: Prisma.PurchaseReturnWhereUniqueInput
-  update: Prisma.XOR<Prisma.PurchaseReturnUpdateWithoutPurchaseInput, Prisma.PurchaseReturnUncheckedUpdateWithoutPurchaseInput>
-  create: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutPurchaseInput, Prisma.PurchaseReturnUncheckedCreateWithoutPurchaseInput>
+export type purchasereturnUpsertWithWhereUniqueWithoutSupplierInput = {
+  where: Prisma.purchasereturnWhereUniqueInput
+  update: Prisma.XOR<Prisma.purchasereturnUpdateWithoutSupplierInput, Prisma.purchasereturnUncheckedUpdateWithoutSupplierInput>
+  create: Prisma.XOR<Prisma.purchasereturnCreateWithoutSupplierInput, Prisma.purchasereturnUncheckedCreateWithoutSupplierInput>
 }
 
-export type PurchaseReturnUpdateWithWhereUniqueWithoutPurchaseInput = {
-  where: Prisma.PurchaseReturnWhereUniqueInput
-  data: Prisma.XOR<Prisma.PurchaseReturnUpdateWithoutPurchaseInput, Prisma.PurchaseReturnUncheckedUpdateWithoutPurchaseInput>
+export type purchasereturnUpdateWithWhereUniqueWithoutSupplierInput = {
+  where: Prisma.purchasereturnWhereUniqueInput
+  data: Prisma.XOR<Prisma.purchasereturnUpdateWithoutSupplierInput, Prisma.purchasereturnUncheckedUpdateWithoutSupplierInput>
 }
 
-export type PurchaseReturnUpdateManyWithWhereWithoutPurchaseInput = {
-  where: Prisma.PurchaseReturnScalarWhereInput
-  data: Prisma.XOR<Prisma.PurchaseReturnUpdateManyMutationInput, Prisma.PurchaseReturnUncheckedUpdateManyWithoutPurchaseInput>
+export type purchasereturnUpdateManyWithWhereWithoutSupplierInput = {
+  where: Prisma.purchasereturnScalarWhereInput
+  data: Prisma.XOR<Prisma.purchasereturnUpdateManyMutationInput, Prisma.purchasereturnUncheckedUpdateManyWithoutSupplierInput>
 }
 
-export type PurchaseReturnCreateWithoutItemsInput = {
-  returnNo: string
-  returnDate?: Date | string
-  subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: string | null
-  status?: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  purchase: Prisma.PurchaseCreateNestedOneWithoutReturnsInput
-  supplier: Prisma.SupplierCreateNestedOneWithoutReturnsInput
-}
-
-export type PurchaseReturnUncheckedCreateWithoutItemsInput = {
-  id?: number
-  returnNo: string
-  purchaseId: number
-  supplierId: number
-  returnDate?: Date | string
-  subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: string | null
-  status?: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-}
-
-export type PurchaseReturnCreateOrConnectWithoutItemsInput = {
-  where: Prisma.PurchaseReturnWhereUniqueInput
-  create: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutItemsInput, Prisma.PurchaseReturnUncheckedCreateWithoutItemsInput>
-}
-
-export type PurchaseReturnUpsertWithoutItemsInput = {
-  update: Prisma.XOR<Prisma.PurchaseReturnUpdateWithoutItemsInput, Prisma.PurchaseReturnUncheckedUpdateWithoutItemsInput>
-  create: Prisma.XOR<Prisma.PurchaseReturnCreateWithoutItemsInput, Prisma.PurchaseReturnUncheckedCreateWithoutItemsInput>
-  where?: Prisma.PurchaseReturnWhereInput
-}
-
-export type PurchaseReturnUpdateToOneWithWhereWithoutItemsInput = {
-  where?: Prisma.PurchaseReturnWhereInput
-  data: Prisma.XOR<Prisma.PurchaseReturnUpdateWithoutItemsInput, Prisma.PurchaseReturnUncheckedUpdateWithoutItemsInput>
-}
-
-export type PurchaseReturnUpdateWithoutItemsInput = {
-  returnNo?: Prisma.StringFieldUpdateOperationsInput | string
-  returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  purchase?: Prisma.PurchaseUpdateOneRequiredWithoutReturnsNestedInput
-  supplier?: Prisma.SupplierUpdateOneRequiredWithoutReturnsNestedInput
-}
-
-export type PurchaseReturnUncheckedUpdateWithoutItemsInput = {
-  id?: Prisma.IntFieldUpdateOperationsInput | number
-  returnNo?: Prisma.StringFieldUpdateOperationsInput | string
-  purchaseId?: Prisma.IntFieldUpdateOperationsInput | number
-  supplierId?: Prisma.IntFieldUpdateOperationsInput | number
-  returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-}
-
-export type PurchaseReturnCreateManySupplierInput = {
-  id?: number
-  returnNo: string
-  purchaseId: number
-  returnDate?: Date | string
-  subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: string | null
-  status?: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-}
-
-export type PurchaseReturnUpdateWithoutSupplierInput = {
-  returnNo?: Prisma.StringFieldUpdateOperationsInput | string
-  returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  purchase?: Prisma.PurchaseUpdateOneRequiredWithoutReturnsNestedInput
-  items?: Prisma.PurchaseReturnItemUpdateManyWithoutPurchaseReturnNestedInput
-}
-
-export type PurchaseReturnUncheckedUpdateWithoutSupplierInput = {
-  id?: Prisma.IntFieldUpdateOperationsInput | number
-  returnNo?: Prisma.StringFieldUpdateOperationsInput | string
-  purchaseId?: Prisma.IntFieldUpdateOperationsInput | number
-  returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  items?: Prisma.PurchaseReturnItemUncheckedUpdateManyWithoutPurchaseReturnNestedInput
-}
-
-export type PurchaseReturnUncheckedUpdateManyWithoutSupplierInput = {
-  id?: Prisma.IntFieldUpdateOperationsInput | number
-  returnNo?: Prisma.StringFieldUpdateOperationsInput | string
-  purchaseId?: Prisma.IntFieldUpdateOperationsInput | number
-  returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
-  note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  status?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-}
-
-export type PurchaseReturnCreateManyPurchaseInput = {
+export type purchasereturnCreateManyPurchaseInput = {
   id?: number
   returnNo: string
   supplierId: number
@@ -889,10 +836,10 @@ export type PurchaseReturnCreateManyPurchaseInput = {
   note?: string | null
   status?: string
   createdAt?: Date | string
-  updatedAt?: Date | string
+  updatedAt: Date | string
 }
 
-export type PurchaseReturnUpdateWithoutPurchaseInput = {
+export type purchasereturnUpdateWithoutPurchaseInput = {
   returnNo?: Prisma.StringFieldUpdateOperationsInput | string
   returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -901,11 +848,11 @@ export type PurchaseReturnUpdateWithoutPurchaseInput = {
   status?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  supplier?: Prisma.SupplierUpdateOneRequiredWithoutReturnsNestedInput
-  items?: Prisma.PurchaseReturnItemUpdateManyWithoutPurchaseReturnNestedInput
+  supplier?: Prisma.supplierUpdateOneRequiredWithoutPurchasereturnNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUpdateManyWithoutPurchasereturnNestedInput
 }
 
-export type PurchaseReturnUncheckedUpdateWithoutPurchaseInput = {
+export type purchasereturnUncheckedUpdateWithoutPurchaseInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   returnNo?: Prisma.StringFieldUpdateOperationsInput | string
   supplierId?: Prisma.IntFieldUpdateOperationsInput | number
@@ -916,13 +863,66 @@ export type PurchaseReturnUncheckedUpdateWithoutPurchaseInput = {
   status?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  items?: Prisma.PurchaseReturnItemUncheckedUpdateManyWithoutPurchaseReturnNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedUpdateManyWithoutPurchasereturnNestedInput
 }
 
-export type PurchaseReturnUncheckedUpdateManyWithoutPurchaseInput = {
+export type purchasereturnUncheckedUpdateManyWithoutPurchaseInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   returnNo?: Prisma.StringFieldUpdateOperationsInput | string
   supplierId?: Prisma.IntFieldUpdateOperationsInput | number
+  returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  status?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type purchasereturnCreateManySupplierInput = {
+  id?: number
+  returnNo: string
+  purchaseId: number
+  returnDate?: Date | string
+  subtotal?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: string | null
+  status?: string
+  createdAt?: Date | string
+  updatedAt: Date | string
+}
+
+export type purchasereturnUpdateWithoutSupplierInput = {
+  returnNo?: Prisma.StringFieldUpdateOperationsInput | string
+  returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  status?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  purchase?: Prisma.purchaseUpdateOneRequiredWithoutPurchasereturnNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUpdateManyWithoutPurchasereturnNestedInput
+}
+
+export type purchasereturnUncheckedUpdateWithoutSupplierInput = {
+  id?: Prisma.IntFieldUpdateOperationsInput | number
+  returnNo?: Prisma.StringFieldUpdateOperationsInput | string
+  purchaseId?: Prisma.IntFieldUpdateOperationsInput | number
+  returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  note?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  status?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedUpdateManyWithoutPurchasereturnNestedInput
+}
+
+export type purchasereturnUncheckedUpdateManyWithoutSupplierInput = {
+  id?: Prisma.IntFieldUpdateOperationsInput | number
+  returnNo?: Prisma.StringFieldUpdateOperationsInput | string
+  purchaseId?: Prisma.IntFieldUpdateOperationsInput | number
   returnDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   subtotal?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   totalAmount?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
@@ -934,36 +934,36 @@ export type PurchaseReturnUncheckedUpdateManyWithoutPurchaseInput = {
 
 
 /**
- * Count Type PurchaseReturnCountOutputType
+ * Count Type PurchasereturnCountOutputType
  */
 
-export type PurchaseReturnCountOutputType = {
-  items: number
+export type PurchasereturnCountOutputType = {
+  purchasereturnitem: number
 }
 
-export type PurchaseReturnCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  items?: boolean | PurchaseReturnCountOutputTypeCountItemsArgs
+export type PurchasereturnCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  purchasereturnitem?: boolean | PurchasereturnCountOutputTypeCountPurchasereturnitemArgs
 }
 
 /**
- * PurchaseReturnCountOutputType without action
+ * PurchasereturnCountOutputType without action
  */
-export type PurchaseReturnCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type PurchasereturnCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturnCountOutputType
+   * Select specific fields to fetch from the PurchasereturnCountOutputType
    */
-  select?: Prisma.PurchaseReturnCountOutputTypeSelect<ExtArgs> | null
+  select?: Prisma.PurchasereturnCountOutputTypeSelect<ExtArgs> | null
 }
 
 /**
- * PurchaseReturnCountOutputType without action
+ * PurchasereturnCountOutputType without action
  */
-export type PurchaseReturnCountOutputTypeCountItemsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.PurchaseReturnItemWhereInput
+export type PurchasereturnCountOutputTypeCountPurchasereturnitemArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.purchasereturnitemWhereInput
 }
 
 
-export type PurchaseReturnSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
+export type purchasereturnSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   returnNo?: boolean
   purchaseId?: boolean
@@ -975,15 +975,15 @@ export type PurchaseReturnSelect<ExtArgs extends runtime.Types.Extensions.Intern
   status?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  purchase?: boolean | Prisma.PurchaseDefaultArgs<ExtArgs>
-  supplier?: boolean | Prisma.SupplierDefaultArgs<ExtArgs>
-  items?: boolean | Prisma.PurchaseReturn$itemsArgs<ExtArgs>
-  _count?: boolean | Prisma.PurchaseReturnCountOutputTypeDefaultArgs<ExtArgs>
-}, ExtArgs["result"]["purchaseReturn"]>
+  purchase?: boolean | Prisma.purchaseDefaultArgs<ExtArgs>
+  supplier?: boolean | Prisma.supplierDefaultArgs<ExtArgs>
+  purchasereturnitem?: boolean | Prisma.purchasereturn$purchasereturnitemArgs<ExtArgs>
+  _count?: boolean | Prisma.PurchasereturnCountOutputTypeDefaultArgs<ExtArgs>
+}, ExtArgs["result"]["purchasereturn"]>
 
 
 
-export type PurchaseReturnSelectScalar = {
+export type purchasereturnSelectScalar = {
   id?: boolean
   returnNo?: boolean
   purchaseId?: boolean
@@ -997,20 +997,20 @@ export type PurchaseReturnSelectScalar = {
   updatedAt?: boolean
 }
 
-export type PurchaseReturnOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "returnNo" | "purchaseId" | "supplierId" | "returnDate" | "subtotal" | "totalAmount" | "note" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["purchaseReturn"]>
-export type PurchaseReturnInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  purchase?: boolean | Prisma.PurchaseDefaultArgs<ExtArgs>
-  supplier?: boolean | Prisma.SupplierDefaultArgs<ExtArgs>
-  items?: boolean | Prisma.PurchaseReturn$itemsArgs<ExtArgs>
-  _count?: boolean | Prisma.PurchaseReturnCountOutputTypeDefaultArgs<ExtArgs>
+export type purchasereturnOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "returnNo" | "purchaseId" | "supplierId" | "returnDate" | "subtotal" | "totalAmount" | "note" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["purchasereturn"]>
+export type purchasereturnInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  purchase?: boolean | Prisma.purchaseDefaultArgs<ExtArgs>
+  supplier?: boolean | Prisma.supplierDefaultArgs<ExtArgs>
+  purchasereturnitem?: boolean | Prisma.purchasereturn$purchasereturnitemArgs<ExtArgs>
+  _count?: boolean | Prisma.PurchasereturnCountOutputTypeDefaultArgs<ExtArgs>
 }
 
-export type $PurchaseReturnPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  name: "PurchaseReturn"
+export type $purchasereturnPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  name: "purchasereturn"
   objects: {
-    purchase: Prisma.$PurchasePayload<ExtArgs>
-    supplier: Prisma.$SupplierPayload<ExtArgs>
-    items: Prisma.$PurchaseReturnItemPayload<ExtArgs>[]
+    purchase: Prisma.$purchasePayload<ExtArgs>
+    supplier: Prisma.$supplierPayload<ExtArgs>
+    purchasereturnitem: Prisma.$purchasereturnitemPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: number
@@ -1024,143 +1024,143 @@ export type $PurchaseReturnPayload<ExtArgs extends runtime.Types.Extensions.Inte
     status: string
     createdAt: Date
     updatedAt: Date
-  }, ExtArgs["result"]["purchaseReturn"]>
+  }, ExtArgs["result"]["purchasereturn"]>
   composites: {}
 }
 
-export type PurchaseReturnGetPayload<S extends boolean | null | undefined | PurchaseReturnDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$PurchaseReturnPayload, S>
+export type purchasereturnGetPayload<S extends boolean | null | undefined | purchasereturnDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$purchasereturnPayload, S>
 
-export type PurchaseReturnCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> =
-  Omit<PurchaseReturnFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-    select?: PurchaseReturnCountAggregateInputType | true
+export type purchasereturnCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> =
+  Omit<purchasereturnFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+    select?: PurchasereturnCountAggregateInputType | true
   }
 
-export interface PurchaseReturnDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-  [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['PurchaseReturn'], meta: { name: 'PurchaseReturn' } }
+export interface purchasereturnDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+  [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['purchasereturn'], meta: { name: 'purchasereturn' } }
   /**
-   * Find zero or one PurchaseReturn that matches the filter.
-   * @param {PurchaseReturnFindUniqueArgs} args - Arguments to find a PurchaseReturn
+   * Find zero or one Purchasereturn that matches the filter.
+   * @param {purchasereturnFindUniqueArgs} args - Arguments to find a Purchasereturn
    * @example
-   * // Get one PurchaseReturn
-   * const purchaseReturn = await prisma.purchaseReturn.findUnique({
+   * // Get one Purchasereturn
+   * const purchasereturn = await prisma.purchasereturn.findUnique({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findUnique<T extends PurchaseReturnFindUniqueArgs>(args: Prisma.SelectSubset<T, PurchaseReturnFindUniqueArgs<ExtArgs>>): Prisma.Prisma__PurchaseReturnClient<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  findUnique<T extends purchasereturnFindUniqueArgs>(args: Prisma.SelectSubset<T, purchasereturnFindUniqueArgs<ExtArgs>>): Prisma.Prisma__purchasereturnClient<runtime.Types.Result.GetResult<Prisma.$purchasereturnPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find one PurchaseReturn that matches the filter or throw an error with `error.code='P2025'`
+   * Find one Purchasereturn that matches the filter or throw an error with `error.code='P2025'`
    * if no matches were found.
-   * @param {PurchaseReturnFindUniqueOrThrowArgs} args - Arguments to find a PurchaseReturn
+   * @param {purchasereturnFindUniqueOrThrowArgs} args - Arguments to find a Purchasereturn
    * @example
-   * // Get one PurchaseReturn
-   * const purchaseReturn = await prisma.purchaseReturn.findUniqueOrThrow({
+   * // Get one Purchasereturn
+   * const purchasereturn = await prisma.purchasereturn.findUniqueOrThrow({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findUniqueOrThrow<T extends PurchaseReturnFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, PurchaseReturnFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__PurchaseReturnClient<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  findUniqueOrThrow<T extends purchasereturnFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, purchasereturnFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__purchasereturnClient<runtime.Types.Result.GetResult<Prisma.$purchasereturnPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find the first PurchaseReturn that matches the filter.
+   * Find the first Purchasereturn that matches the filter.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {PurchaseReturnFindFirstArgs} args - Arguments to find a PurchaseReturn
+   * @param {purchasereturnFindFirstArgs} args - Arguments to find a Purchasereturn
    * @example
-   * // Get one PurchaseReturn
-   * const purchaseReturn = await prisma.purchaseReturn.findFirst({
+   * // Get one Purchasereturn
+   * const purchasereturn = await prisma.purchasereturn.findFirst({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findFirst<T extends PurchaseReturnFindFirstArgs>(args?: Prisma.SelectSubset<T, PurchaseReturnFindFirstArgs<ExtArgs>>): Prisma.Prisma__PurchaseReturnClient<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  findFirst<T extends purchasereturnFindFirstArgs>(args?: Prisma.SelectSubset<T, purchasereturnFindFirstArgs<ExtArgs>>): Prisma.Prisma__purchasereturnClient<runtime.Types.Result.GetResult<Prisma.$purchasereturnPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find the first PurchaseReturn that matches the filter or
+   * Find the first Purchasereturn that matches the filter or
    * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {PurchaseReturnFindFirstOrThrowArgs} args - Arguments to find a PurchaseReturn
+   * @param {purchasereturnFindFirstOrThrowArgs} args - Arguments to find a Purchasereturn
    * @example
-   * // Get one PurchaseReturn
-   * const purchaseReturn = await prisma.purchaseReturn.findFirstOrThrow({
+   * // Get one Purchasereturn
+   * const purchasereturn = await prisma.purchasereturn.findFirstOrThrow({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    */
-  findFirstOrThrow<T extends PurchaseReturnFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, PurchaseReturnFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__PurchaseReturnClient<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  findFirstOrThrow<T extends purchasereturnFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, purchasereturnFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__purchasereturnClient<runtime.Types.Result.GetResult<Prisma.$purchasereturnPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Find zero or more PurchaseReturns that matches the filter.
+   * Find zero or more Purchasereturns that matches the filter.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {PurchaseReturnFindManyArgs} args - Arguments to filter and select certain fields only.
+   * @param {purchasereturnFindManyArgs} args - Arguments to filter and select certain fields only.
    * @example
-   * // Get all PurchaseReturns
-   * const purchaseReturns = await prisma.purchaseReturn.findMany()
+   * // Get all Purchasereturns
+   * const purchasereturns = await prisma.purchasereturn.findMany()
    * 
-   * // Get first 10 PurchaseReturns
-   * const purchaseReturns = await prisma.purchaseReturn.findMany({ take: 10 })
+   * // Get first 10 Purchasereturns
+   * const purchasereturns = await prisma.purchasereturn.findMany({ take: 10 })
    * 
    * // Only select the `id`
-   * const purchaseReturnWithIdOnly = await prisma.purchaseReturn.findMany({ select: { id: true } })
+   * const purchasereturnWithIdOnly = await prisma.purchasereturn.findMany({ select: { id: true } })
    * 
    */
-  findMany<T extends PurchaseReturnFindManyArgs>(args?: Prisma.SelectSubset<T, PurchaseReturnFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+  findMany<T extends purchasereturnFindManyArgs>(args?: Prisma.SelectSubset<T, purchasereturnFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$purchasereturnPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
   /**
-   * Create a PurchaseReturn.
-   * @param {PurchaseReturnCreateArgs} args - Arguments to create a PurchaseReturn.
+   * Create a Purchasereturn.
+   * @param {purchasereturnCreateArgs} args - Arguments to create a Purchasereturn.
    * @example
-   * // Create one PurchaseReturn
-   * const PurchaseReturn = await prisma.purchaseReturn.create({
+   * // Create one Purchasereturn
+   * const Purchasereturn = await prisma.purchasereturn.create({
    *   data: {
-   *     // ... data to create a PurchaseReturn
+   *     // ... data to create a Purchasereturn
    *   }
    * })
    * 
    */
-  create<T extends PurchaseReturnCreateArgs>(args: Prisma.SelectSubset<T, PurchaseReturnCreateArgs<ExtArgs>>): Prisma.Prisma__PurchaseReturnClient<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  create<T extends purchasereturnCreateArgs>(args: Prisma.SelectSubset<T, purchasereturnCreateArgs<ExtArgs>>): Prisma.Prisma__purchasereturnClient<runtime.Types.Result.GetResult<Prisma.$purchasereturnPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Create many PurchaseReturns.
-   * @param {PurchaseReturnCreateManyArgs} args - Arguments to create many PurchaseReturns.
+   * Create many Purchasereturns.
+   * @param {purchasereturnCreateManyArgs} args - Arguments to create many Purchasereturns.
    * @example
-   * // Create many PurchaseReturns
-   * const purchaseReturn = await prisma.purchaseReturn.createMany({
+   * // Create many Purchasereturns
+   * const purchasereturn = await prisma.purchasereturn.createMany({
    *   data: [
    *     // ... provide data here
    *   ]
    * })
    *     
    */
-  createMany<T extends PurchaseReturnCreateManyArgs>(args?: Prisma.SelectSubset<T, PurchaseReturnCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  createMany<T extends purchasereturnCreateManyArgs>(args?: Prisma.SelectSubset<T, purchasereturnCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
-   * Delete a PurchaseReturn.
-   * @param {PurchaseReturnDeleteArgs} args - Arguments to delete one PurchaseReturn.
+   * Delete a Purchasereturn.
+   * @param {purchasereturnDeleteArgs} args - Arguments to delete one Purchasereturn.
    * @example
-   * // Delete one PurchaseReturn
-   * const PurchaseReturn = await prisma.purchaseReturn.delete({
+   * // Delete one Purchasereturn
+   * const Purchasereturn = await prisma.purchasereturn.delete({
    *   where: {
-   *     // ... filter to delete one PurchaseReturn
+   *     // ... filter to delete one Purchasereturn
    *   }
    * })
    * 
    */
-  delete<T extends PurchaseReturnDeleteArgs>(args: Prisma.SelectSubset<T, PurchaseReturnDeleteArgs<ExtArgs>>): Prisma.Prisma__PurchaseReturnClient<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  delete<T extends purchasereturnDeleteArgs>(args: Prisma.SelectSubset<T, purchasereturnDeleteArgs<ExtArgs>>): Prisma.Prisma__purchasereturnClient<runtime.Types.Result.GetResult<Prisma.$purchasereturnPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Update one PurchaseReturn.
-   * @param {PurchaseReturnUpdateArgs} args - Arguments to update one PurchaseReturn.
+   * Update one Purchasereturn.
+   * @param {purchasereturnUpdateArgs} args - Arguments to update one Purchasereturn.
    * @example
-   * // Update one PurchaseReturn
-   * const purchaseReturn = await prisma.purchaseReturn.update({
+   * // Update one Purchasereturn
+   * const purchasereturn = await prisma.purchasereturn.update({
    *   where: {
    *     // ... provide filter here
    *   },
@@ -1170,30 +1170,30 @@ export interface PurchaseReturnDelegate<ExtArgs extends runtime.Types.Extensions
    * })
    * 
    */
-  update<T extends PurchaseReturnUpdateArgs>(args: Prisma.SelectSubset<T, PurchaseReturnUpdateArgs<ExtArgs>>): Prisma.Prisma__PurchaseReturnClient<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  update<T extends purchasereturnUpdateArgs>(args: Prisma.SelectSubset<T, purchasereturnUpdateArgs<ExtArgs>>): Prisma.Prisma__purchasereturnClient<runtime.Types.Result.GetResult<Prisma.$purchasereturnPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
-   * Delete zero or more PurchaseReturns.
-   * @param {PurchaseReturnDeleteManyArgs} args - Arguments to filter PurchaseReturns to delete.
+   * Delete zero or more Purchasereturns.
+   * @param {purchasereturnDeleteManyArgs} args - Arguments to filter Purchasereturns to delete.
    * @example
-   * // Delete a few PurchaseReturns
-   * const { count } = await prisma.purchaseReturn.deleteMany({
+   * // Delete a few Purchasereturns
+   * const { count } = await prisma.purchasereturn.deleteMany({
    *   where: {
    *     // ... provide filter here
    *   }
    * })
    * 
    */
-  deleteMany<T extends PurchaseReturnDeleteManyArgs>(args?: Prisma.SelectSubset<T, PurchaseReturnDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  deleteMany<T extends purchasereturnDeleteManyArgs>(args?: Prisma.SelectSubset<T, purchasereturnDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
-   * Update zero or more PurchaseReturns.
+   * Update zero or more Purchasereturns.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {PurchaseReturnUpdateManyArgs} args - Arguments to update one or more rows.
+   * @param {purchasereturnUpdateManyArgs} args - Arguments to update one or more rows.
    * @example
-   * // Update many PurchaseReturns
-   * const purchaseReturn = await prisma.purchaseReturn.updateMany({
+   * // Update many Purchasereturns
+   * const purchasereturn = await prisma.purchasereturn.updateMany({
    *   where: {
    *     // ... provide filter here
    *   },
@@ -1203,56 +1203,56 @@ export interface PurchaseReturnDelegate<ExtArgs extends runtime.Types.Extensions
    * })
    * 
    */
-  updateMany<T extends PurchaseReturnUpdateManyArgs>(args: Prisma.SelectSubset<T, PurchaseReturnUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  updateMany<T extends purchasereturnUpdateManyArgs>(args: Prisma.SelectSubset<T, purchasereturnUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
-   * Create or update one PurchaseReturn.
-   * @param {PurchaseReturnUpsertArgs} args - Arguments to update or create a PurchaseReturn.
+   * Create or update one Purchasereturn.
+   * @param {purchasereturnUpsertArgs} args - Arguments to update or create a Purchasereturn.
    * @example
-   * // Update or create a PurchaseReturn
-   * const purchaseReturn = await prisma.purchaseReturn.upsert({
+   * // Update or create a Purchasereturn
+   * const purchasereturn = await prisma.purchasereturn.upsert({
    *   create: {
-   *     // ... data to create a PurchaseReturn
+   *     // ... data to create a Purchasereturn
    *   },
    *   update: {
    *     // ... in case it already exists, update
    *   },
    *   where: {
-   *     // ... the filter for the PurchaseReturn we want to update
+   *     // ... the filter for the Purchasereturn we want to update
    *   }
    * })
    */
-  upsert<T extends PurchaseReturnUpsertArgs>(args: Prisma.SelectSubset<T, PurchaseReturnUpsertArgs<ExtArgs>>): Prisma.Prisma__PurchaseReturnClient<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  upsert<T extends purchasereturnUpsertArgs>(args: Prisma.SelectSubset<T, purchasereturnUpsertArgs<ExtArgs>>): Prisma.Prisma__purchasereturnClient<runtime.Types.Result.GetResult<Prisma.$purchasereturnPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
   /**
-   * Count the number of PurchaseReturns.
+   * Count the number of Purchasereturns.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {PurchaseReturnCountArgs} args - Arguments to filter PurchaseReturns to count.
+   * @param {purchasereturnCountArgs} args - Arguments to filter Purchasereturns to count.
    * @example
-   * // Count the number of PurchaseReturns
-   * const count = await prisma.purchaseReturn.count({
+   * // Count the number of Purchasereturns
+   * const count = await prisma.purchasereturn.count({
    *   where: {
-   *     // ... the filter for the PurchaseReturns we want to count
+   *     // ... the filter for the Purchasereturns we want to count
    *   }
    * })
   **/
-  count<T extends PurchaseReturnCountArgs>(
-    args?: Prisma.Subset<T, PurchaseReturnCountArgs>,
+  count<T extends purchasereturnCountArgs>(
+    args?: Prisma.Subset<T, purchasereturnCountArgs>,
   ): Prisma.PrismaPromise<
     T extends runtime.Types.Utils.Record<'select', any>
       ? T['select'] extends true
         ? number
-        : Prisma.GetScalarType<T['select'], PurchaseReturnCountAggregateOutputType>
+        : Prisma.GetScalarType<T['select'], PurchasereturnCountAggregateOutputType>
       : number
   >
 
   /**
-   * Allows you to perform aggregations operations on a PurchaseReturn.
+   * Allows you to perform aggregations operations on a Purchasereturn.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {PurchaseReturnAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+   * @param {PurchasereturnAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
    * @example
    * // Ordered by age ascending
    * // Where email contains prisma.io
@@ -1272,13 +1272,13 @@ export interface PurchaseReturnDelegate<ExtArgs extends runtime.Types.Extensions
    *   take: 10,
    * })
   **/
-  aggregate<T extends PurchaseReturnAggregateArgs>(args: Prisma.Subset<T, PurchaseReturnAggregateArgs>): Prisma.PrismaPromise<GetPurchaseReturnAggregateType<T>>
+  aggregate<T extends PurchasereturnAggregateArgs>(args: Prisma.Subset<T, PurchasereturnAggregateArgs>): Prisma.PrismaPromise<GetPurchasereturnAggregateType<T>>
 
   /**
-   * Group by PurchaseReturn.
+   * Group by Purchasereturn.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {PurchaseReturnGroupByArgs} args - Group by arguments.
+   * @param {purchasereturnGroupByArgs} args - Group by arguments.
    * @example
    * // Group by city, order by createdAt, get count
    * const result = await prisma.user.groupBy({
@@ -1293,14 +1293,14 @@ export interface PurchaseReturnDelegate<ExtArgs extends runtime.Types.Extensions
    * 
   **/
   groupBy<
-    T extends PurchaseReturnGroupByArgs,
+    T extends purchasereturnGroupByArgs,
     HasSelectOrTake extends Prisma.Or<
       Prisma.Extends<'skip', Prisma.Keys<T>>,
       Prisma.Extends<'take', Prisma.Keys<T>>
     >,
     OrderByArg extends Prisma.True extends HasSelectOrTake
-      ? { orderBy: PurchaseReturnGroupByArgs['orderBy'] }
-      : { orderBy?: PurchaseReturnGroupByArgs['orderBy'] },
+      ? { orderBy: purchasereturnGroupByArgs['orderBy'] }
+      : { orderBy?: purchasereturnGroupByArgs['orderBy'] },
     OrderFields extends Prisma.ExcludeUnderscoreKeys<Prisma.Keys<Prisma.MaybeTupleToUnion<T['orderBy']>>>,
     ByFields extends Prisma.MaybeTupleToUnion<T['by']>,
     ByValid extends Prisma.Has<ByFields, OrderFields>,
@@ -1349,24 +1349,24 @@ export interface PurchaseReturnDelegate<ExtArgs extends runtime.Types.Extensions
           ? never
           : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
       }[OrderFields]
-  >(args: Prisma.SubsetIntersection<T, PurchaseReturnGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPurchaseReturnGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  >(args: Prisma.SubsetIntersection<T, purchasereturnGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPurchasereturnGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
 /**
- * Fields of the PurchaseReturn model
+ * Fields of the purchasereturn model
  */
-readonly fields: PurchaseReturnFieldRefs;
+readonly fields: purchasereturnFieldRefs;
 }
 
 /**
- * The delegate class that acts as a "Promise-like" for PurchaseReturn.
+ * The delegate class that acts as a "Promise-like" for purchasereturn.
  * Why is this prefixed with `Prisma__`?
  * Because we want to prevent naming conflicts as mentioned in
  * https://github.com/prisma/prisma-client-js/issues/707
  */
-export interface Prisma__PurchaseReturnClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+export interface Prisma__purchasereturnClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  purchase<T extends Prisma.PurchaseDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PurchaseDefaultArgs<ExtArgs>>): Prisma.Prisma__PurchaseClient<runtime.Types.Result.GetResult<Prisma.$PurchasePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  supplier<T extends Prisma.SupplierDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.SupplierDefaultArgs<ExtArgs>>): Prisma.Prisma__SupplierClient<runtime.Types.Result.GetResult<Prisma.$SupplierPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  items<T extends Prisma.PurchaseReturn$itemsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PurchaseReturn$itemsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  purchase<T extends Prisma.purchaseDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.purchaseDefaultArgs<ExtArgs>>): Prisma.Prisma__purchaseClient<runtime.Types.Result.GetResult<Prisma.$purchasePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  supplier<T extends Prisma.supplierDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.supplierDefaultArgs<ExtArgs>>): Prisma.Prisma__supplierClient<runtime.Types.Result.GetResult<Prisma.$supplierPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  purchasereturnitem<T extends Prisma.purchasereturn$purchasereturnitemArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.purchasereturn$purchasereturnitemArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$purchasereturnitemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1393,405 +1393,405 @@ export interface Prisma__PurchaseReturnClient<T, Null = never, ExtArgs extends r
 
 
 /**
- * Fields of the PurchaseReturn model
+ * Fields of the purchasereturn model
  */
-export interface PurchaseReturnFieldRefs {
-  readonly id: Prisma.FieldRef<"PurchaseReturn", 'Int'>
-  readonly returnNo: Prisma.FieldRef<"PurchaseReturn", 'String'>
-  readonly purchaseId: Prisma.FieldRef<"PurchaseReturn", 'Int'>
-  readonly supplierId: Prisma.FieldRef<"PurchaseReturn", 'Int'>
-  readonly returnDate: Prisma.FieldRef<"PurchaseReturn", 'DateTime'>
-  readonly subtotal: Prisma.FieldRef<"PurchaseReturn", 'Decimal'>
-  readonly totalAmount: Prisma.FieldRef<"PurchaseReturn", 'Decimal'>
-  readonly note: Prisma.FieldRef<"PurchaseReturn", 'String'>
-  readonly status: Prisma.FieldRef<"PurchaseReturn", 'String'>
-  readonly createdAt: Prisma.FieldRef<"PurchaseReturn", 'DateTime'>
-  readonly updatedAt: Prisma.FieldRef<"PurchaseReturn", 'DateTime'>
+export interface purchasereturnFieldRefs {
+  readonly id: Prisma.FieldRef<"purchasereturn", 'Int'>
+  readonly returnNo: Prisma.FieldRef<"purchasereturn", 'String'>
+  readonly purchaseId: Prisma.FieldRef<"purchasereturn", 'Int'>
+  readonly supplierId: Prisma.FieldRef<"purchasereturn", 'Int'>
+  readonly returnDate: Prisma.FieldRef<"purchasereturn", 'DateTime'>
+  readonly subtotal: Prisma.FieldRef<"purchasereturn", 'Decimal'>
+  readonly totalAmount: Prisma.FieldRef<"purchasereturn", 'Decimal'>
+  readonly note: Prisma.FieldRef<"purchasereturn", 'String'>
+  readonly status: Prisma.FieldRef<"purchasereturn", 'String'>
+  readonly createdAt: Prisma.FieldRef<"purchasereturn", 'DateTime'>
+  readonly updatedAt: Prisma.FieldRef<"purchasereturn", 'DateTime'>
 }
     
 
 // Custom InputTypes
 /**
- * PurchaseReturn findUnique
+ * purchasereturn findUnique
  */
-export type PurchaseReturnFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturn
+   * Select specific fields to fetch from the purchasereturn
    */
-  select?: Prisma.PurchaseReturnSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturn
+   * Omit specific fields from the purchasereturn
    */
-  omit?: Prisma.PurchaseReturnOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnInclude<ExtArgs> | null
+  include?: Prisma.purchasereturnInclude<ExtArgs> | null
   /**
-   * Filter, which PurchaseReturn to fetch.
+   * Filter, which purchasereturn to fetch.
    */
-  where: Prisma.PurchaseReturnWhereUniqueInput
+  where: Prisma.purchasereturnWhereUniqueInput
 }
 
 /**
- * PurchaseReturn findUniqueOrThrow
+ * purchasereturn findUniqueOrThrow
  */
-export type PurchaseReturnFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturn
+   * Select specific fields to fetch from the purchasereturn
    */
-  select?: Prisma.PurchaseReturnSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturn
+   * Omit specific fields from the purchasereturn
    */
-  omit?: Prisma.PurchaseReturnOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnInclude<ExtArgs> | null
+  include?: Prisma.purchasereturnInclude<ExtArgs> | null
   /**
-   * Filter, which PurchaseReturn to fetch.
+   * Filter, which purchasereturn to fetch.
    */
-  where: Prisma.PurchaseReturnWhereUniqueInput
+  where: Prisma.purchasereturnWhereUniqueInput
 }
 
 /**
- * PurchaseReturn findFirst
+ * purchasereturn findFirst
  */
-export type PurchaseReturnFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturn
+   * Select specific fields to fetch from the purchasereturn
    */
-  select?: Prisma.PurchaseReturnSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturn
+   * Omit specific fields from the purchasereturn
    */
-  omit?: Prisma.PurchaseReturnOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnInclude<ExtArgs> | null
+  include?: Prisma.purchasereturnInclude<ExtArgs> | null
   /**
-   * Filter, which PurchaseReturn to fetch.
+   * Filter, which purchasereturn to fetch.
    */
-  where?: Prisma.PurchaseReturnWhereInput
+  where?: Prisma.purchasereturnWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of PurchaseReturns to fetch.
+   * Determine the order of purchasereturns to fetch.
    */
-  orderBy?: Prisma.PurchaseReturnOrderByWithRelationInput | Prisma.PurchaseReturnOrderByWithRelationInput[]
+  orderBy?: Prisma.purchasereturnOrderByWithRelationInput | Prisma.purchasereturnOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for searching for PurchaseReturns.
+   * Sets the position for searching for purchasereturns.
    */
-  cursor?: Prisma.PurchaseReturnWhereUniqueInput
+  cursor?: Prisma.purchasereturnWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` PurchaseReturns from the position of the cursor.
+   * Take `±n` purchasereturns from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` PurchaseReturns.
+   * Skip the first `n` purchasereturns.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of PurchaseReturns.
+   * Filter by unique combinations of purchasereturns.
    */
-  distinct?: Prisma.PurchaseReturnScalarFieldEnum | Prisma.PurchaseReturnScalarFieldEnum[]
+  distinct?: Prisma.PurchasereturnScalarFieldEnum | Prisma.PurchasereturnScalarFieldEnum[]
 }
 
 /**
- * PurchaseReturn findFirstOrThrow
+ * purchasereturn findFirstOrThrow
  */
-export type PurchaseReturnFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturn
+   * Select specific fields to fetch from the purchasereturn
    */
-  select?: Prisma.PurchaseReturnSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturn
+   * Omit specific fields from the purchasereturn
    */
-  omit?: Prisma.PurchaseReturnOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnInclude<ExtArgs> | null
+  include?: Prisma.purchasereturnInclude<ExtArgs> | null
   /**
-   * Filter, which PurchaseReturn to fetch.
+   * Filter, which purchasereturn to fetch.
    */
-  where?: Prisma.PurchaseReturnWhereInput
+  where?: Prisma.purchasereturnWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of PurchaseReturns to fetch.
+   * Determine the order of purchasereturns to fetch.
    */
-  orderBy?: Prisma.PurchaseReturnOrderByWithRelationInput | Prisma.PurchaseReturnOrderByWithRelationInput[]
+  orderBy?: Prisma.purchasereturnOrderByWithRelationInput | Prisma.purchasereturnOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for searching for PurchaseReturns.
+   * Sets the position for searching for purchasereturns.
    */
-  cursor?: Prisma.PurchaseReturnWhereUniqueInput
+  cursor?: Prisma.purchasereturnWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` PurchaseReturns from the position of the cursor.
+   * Take `±n` purchasereturns from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` PurchaseReturns.
+   * Skip the first `n` purchasereturns.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of PurchaseReturns.
+   * Filter by unique combinations of purchasereturns.
    */
-  distinct?: Prisma.PurchaseReturnScalarFieldEnum | Prisma.PurchaseReturnScalarFieldEnum[]
+  distinct?: Prisma.PurchasereturnScalarFieldEnum | Prisma.PurchasereturnScalarFieldEnum[]
 }
 
 /**
- * PurchaseReturn findMany
+ * purchasereturn findMany
  */
-export type PurchaseReturnFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturn
+   * Select specific fields to fetch from the purchasereturn
    */
-  select?: Prisma.PurchaseReturnSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturn
+   * Omit specific fields from the purchasereturn
    */
-  omit?: Prisma.PurchaseReturnOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnInclude<ExtArgs> | null
+  include?: Prisma.purchasereturnInclude<ExtArgs> | null
   /**
-   * Filter, which PurchaseReturns to fetch.
+   * Filter, which purchasereturns to fetch.
    */
-  where?: Prisma.PurchaseReturnWhereInput
+  where?: Prisma.purchasereturnWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of PurchaseReturns to fetch.
+   * Determine the order of purchasereturns to fetch.
    */
-  orderBy?: Prisma.PurchaseReturnOrderByWithRelationInput | Prisma.PurchaseReturnOrderByWithRelationInput[]
+  orderBy?: Prisma.purchasereturnOrderByWithRelationInput | Prisma.purchasereturnOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for listing PurchaseReturns.
+   * Sets the position for listing purchasereturns.
    */
-  cursor?: Prisma.PurchaseReturnWhereUniqueInput
+  cursor?: Prisma.purchasereturnWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` PurchaseReturns from the position of the cursor.
+   * Take `±n` purchasereturns from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` PurchaseReturns.
+   * Skip the first `n` purchasereturns.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of PurchaseReturns.
+   * Filter by unique combinations of purchasereturns.
    */
-  distinct?: Prisma.PurchaseReturnScalarFieldEnum | Prisma.PurchaseReturnScalarFieldEnum[]
+  distinct?: Prisma.PurchasereturnScalarFieldEnum | Prisma.PurchasereturnScalarFieldEnum[]
 }
 
 /**
- * PurchaseReturn create
+ * purchasereturn create
  */
-export type PurchaseReturnCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturn
+   * Select specific fields to fetch from the purchasereturn
    */
-  select?: Prisma.PurchaseReturnSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturn
+   * Omit specific fields from the purchasereturn
    */
-  omit?: Prisma.PurchaseReturnOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnInclude<ExtArgs> | null
+  include?: Prisma.purchasereturnInclude<ExtArgs> | null
   /**
-   * The data needed to create a PurchaseReturn.
+   * The data needed to create a purchasereturn.
    */
-  data: Prisma.XOR<Prisma.PurchaseReturnCreateInput, Prisma.PurchaseReturnUncheckedCreateInput>
+  data: Prisma.XOR<Prisma.purchasereturnCreateInput, Prisma.purchasereturnUncheckedCreateInput>
 }
 
 /**
- * PurchaseReturn createMany
+ * purchasereturn createMany
  */
-export type PurchaseReturnCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * The data used to create many PurchaseReturns.
+   * The data used to create many purchasereturns.
    */
-  data: Prisma.PurchaseReturnCreateManyInput | Prisma.PurchaseReturnCreateManyInput[]
+  data: Prisma.purchasereturnCreateManyInput | Prisma.purchasereturnCreateManyInput[]
   skipDuplicates?: boolean
 }
 
 /**
- * PurchaseReturn update
+ * purchasereturn update
  */
-export type PurchaseReturnUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturn
+   * Select specific fields to fetch from the purchasereturn
    */
-  select?: Prisma.PurchaseReturnSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturn
+   * Omit specific fields from the purchasereturn
    */
-  omit?: Prisma.PurchaseReturnOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnInclude<ExtArgs> | null
+  include?: Prisma.purchasereturnInclude<ExtArgs> | null
   /**
-   * The data needed to update a PurchaseReturn.
+   * The data needed to update a purchasereturn.
    */
-  data: Prisma.XOR<Prisma.PurchaseReturnUpdateInput, Prisma.PurchaseReturnUncheckedUpdateInput>
+  data: Prisma.XOR<Prisma.purchasereturnUpdateInput, Prisma.purchasereturnUncheckedUpdateInput>
   /**
-   * Choose, which PurchaseReturn to update.
+   * Choose, which purchasereturn to update.
    */
-  where: Prisma.PurchaseReturnWhereUniqueInput
+  where: Prisma.purchasereturnWhereUniqueInput
 }
 
 /**
- * PurchaseReturn updateMany
+ * purchasereturn updateMany
  */
-export type PurchaseReturnUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * The data used to update PurchaseReturns.
+   * The data used to update purchasereturns.
    */
-  data: Prisma.XOR<Prisma.PurchaseReturnUpdateManyMutationInput, Prisma.PurchaseReturnUncheckedUpdateManyInput>
+  data: Prisma.XOR<Prisma.purchasereturnUpdateManyMutationInput, Prisma.purchasereturnUncheckedUpdateManyInput>
   /**
-   * Filter which PurchaseReturns to update
+   * Filter which purchasereturns to update
    */
-  where?: Prisma.PurchaseReturnWhereInput
+  where?: Prisma.purchasereturnWhereInput
   /**
-   * Limit how many PurchaseReturns to update.
+   * Limit how many purchasereturns to update.
    */
   limit?: number
 }
 
 /**
- * PurchaseReturn upsert
+ * purchasereturn upsert
  */
-export type PurchaseReturnUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturn
+   * Select specific fields to fetch from the purchasereturn
    */
-  select?: Prisma.PurchaseReturnSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturn
+   * Omit specific fields from the purchasereturn
    */
-  omit?: Prisma.PurchaseReturnOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnInclude<ExtArgs> | null
+  include?: Prisma.purchasereturnInclude<ExtArgs> | null
   /**
-   * The filter to search for the PurchaseReturn to update in case it exists.
+   * The filter to search for the purchasereturn to update in case it exists.
    */
-  where: Prisma.PurchaseReturnWhereUniqueInput
+  where: Prisma.purchasereturnWhereUniqueInput
   /**
-   * In case the PurchaseReturn found by the `where` argument doesn't exist, create a new PurchaseReturn with this data.
+   * In case the purchasereturn found by the `where` argument doesn't exist, create a new purchasereturn with this data.
    */
-  create: Prisma.XOR<Prisma.PurchaseReturnCreateInput, Prisma.PurchaseReturnUncheckedCreateInput>
+  create: Prisma.XOR<Prisma.purchasereturnCreateInput, Prisma.purchasereturnUncheckedCreateInput>
   /**
-   * In case the PurchaseReturn was found with the provided `where` argument, update it with this data.
+   * In case the purchasereturn was found with the provided `where` argument, update it with this data.
    */
-  update: Prisma.XOR<Prisma.PurchaseReturnUpdateInput, Prisma.PurchaseReturnUncheckedUpdateInput>
+  update: Prisma.XOR<Prisma.purchasereturnUpdateInput, Prisma.purchasereturnUncheckedUpdateInput>
 }
 
 /**
- * PurchaseReturn delete
+ * purchasereturn delete
  */
-export type PurchaseReturnDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturn
+   * Select specific fields to fetch from the purchasereturn
    */
-  select?: Prisma.PurchaseReturnSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturn
+   * Omit specific fields from the purchasereturn
    */
-  omit?: Prisma.PurchaseReturnOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnInclude<ExtArgs> | null
+  include?: Prisma.purchasereturnInclude<ExtArgs> | null
   /**
-   * Filter which PurchaseReturn to delete.
+   * Filter which purchasereturn to delete.
    */
-  where: Prisma.PurchaseReturnWhereUniqueInput
+  where: Prisma.purchasereturnWhereUniqueInput
 }
 
 /**
- * PurchaseReturn deleteMany
+ * purchasereturn deleteMany
  */
-export type PurchaseReturnDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Filter which PurchaseReturns to delete
+   * Filter which purchasereturns to delete
    */
-  where?: Prisma.PurchaseReturnWhereInput
+  where?: Prisma.purchasereturnWhereInput
   /**
-   * Limit how many PurchaseReturns to delete.
+   * Limit how many purchasereturns to delete.
    */
   limit?: number
 }
 
 /**
- * PurchaseReturn.items
+ * purchasereturn.purchasereturnitem
  */
-export type PurchaseReturn$itemsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturn$purchasereturnitemArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturnItem
+   * Select specific fields to fetch from the purchasereturnitem
    */
-  select?: Prisma.PurchaseReturnItemSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnitemSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturnItem
+   * Omit specific fields from the purchasereturnitem
    */
-  omit?: Prisma.PurchaseReturnItemOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnitemOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnItemInclude<ExtArgs> | null
-  where?: Prisma.PurchaseReturnItemWhereInput
-  orderBy?: Prisma.PurchaseReturnItemOrderByWithRelationInput | Prisma.PurchaseReturnItemOrderByWithRelationInput[]
-  cursor?: Prisma.PurchaseReturnItemWhereUniqueInput
+  include?: Prisma.purchasereturnitemInclude<ExtArgs> | null
+  where?: Prisma.purchasereturnitemWhereInput
+  orderBy?: Prisma.purchasereturnitemOrderByWithRelationInput | Prisma.purchasereturnitemOrderByWithRelationInput[]
+  cursor?: Prisma.purchasereturnitemWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.PurchaseReturnItemScalarFieldEnum | Prisma.PurchaseReturnItemScalarFieldEnum[]
+  distinct?: Prisma.PurchasereturnitemScalarFieldEnum | Prisma.PurchasereturnitemScalarFieldEnum[]
 }
 
 /**
- * PurchaseReturn without action
+ * purchasereturn without action
  */
-export type PurchaseReturnDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type purchasereturnDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturn
+   * Select specific fields to fetch from the purchasereturn
    */
-  select?: Prisma.PurchaseReturnSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturn
+   * Omit specific fields from the purchasereturn
    */
-  omit?: Prisma.PurchaseReturnOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnInclude<ExtArgs> | null
+  include?: Prisma.purchasereturnInclude<ExtArgs> | null
 }

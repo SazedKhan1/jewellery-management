@@ -4,7 +4,7 @@
 // biome-ignore-all lint: generated file
 // @ts-nocheck 
 /*
- * This file exports the `Product` model and its related types.
+ * This file exports the `product` model and its related types.
  *
  * 🟢 You can import this file directly.
  */
@@ -13,10 +13,10 @@ import type * as $Enums from "../enums.ts"
 import type * as Prisma from "../internal/prismaNamespace.ts"
 
 /**
- * Model Product
+ * Model product
  * 
  */
-export type ProductModel = runtime.Types.Result.DefaultSelection<Prisma.$ProductPayload>
+export type productModel = runtime.Types.Result.DefaultSelection<Prisma.$productPayload>
 
 export type AggregateProduct = {
   _count: ProductCountAggregateOutputType | null
@@ -229,37 +229,37 @@ export type ProductCountAggregateInputType = {
 
 export type ProductAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Filter which Product to aggregate.
+   * Filter which product to aggregate.
    */
-  where?: Prisma.ProductWhereInput
+  where?: Prisma.productWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of Products to fetch.
+   * Determine the order of products to fetch.
    */
-  orderBy?: Prisma.ProductOrderByWithRelationInput | Prisma.ProductOrderByWithRelationInput[]
+  orderBy?: Prisma.productOrderByWithRelationInput | Prisma.productOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
    * Sets the start position
    */
-  cursor?: Prisma.ProductWhereUniqueInput
+  cursor?: Prisma.productWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` Products from the position of the cursor.
+   * Take `±n` products from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` Products.
+   * Skip the first `n` products.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
    * 
-   * Count returned Products
+   * Count returned products
   **/
   _count?: true | ProductCountAggregateInputType
   /**
@@ -299,11 +299,11 @@ export type GetProductAggregateType<T extends ProductAggregateArgs> = {
 
 
 
-export type ProductGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.ProductWhereInput
-  orderBy?: Prisma.ProductOrderByWithAggregationInput | Prisma.ProductOrderByWithAggregationInput[]
+export type productGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.productWhereInput
+  orderBy?: Prisma.productOrderByWithAggregationInput | Prisma.productOrderByWithAggregationInput[]
   by: Prisma.ProductScalarFieldEnum[] | Prisma.ProductScalarFieldEnum
-  having?: Prisma.ProductScalarWhereWithAggregatesInput
+  having?: Prisma.productScalarWhereWithAggregatesInput
   take?: number
   skip?: number
   _count?: ProductCountAggregateInputType | true
@@ -341,7 +341,7 @@ export type ProductGroupByOutputType = {
   _max: ProductMaxAggregateOutputType | null
 }
 
-export type GetProductGroupByPayload<T extends ProductGroupByArgs> = Prisma.PrismaPromise<
+export type GetProductGroupByPayload<T extends productGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<ProductGroupByOutputType, T['by']> &
       {
@@ -356,37 +356,37 @@ export type GetProductGroupByPayload<T extends ProductGroupByArgs> = Prisma.Pris
 
 
 
-export type ProductWhereInput = {
-  AND?: Prisma.ProductWhereInput | Prisma.ProductWhereInput[]
-  OR?: Prisma.ProductWhereInput[]
-  NOT?: Prisma.ProductWhereInput | Prisma.ProductWhereInput[]
-  id?: Prisma.IntFilter<"Product"> | number
-  productCode?: Prisma.StringFilter<"Product"> | string
-  barcode?: Prisma.StringNullableFilter<"Product"> | string | null
-  name?: Prisma.StringFilter<"Product"> | string
-  categoryId?: Prisma.IntFilter<"Product"> | number
-  jewelleryType?: Prisma.StringNullableFilter<"Product"> | string | null
-  karat?: Prisma.StringNullableFilter<"Product"> | string | null
-  purity?: Prisma.DecimalNullableFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  grossWeight?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  wastagePercent?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  makingCharge?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneCharge?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  purchasePrice?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  sellingPrice?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stockQuantity?: Prisma.IntFilter<"Product"> | number
-  status?: Prisma.BoolFilter<"Product"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string
-  category?: Prisma.XOR<Prisma.CategoryScalarRelationFilter, Prisma.CategoryWhereInput>
-  stockTransactions?: Prisma.StockTransactionListRelationFilter
-  purchases?: Prisma.PurchaseItemListRelationFilter
-  purchaseReturns?: Prisma.PurchaseReturnItemListRelationFilter
+export type productWhereInput = {
+  AND?: Prisma.productWhereInput | Prisma.productWhereInput[]
+  OR?: Prisma.productWhereInput[]
+  NOT?: Prisma.productWhereInput | Prisma.productWhereInput[]
+  id?: Prisma.IntFilter<"product"> | number
+  productCode?: Prisma.StringFilter<"product"> | string
+  barcode?: Prisma.StringNullableFilter<"product"> | string | null
+  name?: Prisma.StringFilter<"product"> | string
+  categoryId?: Prisma.IntFilter<"product"> | number
+  jewelleryType?: Prisma.StringNullableFilter<"product"> | string | null
+  karat?: Prisma.StringNullableFilter<"product"> | string | null
+  purity?: Prisma.DecimalNullableFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  grossWeight?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  wastagePercent?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  makingCharge?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneCharge?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  purchasePrice?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  sellingPrice?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stockQuantity?: Prisma.IntFilter<"product"> | number
+  status?: Prisma.BoolFilter<"product"> | boolean
+  createdAt?: Prisma.DateTimeFilter<"product"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"product"> | Date | string
+  category?: Prisma.XOR<Prisma.CategoryScalarRelationFilter, Prisma.categoryWhereInput>
+  purchaseitem?: Prisma.PurchaseitemListRelationFilter
+  purchasereturnitem?: Prisma.PurchasereturnitemListRelationFilter
+  stocktransaction?: Prisma.StocktransactionListRelationFilter
 }
 
-export type ProductOrderByWithRelationInput = {
+export type productOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   productCode?: Prisma.SortOrder
   barcode?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -407,44 +407,44 @@ export type ProductOrderByWithRelationInput = {
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  category?: Prisma.CategoryOrderByWithRelationInput
-  stockTransactions?: Prisma.StockTransactionOrderByRelationAggregateInput
-  purchases?: Prisma.PurchaseItemOrderByRelationAggregateInput
-  purchaseReturns?: Prisma.PurchaseReturnItemOrderByRelationAggregateInput
-  _relevance?: Prisma.ProductOrderByRelevanceInput
+  category?: Prisma.categoryOrderByWithRelationInput
+  purchaseitem?: Prisma.purchaseitemOrderByRelationAggregateInput
+  purchasereturnitem?: Prisma.purchasereturnitemOrderByRelationAggregateInput
+  stocktransaction?: Prisma.stocktransactionOrderByRelationAggregateInput
+  _relevance?: Prisma.productOrderByRelevanceInput
 }
 
-export type ProductWhereUniqueInput = Prisma.AtLeast<{
+export type productWhereUniqueInput = Prisma.AtLeast<{
   id?: number
   productCode?: string
   barcode?: string
-  AND?: Prisma.ProductWhereInput | Prisma.ProductWhereInput[]
-  OR?: Prisma.ProductWhereInput[]
-  NOT?: Prisma.ProductWhereInput | Prisma.ProductWhereInput[]
-  name?: Prisma.StringFilter<"Product"> | string
-  categoryId?: Prisma.IntFilter<"Product"> | number
-  jewelleryType?: Prisma.StringNullableFilter<"Product"> | string | null
-  karat?: Prisma.StringNullableFilter<"Product"> | string | null
-  purity?: Prisma.DecimalNullableFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  grossWeight?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  wastagePercent?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  makingCharge?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneCharge?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  purchasePrice?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  sellingPrice?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stockQuantity?: Prisma.IntFilter<"Product"> | number
-  status?: Prisma.BoolFilter<"Product"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string
-  category?: Prisma.XOR<Prisma.CategoryScalarRelationFilter, Prisma.CategoryWhereInput>
-  stockTransactions?: Prisma.StockTransactionListRelationFilter
-  purchases?: Prisma.PurchaseItemListRelationFilter
-  purchaseReturns?: Prisma.PurchaseReturnItemListRelationFilter
+  AND?: Prisma.productWhereInput | Prisma.productWhereInput[]
+  OR?: Prisma.productWhereInput[]
+  NOT?: Prisma.productWhereInput | Prisma.productWhereInput[]
+  name?: Prisma.StringFilter<"product"> | string
+  categoryId?: Prisma.IntFilter<"product"> | number
+  jewelleryType?: Prisma.StringNullableFilter<"product"> | string | null
+  karat?: Prisma.StringNullableFilter<"product"> | string | null
+  purity?: Prisma.DecimalNullableFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  grossWeight?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  wastagePercent?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  makingCharge?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneCharge?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  purchasePrice?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  sellingPrice?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stockQuantity?: Prisma.IntFilter<"product"> | number
+  status?: Prisma.BoolFilter<"product"> | boolean
+  createdAt?: Prisma.DateTimeFilter<"product"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"product"> | Date | string
+  category?: Prisma.XOR<Prisma.CategoryScalarRelationFilter, Prisma.categoryWhereInput>
+  purchaseitem?: Prisma.PurchaseitemListRelationFilter
+  purchasereturnitem?: Prisma.PurchasereturnitemListRelationFilter
+  stocktransaction?: Prisma.StocktransactionListRelationFilter
 }, "id" | "productCode" | "barcode">
 
-export type ProductOrderByWithAggregationInput = {
+export type productOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   productCode?: Prisma.SortOrder
   barcode?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -465,40 +465,40 @@ export type ProductOrderByWithAggregationInput = {
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  _count?: Prisma.ProductCountOrderByAggregateInput
-  _avg?: Prisma.ProductAvgOrderByAggregateInput
-  _max?: Prisma.ProductMaxOrderByAggregateInput
-  _min?: Prisma.ProductMinOrderByAggregateInput
-  _sum?: Prisma.ProductSumOrderByAggregateInput
+  _count?: Prisma.productCountOrderByAggregateInput
+  _avg?: Prisma.productAvgOrderByAggregateInput
+  _max?: Prisma.productMaxOrderByAggregateInput
+  _min?: Prisma.productMinOrderByAggregateInput
+  _sum?: Prisma.productSumOrderByAggregateInput
 }
 
-export type ProductScalarWhereWithAggregatesInput = {
-  AND?: Prisma.ProductScalarWhereWithAggregatesInput | Prisma.ProductScalarWhereWithAggregatesInput[]
-  OR?: Prisma.ProductScalarWhereWithAggregatesInput[]
-  NOT?: Prisma.ProductScalarWhereWithAggregatesInput | Prisma.ProductScalarWhereWithAggregatesInput[]
-  id?: Prisma.IntWithAggregatesFilter<"Product"> | number
-  productCode?: Prisma.StringWithAggregatesFilter<"Product"> | string
-  barcode?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null
-  name?: Prisma.StringWithAggregatesFilter<"Product"> | string
-  categoryId?: Prisma.IntWithAggregatesFilter<"Product"> | number
-  jewelleryType?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null
-  karat?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null
-  purity?: Prisma.DecimalNullableWithAggregatesFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  grossWeight?: Prisma.DecimalWithAggregatesFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalWithAggregatesFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalWithAggregatesFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  wastagePercent?: Prisma.DecimalWithAggregatesFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  makingCharge?: Prisma.DecimalWithAggregatesFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneCharge?: Prisma.DecimalWithAggregatesFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  purchasePrice?: Prisma.DecimalWithAggregatesFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  sellingPrice?: Prisma.DecimalWithAggregatesFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stockQuantity?: Prisma.IntWithAggregatesFilter<"Product"> | number
-  status?: Prisma.BoolWithAggregatesFilter<"Product"> | boolean
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"Product"> | Date | string
-  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Product"> | Date | string
+export type productScalarWhereWithAggregatesInput = {
+  AND?: Prisma.productScalarWhereWithAggregatesInput | Prisma.productScalarWhereWithAggregatesInput[]
+  OR?: Prisma.productScalarWhereWithAggregatesInput[]
+  NOT?: Prisma.productScalarWhereWithAggregatesInput | Prisma.productScalarWhereWithAggregatesInput[]
+  id?: Prisma.IntWithAggregatesFilter<"product"> | number
+  productCode?: Prisma.StringWithAggregatesFilter<"product"> | string
+  barcode?: Prisma.StringNullableWithAggregatesFilter<"product"> | string | null
+  name?: Prisma.StringWithAggregatesFilter<"product"> | string
+  categoryId?: Prisma.IntWithAggregatesFilter<"product"> | number
+  jewelleryType?: Prisma.StringNullableWithAggregatesFilter<"product"> | string | null
+  karat?: Prisma.StringNullableWithAggregatesFilter<"product"> | string | null
+  purity?: Prisma.DecimalNullableWithAggregatesFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  grossWeight?: Prisma.DecimalWithAggregatesFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalWithAggregatesFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalWithAggregatesFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  wastagePercent?: Prisma.DecimalWithAggregatesFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  makingCharge?: Prisma.DecimalWithAggregatesFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneCharge?: Prisma.DecimalWithAggregatesFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  purchasePrice?: Prisma.DecimalWithAggregatesFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  sellingPrice?: Prisma.DecimalWithAggregatesFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stockQuantity?: Prisma.IntWithAggregatesFilter<"product"> | number
+  status?: Prisma.BoolWithAggregatesFilter<"product"> | boolean
+  createdAt?: Prisma.DateTimeWithAggregatesFilter<"product"> | Date | string
+  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"product"> | Date | string
 }
 
-export type ProductCreateInput = {
+export type productCreateInput = {
   productCode: string
   barcode?: string | null
   name: string
@@ -516,14 +516,14 @@ export type ProductCreateInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
-  category: Prisma.CategoryCreateNestedOneWithoutProductsInput
-  stockTransactions?: Prisma.StockTransactionCreateNestedManyWithoutProductInput
-  purchases?: Prisma.PurchaseItemCreateNestedManyWithoutProductInput
-  purchaseReturns?: Prisma.PurchaseReturnItemCreateNestedManyWithoutProductInput
+  updatedAt: Date | string
+  category: Prisma.categoryCreateNestedOneWithoutProductInput
+  purchaseitem?: Prisma.purchaseitemCreateNestedManyWithoutProductInput
+  purchasereturnitem?: Prisma.purchasereturnitemCreateNestedManyWithoutProductInput
+  stocktransaction?: Prisma.stocktransactionCreateNestedManyWithoutProductInput
 }
 
-export type ProductUncheckedCreateInput = {
+export type productUncheckedCreateInput = {
   id?: number
   productCode: string
   barcode?: string | null
@@ -543,13 +543,13 @@ export type ProductUncheckedCreateInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
-  stockTransactions?: Prisma.StockTransactionUncheckedCreateNestedManyWithoutProductInput
-  purchases?: Prisma.PurchaseItemUncheckedCreateNestedManyWithoutProductInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUncheckedCreateNestedManyWithoutProductInput
+  updatedAt: Date | string
+  purchaseitem?: Prisma.purchaseitemUncheckedCreateNestedManyWithoutProductInput
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedCreateNestedManyWithoutProductInput
+  stocktransaction?: Prisma.stocktransactionUncheckedCreateNestedManyWithoutProductInput
 }
 
-export type ProductUpdateInput = {
+export type productUpdateInput = {
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   name?: Prisma.StringFieldUpdateOperationsInput | string
@@ -568,13 +568,13 @@ export type ProductUpdateInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  category?: Prisma.CategoryUpdateOneRequiredWithoutProductsNestedInput
-  stockTransactions?: Prisma.StockTransactionUpdateManyWithoutProductNestedInput
-  purchases?: Prisma.PurchaseItemUpdateManyWithoutProductNestedInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUpdateManyWithoutProductNestedInput
+  category?: Prisma.categoryUpdateOneRequiredWithoutProductNestedInput
+  purchaseitem?: Prisma.purchaseitemUpdateManyWithoutProductNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUpdateManyWithoutProductNestedInput
+  stocktransaction?: Prisma.stocktransactionUpdateManyWithoutProductNestedInput
 }
 
-export type ProductUncheckedUpdateInput = {
+export type productUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -595,12 +595,12 @@ export type ProductUncheckedUpdateInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  stockTransactions?: Prisma.StockTransactionUncheckedUpdateManyWithoutProductNestedInput
-  purchases?: Prisma.PurchaseItemUncheckedUpdateManyWithoutProductNestedInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUncheckedUpdateManyWithoutProductNestedInput
+  purchaseitem?: Prisma.purchaseitemUncheckedUpdateManyWithoutProductNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedUpdateManyWithoutProductNestedInput
+  stocktransaction?: Prisma.stocktransactionUncheckedUpdateManyWithoutProductNestedInput
 }
 
-export type ProductCreateManyInput = {
+export type productCreateManyInput = {
   id?: number
   productCode: string
   barcode?: string | null
@@ -620,10 +620,10 @@ export type ProductCreateManyInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
+  updatedAt: Date | string
 }
 
-export type ProductUpdateManyMutationInput = {
+export type productUpdateManyMutationInput = {
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   name?: Prisma.StringFieldUpdateOperationsInput | string
@@ -644,7 +644,7 @@ export type ProductUpdateManyMutationInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ProductUncheckedUpdateManyInput = {
+export type productUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -668,22 +668,22 @@ export type ProductUncheckedUpdateManyInput = {
 }
 
 export type ProductListRelationFilter = {
-  every?: Prisma.ProductWhereInput
-  some?: Prisma.ProductWhereInput
-  none?: Prisma.ProductWhereInput
+  every?: Prisma.productWhereInput
+  some?: Prisma.productWhereInput
+  none?: Prisma.productWhereInput
 }
 
-export type ProductOrderByRelationAggregateInput = {
+export type productOrderByRelationAggregateInput = {
   _count?: Prisma.SortOrder
 }
 
-export type ProductOrderByRelevanceInput = {
-  fields: Prisma.ProductOrderByRelevanceFieldEnum | Prisma.ProductOrderByRelevanceFieldEnum[]
+export type productOrderByRelevanceInput = {
+  fields: Prisma.productOrderByRelevanceFieldEnum | Prisma.productOrderByRelevanceFieldEnum[]
   sort: Prisma.SortOrder
   search: string
 }
 
-export type ProductCountOrderByAggregateInput = {
+export type productCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   productCode?: Prisma.SortOrder
   barcode?: Prisma.SortOrder
@@ -706,7 +706,7 @@ export type ProductCountOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
 }
 
-export type ProductAvgOrderByAggregateInput = {
+export type productAvgOrderByAggregateInput = {
   id?: Prisma.SortOrder
   categoryId?: Prisma.SortOrder
   purity?: Prisma.SortOrder
@@ -721,30 +721,7 @@ export type ProductAvgOrderByAggregateInput = {
   stockQuantity?: Prisma.SortOrder
 }
 
-export type ProductMaxOrderByAggregateInput = {
-  id?: Prisma.SortOrder
-  productCode?: Prisma.SortOrder
-  barcode?: Prisma.SortOrder
-  name?: Prisma.SortOrder
-  categoryId?: Prisma.SortOrder
-  jewelleryType?: Prisma.SortOrder
-  karat?: Prisma.SortOrder
-  purity?: Prisma.SortOrder
-  grossWeight?: Prisma.SortOrder
-  stoneWeight?: Prisma.SortOrder
-  netWeight?: Prisma.SortOrder
-  wastagePercent?: Prisma.SortOrder
-  makingCharge?: Prisma.SortOrder
-  stoneCharge?: Prisma.SortOrder
-  purchasePrice?: Prisma.SortOrder
-  sellingPrice?: Prisma.SortOrder
-  stockQuantity?: Prisma.SortOrder
-  status?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
-  updatedAt?: Prisma.SortOrder
-}
-
-export type ProductMinOrderByAggregateInput = {
+export type productMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   productCode?: Prisma.SortOrder
   barcode?: Prisma.SortOrder
@@ -767,7 +744,30 @@ export type ProductMinOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
 }
 
-export type ProductSumOrderByAggregateInput = {
+export type productMinOrderByAggregateInput = {
+  id?: Prisma.SortOrder
+  productCode?: Prisma.SortOrder
+  barcode?: Prisma.SortOrder
+  name?: Prisma.SortOrder
+  categoryId?: Prisma.SortOrder
+  jewelleryType?: Prisma.SortOrder
+  karat?: Prisma.SortOrder
+  purity?: Prisma.SortOrder
+  grossWeight?: Prisma.SortOrder
+  stoneWeight?: Prisma.SortOrder
+  netWeight?: Prisma.SortOrder
+  wastagePercent?: Prisma.SortOrder
+  makingCharge?: Prisma.SortOrder
+  stoneCharge?: Prisma.SortOrder
+  purchasePrice?: Prisma.SortOrder
+  sellingPrice?: Prisma.SortOrder
+  stockQuantity?: Prisma.SortOrder
+  status?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
+}
+
+export type productSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
   categoryId?: Prisma.SortOrder
   purity?: Prisma.SortOrder
@@ -783,50 +783,50 @@ export type ProductSumOrderByAggregateInput = {
 }
 
 export type ProductScalarRelationFilter = {
-  is?: Prisma.ProductWhereInput
-  isNot?: Prisma.ProductWhereInput
+  is?: Prisma.productWhereInput
+  isNot?: Prisma.productWhereInput
 }
 
-export type ProductCreateNestedManyWithoutCategoryInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
-  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
+export type productCreateNestedManyWithoutCategoryInput = {
+  create?: Prisma.XOR<Prisma.productCreateWithoutCategoryInput, Prisma.productUncheckedCreateWithoutCategoryInput> | Prisma.productCreateWithoutCategoryInput[] | Prisma.productUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.productCreateOrConnectWithoutCategoryInput | Prisma.productCreateOrConnectWithoutCategoryInput[]
+  createMany?: Prisma.productCreateManyCategoryInputEnvelope
+  connect?: Prisma.productWhereUniqueInput | Prisma.productWhereUniqueInput[]
 }
 
-export type ProductUncheckedCreateNestedManyWithoutCategoryInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
-  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
+export type productUncheckedCreateNestedManyWithoutCategoryInput = {
+  create?: Prisma.XOR<Prisma.productCreateWithoutCategoryInput, Prisma.productUncheckedCreateWithoutCategoryInput> | Prisma.productCreateWithoutCategoryInput[] | Prisma.productUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.productCreateOrConnectWithoutCategoryInput | Prisma.productCreateOrConnectWithoutCategoryInput[]
+  createMany?: Prisma.productCreateManyCategoryInputEnvelope
+  connect?: Prisma.productWhereUniqueInput | Prisma.productWhereUniqueInput[]
 }
 
-export type ProductUpdateManyWithoutCategoryNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
-  upsert?: Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput[]
-  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
-  set?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  disconnect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  delete?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  update?: Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput[]
-  updateMany?: Prisma.ProductUpdateManyWithWhereWithoutCategoryInput | Prisma.ProductUpdateManyWithWhereWithoutCategoryInput[]
-  deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
+export type productUpdateManyWithoutCategoryNestedInput = {
+  create?: Prisma.XOR<Prisma.productCreateWithoutCategoryInput, Prisma.productUncheckedCreateWithoutCategoryInput> | Prisma.productCreateWithoutCategoryInput[] | Prisma.productUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.productCreateOrConnectWithoutCategoryInput | Prisma.productCreateOrConnectWithoutCategoryInput[]
+  upsert?: Prisma.productUpsertWithWhereUniqueWithoutCategoryInput | Prisma.productUpsertWithWhereUniqueWithoutCategoryInput[]
+  createMany?: Prisma.productCreateManyCategoryInputEnvelope
+  set?: Prisma.productWhereUniqueInput | Prisma.productWhereUniqueInput[]
+  disconnect?: Prisma.productWhereUniqueInput | Prisma.productWhereUniqueInput[]
+  delete?: Prisma.productWhereUniqueInput | Prisma.productWhereUniqueInput[]
+  connect?: Prisma.productWhereUniqueInput | Prisma.productWhereUniqueInput[]
+  update?: Prisma.productUpdateWithWhereUniqueWithoutCategoryInput | Prisma.productUpdateWithWhereUniqueWithoutCategoryInput[]
+  updateMany?: Prisma.productUpdateManyWithWhereWithoutCategoryInput | Prisma.productUpdateManyWithWhereWithoutCategoryInput[]
+  deleteMany?: Prisma.productScalarWhereInput | Prisma.productScalarWhereInput[]
 }
 
-export type ProductUncheckedUpdateManyWithoutCategoryNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
-  upsert?: Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput[]
-  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
-  set?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  disconnect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  delete?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  update?: Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput[]
-  updateMany?: Prisma.ProductUpdateManyWithWhereWithoutCategoryInput | Prisma.ProductUpdateManyWithWhereWithoutCategoryInput[]
-  deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
+export type productUncheckedUpdateManyWithoutCategoryNestedInput = {
+  create?: Prisma.XOR<Prisma.productCreateWithoutCategoryInput, Prisma.productUncheckedCreateWithoutCategoryInput> | Prisma.productCreateWithoutCategoryInput[] | Prisma.productUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.productCreateOrConnectWithoutCategoryInput | Prisma.productCreateOrConnectWithoutCategoryInput[]
+  upsert?: Prisma.productUpsertWithWhereUniqueWithoutCategoryInput | Prisma.productUpsertWithWhereUniqueWithoutCategoryInput[]
+  createMany?: Prisma.productCreateManyCategoryInputEnvelope
+  set?: Prisma.productWhereUniqueInput | Prisma.productWhereUniqueInput[]
+  disconnect?: Prisma.productWhereUniqueInput | Prisma.productWhereUniqueInput[]
+  delete?: Prisma.productWhereUniqueInput | Prisma.productWhereUniqueInput[]
+  connect?: Prisma.productWhereUniqueInput | Prisma.productWhereUniqueInput[]
+  update?: Prisma.productUpdateWithWhereUniqueWithoutCategoryInput | Prisma.productUpdateWithWhereUniqueWithoutCategoryInput[]
+  updateMany?: Prisma.productUpdateManyWithWhereWithoutCategoryInput | Prisma.productUpdateManyWithWhereWithoutCategoryInput[]
+  deleteMany?: Prisma.productScalarWhereInput | Prisma.productScalarWhereInput[]
 }
 
 export type NullableDecimalFieldUpdateOperationsInput = {
@@ -845,49 +845,49 @@ export type DecimalFieldUpdateOperationsInput = {
   divide?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
-export type ProductCreateNestedOneWithoutStockTransactionsInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutStockTransactionsInput, Prisma.ProductUncheckedCreateWithoutStockTransactionsInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutStockTransactionsInput
-  connect?: Prisma.ProductWhereUniqueInput
+export type productCreateNestedOneWithoutPurchaseitemInput = {
+  create?: Prisma.XOR<Prisma.productCreateWithoutPurchaseitemInput, Prisma.productUncheckedCreateWithoutPurchaseitemInput>
+  connectOrCreate?: Prisma.productCreateOrConnectWithoutPurchaseitemInput
+  connect?: Prisma.productWhereUniqueInput
 }
 
-export type ProductUpdateOneRequiredWithoutStockTransactionsNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutStockTransactionsInput, Prisma.ProductUncheckedCreateWithoutStockTransactionsInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutStockTransactionsInput
-  upsert?: Prisma.ProductUpsertWithoutStockTransactionsInput
-  connect?: Prisma.ProductWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutStockTransactionsInput, Prisma.ProductUpdateWithoutStockTransactionsInput>, Prisma.ProductUncheckedUpdateWithoutStockTransactionsInput>
+export type productUpdateOneRequiredWithoutPurchaseitemNestedInput = {
+  create?: Prisma.XOR<Prisma.productCreateWithoutPurchaseitemInput, Prisma.productUncheckedCreateWithoutPurchaseitemInput>
+  connectOrCreate?: Prisma.productCreateOrConnectWithoutPurchaseitemInput
+  upsert?: Prisma.productUpsertWithoutPurchaseitemInput
+  connect?: Prisma.productWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.productUpdateToOneWithWhereWithoutPurchaseitemInput, Prisma.productUpdateWithoutPurchaseitemInput>, Prisma.productUncheckedUpdateWithoutPurchaseitemInput>
 }
 
-export type ProductCreateNestedOneWithoutPurchasesInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutPurchasesInput, Prisma.ProductUncheckedCreateWithoutPurchasesInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutPurchasesInput
-  connect?: Prisma.ProductWhereUniqueInput
+export type productCreateNestedOneWithoutPurchasereturnitemInput = {
+  create?: Prisma.XOR<Prisma.productCreateWithoutPurchasereturnitemInput, Prisma.productUncheckedCreateWithoutPurchasereturnitemInput>
+  connectOrCreate?: Prisma.productCreateOrConnectWithoutPurchasereturnitemInput
+  connect?: Prisma.productWhereUniqueInput
 }
 
-export type ProductUpdateOneRequiredWithoutPurchasesNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutPurchasesInput, Prisma.ProductUncheckedCreateWithoutPurchasesInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutPurchasesInput
-  upsert?: Prisma.ProductUpsertWithoutPurchasesInput
-  connect?: Prisma.ProductWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutPurchasesInput, Prisma.ProductUpdateWithoutPurchasesInput>, Prisma.ProductUncheckedUpdateWithoutPurchasesInput>
+export type productUpdateOneRequiredWithoutPurchasereturnitemNestedInput = {
+  create?: Prisma.XOR<Prisma.productCreateWithoutPurchasereturnitemInput, Prisma.productUncheckedCreateWithoutPurchasereturnitemInput>
+  connectOrCreate?: Prisma.productCreateOrConnectWithoutPurchasereturnitemInput
+  upsert?: Prisma.productUpsertWithoutPurchasereturnitemInput
+  connect?: Prisma.productWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.productUpdateToOneWithWhereWithoutPurchasereturnitemInput, Prisma.productUpdateWithoutPurchasereturnitemInput>, Prisma.productUncheckedUpdateWithoutPurchasereturnitemInput>
 }
 
-export type ProductCreateNestedOneWithoutPurchaseReturnsInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutPurchaseReturnsInput, Prisma.ProductUncheckedCreateWithoutPurchaseReturnsInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutPurchaseReturnsInput
-  connect?: Prisma.ProductWhereUniqueInput
+export type productCreateNestedOneWithoutStocktransactionInput = {
+  create?: Prisma.XOR<Prisma.productCreateWithoutStocktransactionInput, Prisma.productUncheckedCreateWithoutStocktransactionInput>
+  connectOrCreate?: Prisma.productCreateOrConnectWithoutStocktransactionInput
+  connect?: Prisma.productWhereUniqueInput
 }
 
-export type ProductUpdateOneRequiredWithoutPurchaseReturnsNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutPurchaseReturnsInput, Prisma.ProductUncheckedCreateWithoutPurchaseReturnsInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutPurchaseReturnsInput
-  upsert?: Prisma.ProductUpsertWithoutPurchaseReturnsInput
-  connect?: Prisma.ProductWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutPurchaseReturnsInput, Prisma.ProductUpdateWithoutPurchaseReturnsInput>, Prisma.ProductUncheckedUpdateWithoutPurchaseReturnsInput>
+export type productUpdateOneRequiredWithoutStocktransactionNestedInput = {
+  create?: Prisma.XOR<Prisma.productCreateWithoutStocktransactionInput, Prisma.productUncheckedCreateWithoutStocktransactionInput>
+  connectOrCreate?: Prisma.productCreateOrConnectWithoutStocktransactionInput
+  upsert?: Prisma.productUpsertWithoutStocktransactionInput
+  connect?: Prisma.productWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.productUpdateToOneWithWhereWithoutStocktransactionInput, Prisma.productUpdateWithoutStocktransactionInput>, Prisma.productUncheckedUpdateWithoutStocktransactionInput>
 }
 
-export type ProductCreateWithoutCategoryInput = {
+export type productCreateWithoutCategoryInput = {
   productCode: string
   barcode?: string | null
   name: string
@@ -905,13 +905,13 @@ export type ProductCreateWithoutCategoryInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
-  stockTransactions?: Prisma.StockTransactionCreateNestedManyWithoutProductInput
-  purchases?: Prisma.PurchaseItemCreateNestedManyWithoutProductInput
-  purchaseReturns?: Prisma.PurchaseReturnItemCreateNestedManyWithoutProductInput
+  updatedAt: Date | string
+  purchaseitem?: Prisma.purchaseitemCreateNestedManyWithoutProductInput
+  purchasereturnitem?: Prisma.purchasereturnitemCreateNestedManyWithoutProductInput
+  stocktransaction?: Prisma.stocktransactionCreateNestedManyWithoutProductInput
 }
 
-export type ProductUncheckedCreateWithoutCategoryInput = {
+export type productUncheckedCreateWithoutCategoryInput = {
   id?: number
   productCode: string
   barcode?: string | null
@@ -930,65 +930,65 @@ export type ProductUncheckedCreateWithoutCategoryInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
-  stockTransactions?: Prisma.StockTransactionUncheckedCreateNestedManyWithoutProductInput
-  purchases?: Prisma.PurchaseItemUncheckedCreateNestedManyWithoutProductInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUncheckedCreateNestedManyWithoutProductInput
+  updatedAt: Date | string
+  purchaseitem?: Prisma.purchaseitemUncheckedCreateNestedManyWithoutProductInput
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedCreateNestedManyWithoutProductInput
+  stocktransaction?: Prisma.stocktransactionUncheckedCreateNestedManyWithoutProductInput
 }
 
-export type ProductCreateOrConnectWithoutCategoryInput = {
-  where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput>
+export type productCreateOrConnectWithoutCategoryInput = {
+  where: Prisma.productWhereUniqueInput
+  create: Prisma.XOR<Prisma.productCreateWithoutCategoryInput, Prisma.productUncheckedCreateWithoutCategoryInput>
 }
 
-export type ProductCreateManyCategoryInputEnvelope = {
-  data: Prisma.ProductCreateManyCategoryInput | Prisma.ProductCreateManyCategoryInput[]
+export type productCreateManyCategoryInputEnvelope = {
+  data: Prisma.productCreateManyCategoryInput | Prisma.productCreateManyCategoryInput[]
   skipDuplicates?: boolean
 }
 
-export type ProductUpsertWithWhereUniqueWithoutCategoryInput = {
-  where: Prisma.ProductWhereUniqueInput
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutCategoryInput, Prisma.ProductUncheckedUpdateWithoutCategoryInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput>
+export type productUpsertWithWhereUniqueWithoutCategoryInput = {
+  where: Prisma.productWhereUniqueInput
+  update: Prisma.XOR<Prisma.productUpdateWithoutCategoryInput, Prisma.productUncheckedUpdateWithoutCategoryInput>
+  create: Prisma.XOR<Prisma.productCreateWithoutCategoryInput, Prisma.productUncheckedCreateWithoutCategoryInput>
 }
 
-export type ProductUpdateWithWhereUniqueWithoutCategoryInput = {
-  where: Prisma.ProductWhereUniqueInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutCategoryInput, Prisma.ProductUncheckedUpdateWithoutCategoryInput>
+export type productUpdateWithWhereUniqueWithoutCategoryInput = {
+  where: Prisma.productWhereUniqueInput
+  data: Prisma.XOR<Prisma.productUpdateWithoutCategoryInput, Prisma.productUncheckedUpdateWithoutCategoryInput>
 }
 
-export type ProductUpdateManyWithWhereWithoutCategoryInput = {
-  where: Prisma.ProductScalarWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateManyMutationInput, Prisma.ProductUncheckedUpdateManyWithoutCategoryInput>
+export type productUpdateManyWithWhereWithoutCategoryInput = {
+  where: Prisma.productScalarWhereInput
+  data: Prisma.XOR<Prisma.productUpdateManyMutationInput, Prisma.productUncheckedUpdateManyWithoutCategoryInput>
 }
 
-export type ProductScalarWhereInput = {
-  AND?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
-  OR?: Prisma.ProductScalarWhereInput[]
-  NOT?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
-  id?: Prisma.IntFilter<"Product"> | number
-  productCode?: Prisma.StringFilter<"Product"> | string
-  barcode?: Prisma.StringNullableFilter<"Product"> | string | null
-  name?: Prisma.StringFilter<"Product"> | string
-  categoryId?: Prisma.IntFilter<"Product"> | number
-  jewelleryType?: Prisma.StringNullableFilter<"Product"> | string | null
-  karat?: Prisma.StringNullableFilter<"Product"> | string | null
-  purity?: Prisma.DecimalNullableFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  grossWeight?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneWeight?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  netWeight?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  wastagePercent?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  makingCharge?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stoneCharge?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  purchasePrice?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  sellingPrice?: Prisma.DecimalFilter<"Product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
-  stockQuantity?: Prisma.IntFilter<"Product"> | number
-  status?: Prisma.BoolFilter<"Product"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string
+export type productScalarWhereInput = {
+  AND?: Prisma.productScalarWhereInput | Prisma.productScalarWhereInput[]
+  OR?: Prisma.productScalarWhereInput[]
+  NOT?: Prisma.productScalarWhereInput | Prisma.productScalarWhereInput[]
+  id?: Prisma.IntFilter<"product"> | number
+  productCode?: Prisma.StringFilter<"product"> | string
+  barcode?: Prisma.StringNullableFilter<"product"> | string | null
+  name?: Prisma.StringFilter<"product"> | string
+  categoryId?: Prisma.IntFilter<"product"> | number
+  jewelleryType?: Prisma.StringNullableFilter<"product"> | string | null
+  karat?: Prisma.StringNullableFilter<"product"> | string | null
+  purity?: Prisma.DecimalNullableFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  grossWeight?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneWeight?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  netWeight?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  wastagePercent?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  makingCharge?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stoneCharge?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  purchasePrice?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  sellingPrice?: Prisma.DecimalFilter<"product"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  stockQuantity?: Prisma.IntFilter<"product"> | number
+  status?: Prisma.BoolFilter<"product"> | boolean
+  createdAt?: Prisma.DateTimeFilter<"product"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"product"> | Date | string
 }
 
-export type ProductCreateWithoutStockTransactionsInput = {
+export type productCreateWithoutPurchaseitemInput = {
   productCode: string
   barcode?: string | null
   name: string
@@ -1006,13 +1006,13 @@ export type ProductCreateWithoutStockTransactionsInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
-  category: Prisma.CategoryCreateNestedOneWithoutProductsInput
-  purchases?: Prisma.PurchaseItemCreateNestedManyWithoutProductInput
-  purchaseReturns?: Prisma.PurchaseReturnItemCreateNestedManyWithoutProductInput
+  updatedAt: Date | string
+  category: Prisma.categoryCreateNestedOneWithoutProductInput
+  purchasereturnitem?: Prisma.purchasereturnitemCreateNestedManyWithoutProductInput
+  stocktransaction?: Prisma.stocktransactionCreateNestedManyWithoutProductInput
 }
 
-export type ProductUncheckedCreateWithoutStockTransactionsInput = {
+export type productUncheckedCreateWithoutPurchaseitemInput = {
   id?: number
   productCode: string
   barcode?: string | null
@@ -1032,28 +1032,28 @@ export type ProductUncheckedCreateWithoutStockTransactionsInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
-  purchases?: Prisma.PurchaseItemUncheckedCreateNestedManyWithoutProductInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUncheckedCreateNestedManyWithoutProductInput
+  updatedAt: Date | string
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedCreateNestedManyWithoutProductInput
+  stocktransaction?: Prisma.stocktransactionUncheckedCreateNestedManyWithoutProductInput
 }
 
-export type ProductCreateOrConnectWithoutStockTransactionsInput = {
-  where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutStockTransactionsInput, Prisma.ProductUncheckedCreateWithoutStockTransactionsInput>
+export type productCreateOrConnectWithoutPurchaseitemInput = {
+  where: Prisma.productWhereUniqueInput
+  create: Prisma.XOR<Prisma.productCreateWithoutPurchaseitemInput, Prisma.productUncheckedCreateWithoutPurchaseitemInput>
 }
 
-export type ProductUpsertWithoutStockTransactionsInput = {
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutStockTransactionsInput, Prisma.ProductUncheckedUpdateWithoutStockTransactionsInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutStockTransactionsInput, Prisma.ProductUncheckedCreateWithoutStockTransactionsInput>
-  where?: Prisma.ProductWhereInput
+export type productUpsertWithoutPurchaseitemInput = {
+  update: Prisma.XOR<Prisma.productUpdateWithoutPurchaseitemInput, Prisma.productUncheckedUpdateWithoutPurchaseitemInput>
+  create: Prisma.XOR<Prisma.productCreateWithoutPurchaseitemInput, Prisma.productUncheckedCreateWithoutPurchaseitemInput>
+  where?: Prisma.productWhereInput
 }
 
-export type ProductUpdateToOneWithWhereWithoutStockTransactionsInput = {
-  where?: Prisma.ProductWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutStockTransactionsInput, Prisma.ProductUncheckedUpdateWithoutStockTransactionsInput>
+export type productUpdateToOneWithWhereWithoutPurchaseitemInput = {
+  where?: Prisma.productWhereInput
+  data: Prisma.XOR<Prisma.productUpdateWithoutPurchaseitemInput, Prisma.productUncheckedUpdateWithoutPurchaseitemInput>
 }
 
-export type ProductUpdateWithoutStockTransactionsInput = {
+export type productUpdateWithoutPurchaseitemInput = {
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   name?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1072,12 +1072,12 @@ export type ProductUpdateWithoutStockTransactionsInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  category?: Prisma.CategoryUpdateOneRequiredWithoutProductsNestedInput
-  purchases?: Prisma.PurchaseItemUpdateManyWithoutProductNestedInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUpdateManyWithoutProductNestedInput
+  category?: Prisma.categoryUpdateOneRequiredWithoutProductNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUpdateManyWithoutProductNestedInput
+  stocktransaction?: Prisma.stocktransactionUpdateManyWithoutProductNestedInput
 }
 
-export type ProductUncheckedUpdateWithoutStockTransactionsInput = {
+export type productUncheckedUpdateWithoutPurchaseitemInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1098,11 +1098,11 @@ export type ProductUncheckedUpdateWithoutStockTransactionsInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  purchases?: Prisma.PurchaseItemUncheckedUpdateManyWithoutProductNestedInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUncheckedUpdateManyWithoutProductNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedUpdateManyWithoutProductNestedInput
+  stocktransaction?: Prisma.stocktransactionUncheckedUpdateManyWithoutProductNestedInput
 }
 
-export type ProductCreateWithoutPurchasesInput = {
+export type productCreateWithoutPurchasereturnitemInput = {
   productCode: string
   barcode?: string | null
   name: string
@@ -1120,13 +1120,13 @@ export type ProductCreateWithoutPurchasesInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
-  category: Prisma.CategoryCreateNestedOneWithoutProductsInput
-  stockTransactions?: Prisma.StockTransactionCreateNestedManyWithoutProductInput
-  purchaseReturns?: Prisma.PurchaseReturnItemCreateNestedManyWithoutProductInput
+  updatedAt: Date | string
+  category: Prisma.categoryCreateNestedOneWithoutProductInput
+  purchaseitem?: Prisma.purchaseitemCreateNestedManyWithoutProductInput
+  stocktransaction?: Prisma.stocktransactionCreateNestedManyWithoutProductInput
 }
 
-export type ProductUncheckedCreateWithoutPurchasesInput = {
+export type productUncheckedCreateWithoutPurchasereturnitemInput = {
   id?: number
   productCode: string
   barcode?: string | null
@@ -1146,28 +1146,28 @@ export type ProductUncheckedCreateWithoutPurchasesInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
-  stockTransactions?: Prisma.StockTransactionUncheckedCreateNestedManyWithoutProductInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUncheckedCreateNestedManyWithoutProductInput
+  updatedAt: Date | string
+  purchaseitem?: Prisma.purchaseitemUncheckedCreateNestedManyWithoutProductInput
+  stocktransaction?: Prisma.stocktransactionUncheckedCreateNestedManyWithoutProductInput
 }
 
-export type ProductCreateOrConnectWithoutPurchasesInput = {
-  where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutPurchasesInput, Prisma.ProductUncheckedCreateWithoutPurchasesInput>
+export type productCreateOrConnectWithoutPurchasereturnitemInput = {
+  where: Prisma.productWhereUniqueInput
+  create: Prisma.XOR<Prisma.productCreateWithoutPurchasereturnitemInput, Prisma.productUncheckedCreateWithoutPurchasereturnitemInput>
 }
 
-export type ProductUpsertWithoutPurchasesInput = {
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutPurchasesInput, Prisma.ProductUncheckedUpdateWithoutPurchasesInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutPurchasesInput, Prisma.ProductUncheckedCreateWithoutPurchasesInput>
-  where?: Prisma.ProductWhereInput
+export type productUpsertWithoutPurchasereturnitemInput = {
+  update: Prisma.XOR<Prisma.productUpdateWithoutPurchasereturnitemInput, Prisma.productUncheckedUpdateWithoutPurchasereturnitemInput>
+  create: Prisma.XOR<Prisma.productCreateWithoutPurchasereturnitemInput, Prisma.productUncheckedCreateWithoutPurchasereturnitemInput>
+  where?: Prisma.productWhereInput
 }
 
-export type ProductUpdateToOneWithWhereWithoutPurchasesInput = {
-  where?: Prisma.ProductWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutPurchasesInput, Prisma.ProductUncheckedUpdateWithoutPurchasesInput>
+export type productUpdateToOneWithWhereWithoutPurchasereturnitemInput = {
+  where?: Prisma.productWhereInput
+  data: Prisma.XOR<Prisma.productUpdateWithoutPurchasereturnitemInput, Prisma.productUncheckedUpdateWithoutPurchasereturnitemInput>
 }
 
-export type ProductUpdateWithoutPurchasesInput = {
+export type productUpdateWithoutPurchasereturnitemInput = {
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   name?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1186,12 +1186,12 @@ export type ProductUpdateWithoutPurchasesInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  category?: Prisma.CategoryUpdateOneRequiredWithoutProductsNestedInput
-  stockTransactions?: Prisma.StockTransactionUpdateManyWithoutProductNestedInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUpdateManyWithoutProductNestedInput
+  category?: Prisma.categoryUpdateOneRequiredWithoutProductNestedInput
+  purchaseitem?: Prisma.purchaseitemUpdateManyWithoutProductNestedInput
+  stocktransaction?: Prisma.stocktransactionUpdateManyWithoutProductNestedInput
 }
 
-export type ProductUncheckedUpdateWithoutPurchasesInput = {
+export type productUncheckedUpdateWithoutPurchasereturnitemInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1212,11 +1212,11 @@ export type ProductUncheckedUpdateWithoutPurchasesInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  stockTransactions?: Prisma.StockTransactionUncheckedUpdateManyWithoutProductNestedInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUncheckedUpdateManyWithoutProductNestedInput
+  purchaseitem?: Prisma.purchaseitemUncheckedUpdateManyWithoutProductNestedInput
+  stocktransaction?: Prisma.stocktransactionUncheckedUpdateManyWithoutProductNestedInput
 }
 
-export type ProductCreateWithoutPurchaseReturnsInput = {
+export type productCreateWithoutStocktransactionInput = {
   productCode: string
   barcode?: string | null
   name: string
@@ -1234,13 +1234,13 @@ export type ProductCreateWithoutPurchaseReturnsInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
-  category: Prisma.CategoryCreateNestedOneWithoutProductsInput
-  stockTransactions?: Prisma.StockTransactionCreateNestedManyWithoutProductInput
-  purchases?: Prisma.PurchaseItemCreateNestedManyWithoutProductInput
+  updatedAt: Date | string
+  category: Prisma.categoryCreateNestedOneWithoutProductInput
+  purchaseitem?: Prisma.purchaseitemCreateNestedManyWithoutProductInput
+  purchasereturnitem?: Prisma.purchasereturnitemCreateNestedManyWithoutProductInput
 }
 
-export type ProductUncheckedCreateWithoutPurchaseReturnsInput = {
+export type productUncheckedCreateWithoutStocktransactionInput = {
   id?: number
   productCode: string
   barcode?: string | null
@@ -1260,28 +1260,28 @@ export type ProductUncheckedCreateWithoutPurchaseReturnsInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
-  stockTransactions?: Prisma.StockTransactionUncheckedCreateNestedManyWithoutProductInput
-  purchases?: Prisma.PurchaseItemUncheckedCreateNestedManyWithoutProductInput
+  updatedAt: Date | string
+  purchaseitem?: Prisma.purchaseitemUncheckedCreateNestedManyWithoutProductInput
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedCreateNestedManyWithoutProductInput
 }
 
-export type ProductCreateOrConnectWithoutPurchaseReturnsInput = {
-  where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutPurchaseReturnsInput, Prisma.ProductUncheckedCreateWithoutPurchaseReturnsInput>
+export type productCreateOrConnectWithoutStocktransactionInput = {
+  where: Prisma.productWhereUniqueInput
+  create: Prisma.XOR<Prisma.productCreateWithoutStocktransactionInput, Prisma.productUncheckedCreateWithoutStocktransactionInput>
 }
 
-export type ProductUpsertWithoutPurchaseReturnsInput = {
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutPurchaseReturnsInput, Prisma.ProductUncheckedUpdateWithoutPurchaseReturnsInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutPurchaseReturnsInput, Prisma.ProductUncheckedCreateWithoutPurchaseReturnsInput>
-  where?: Prisma.ProductWhereInput
+export type productUpsertWithoutStocktransactionInput = {
+  update: Prisma.XOR<Prisma.productUpdateWithoutStocktransactionInput, Prisma.productUncheckedUpdateWithoutStocktransactionInput>
+  create: Prisma.XOR<Prisma.productCreateWithoutStocktransactionInput, Prisma.productUncheckedCreateWithoutStocktransactionInput>
+  where?: Prisma.productWhereInput
 }
 
-export type ProductUpdateToOneWithWhereWithoutPurchaseReturnsInput = {
-  where?: Prisma.ProductWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutPurchaseReturnsInput, Prisma.ProductUncheckedUpdateWithoutPurchaseReturnsInput>
+export type productUpdateToOneWithWhereWithoutStocktransactionInput = {
+  where?: Prisma.productWhereInput
+  data: Prisma.XOR<Prisma.productUpdateWithoutStocktransactionInput, Prisma.productUncheckedUpdateWithoutStocktransactionInput>
 }
 
-export type ProductUpdateWithoutPurchaseReturnsInput = {
+export type productUpdateWithoutStocktransactionInput = {
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   name?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1300,12 +1300,12 @@ export type ProductUpdateWithoutPurchaseReturnsInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  category?: Prisma.CategoryUpdateOneRequiredWithoutProductsNestedInput
-  stockTransactions?: Prisma.StockTransactionUpdateManyWithoutProductNestedInput
-  purchases?: Prisma.PurchaseItemUpdateManyWithoutProductNestedInput
+  category?: Prisma.categoryUpdateOneRequiredWithoutProductNestedInput
+  purchaseitem?: Prisma.purchaseitemUpdateManyWithoutProductNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUpdateManyWithoutProductNestedInput
 }
 
-export type ProductUncheckedUpdateWithoutPurchaseReturnsInput = {
+export type productUncheckedUpdateWithoutStocktransactionInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1326,11 +1326,11 @@ export type ProductUncheckedUpdateWithoutPurchaseReturnsInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  stockTransactions?: Prisma.StockTransactionUncheckedUpdateManyWithoutProductNestedInput
-  purchases?: Prisma.PurchaseItemUncheckedUpdateManyWithoutProductNestedInput
+  purchaseitem?: Prisma.purchaseitemUncheckedUpdateManyWithoutProductNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedUpdateManyWithoutProductNestedInput
 }
 
-export type ProductCreateManyCategoryInput = {
+export type productCreateManyCategoryInput = {
   id?: number
   productCode: string
   barcode?: string | null
@@ -1349,10 +1349,10 @@ export type ProductCreateManyCategoryInput = {
   stockQuantity?: number
   status?: boolean
   createdAt?: Date | string
-  updatedAt?: Date | string
+  updatedAt: Date | string
 }
 
-export type ProductUpdateWithoutCategoryInput = {
+export type productUpdateWithoutCategoryInput = {
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   name?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1371,12 +1371,12 @@ export type ProductUpdateWithoutCategoryInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  stockTransactions?: Prisma.StockTransactionUpdateManyWithoutProductNestedInput
-  purchases?: Prisma.PurchaseItemUpdateManyWithoutProductNestedInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUpdateManyWithoutProductNestedInput
+  purchaseitem?: Prisma.purchaseitemUpdateManyWithoutProductNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUpdateManyWithoutProductNestedInput
+  stocktransaction?: Prisma.stocktransactionUpdateManyWithoutProductNestedInput
 }
 
-export type ProductUncheckedUpdateWithoutCategoryInput = {
+export type productUncheckedUpdateWithoutCategoryInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1396,12 +1396,12 @@ export type ProductUncheckedUpdateWithoutCategoryInput = {
   status?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  stockTransactions?: Prisma.StockTransactionUncheckedUpdateManyWithoutProductNestedInput
-  purchases?: Prisma.PurchaseItemUncheckedUpdateManyWithoutProductNestedInput
-  purchaseReturns?: Prisma.PurchaseReturnItemUncheckedUpdateManyWithoutProductNestedInput
+  purchaseitem?: Prisma.purchaseitemUncheckedUpdateManyWithoutProductNestedInput
+  purchasereturnitem?: Prisma.purchasereturnitemUncheckedUpdateManyWithoutProductNestedInput
+  stocktransaction?: Prisma.stocktransactionUncheckedUpdateManyWithoutProductNestedInput
 }
 
-export type ProductUncheckedUpdateManyWithoutCategoryInput = {
+export type productUncheckedUpdateManyWithoutCategoryInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productCode?: Prisma.StringFieldUpdateOperationsInput | string
   barcode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1429,15 +1429,15 @@ export type ProductUncheckedUpdateManyWithoutCategoryInput = {
  */
 
 export type ProductCountOutputType = {
-  stockTransactions: number
-  purchases: number
-  purchaseReturns: number
+  purchaseitem: number
+  purchasereturnitem: number
+  stocktransaction: number
 }
 
 export type ProductCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  stockTransactions?: boolean | ProductCountOutputTypeCountStockTransactionsArgs
-  purchases?: boolean | ProductCountOutputTypeCountPurchasesArgs
-  purchaseReturns?: boolean | ProductCountOutputTypeCountPurchaseReturnsArgs
+  purchaseitem?: boolean | ProductCountOutputTypeCountPurchaseitemArgs
+  purchasereturnitem?: boolean | ProductCountOutputTypeCountPurchasereturnitemArgs
+  stocktransaction?: boolean | ProductCountOutputTypeCountStocktransactionArgs
 }
 
 /**
@@ -1453,26 +1453,26 @@ export type ProductCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Exte
 /**
  * ProductCountOutputType without action
  */
-export type ProductCountOutputTypeCountStockTransactionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.StockTransactionWhereInput
+export type ProductCountOutputTypeCountPurchaseitemArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.purchaseitemWhereInput
 }
 
 /**
  * ProductCountOutputType without action
  */
-export type ProductCountOutputTypeCountPurchasesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.PurchaseItemWhereInput
+export type ProductCountOutputTypeCountPurchasereturnitemArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.purchasereturnitemWhereInput
 }
 
 /**
  * ProductCountOutputType without action
  */
-export type ProductCountOutputTypeCountPurchaseReturnsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.PurchaseReturnItemWhereInput
+export type ProductCountOutputTypeCountStocktransactionArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.stocktransactionWhereInput
 }
 
 
-export type ProductSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
+export type productSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   productCode?: boolean
   barcode?: boolean
@@ -1493,16 +1493,16 @@ export type ProductSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   status?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  category?: boolean | Prisma.CategoryDefaultArgs<ExtArgs>
-  stockTransactions?: boolean | Prisma.Product$stockTransactionsArgs<ExtArgs>
-  purchases?: boolean | Prisma.Product$purchasesArgs<ExtArgs>
-  purchaseReturns?: boolean | Prisma.Product$purchaseReturnsArgs<ExtArgs>
+  category?: boolean | Prisma.categoryDefaultArgs<ExtArgs>
+  purchaseitem?: boolean | Prisma.product$purchaseitemArgs<ExtArgs>
+  purchasereturnitem?: boolean | Prisma.product$purchasereturnitemArgs<ExtArgs>
+  stocktransaction?: boolean | Prisma.product$stocktransactionArgs<ExtArgs>
   _count?: boolean | Prisma.ProductCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["product"]>
 
 
 
-export type ProductSelectScalar = {
+export type productSelectScalar = {
   id?: boolean
   productCode?: boolean
   barcode?: boolean
@@ -1525,22 +1525,22 @@ export type ProductSelectScalar = {
   updatedAt?: boolean
 }
 
-export type ProductOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "productCode" | "barcode" | "name" | "categoryId" | "jewelleryType" | "karat" | "purity" | "grossWeight" | "stoneWeight" | "netWeight" | "wastagePercent" | "makingCharge" | "stoneCharge" | "purchasePrice" | "sellingPrice" | "stockQuantity" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["product"]>
-export type ProductInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  category?: boolean | Prisma.CategoryDefaultArgs<ExtArgs>
-  stockTransactions?: boolean | Prisma.Product$stockTransactionsArgs<ExtArgs>
-  purchases?: boolean | Prisma.Product$purchasesArgs<ExtArgs>
-  purchaseReturns?: boolean | Prisma.Product$purchaseReturnsArgs<ExtArgs>
+export type productOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "productCode" | "barcode" | "name" | "categoryId" | "jewelleryType" | "karat" | "purity" | "grossWeight" | "stoneWeight" | "netWeight" | "wastagePercent" | "makingCharge" | "stoneCharge" | "purchasePrice" | "sellingPrice" | "stockQuantity" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["product"]>
+export type productInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  category?: boolean | Prisma.categoryDefaultArgs<ExtArgs>
+  purchaseitem?: boolean | Prisma.product$purchaseitemArgs<ExtArgs>
+  purchasereturnitem?: boolean | Prisma.product$purchasereturnitemArgs<ExtArgs>
+  stocktransaction?: boolean | Prisma.product$stocktransactionArgs<ExtArgs>
   _count?: boolean | Prisma.ProductCountOutputTypeDefaultArgs<ExtArgs>
 }
 
-export type $ProductPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  name: "Product"
+export type $productPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  name: "product"
   objects: {
-    category: Prisma.$CategoryPayload<ExtArgs>
-    stockTransactions: Prisma.$StockTransactionPayload<ExtArgs>[]
-    purchases: Prisma.$PurchaseItemPayload<ExtArgs>[]
-    purchaseReturns: Prisma.$PurchaseReturnItemPayload<ExtArgs>[]
+    category: Prisma.$categoryPayload<ExtArgs>
+    purchaseitem: Prisma.$purchaseitemPayload<ExtArgs>[]
+    purchasereturnitem: Prisma.$purchasereturnitemPayload<ExtArgs>[]
+    stocktransaction: Prisma.$stocktransactionPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: number
@@ -1567,18 +1567,18 @@ export type $ProductPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
   composites: {}
 }
 
-export type ProductGetPayload<S extends boolean | null | undefined | ProductDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$ProductPayload, S>
+export type productGetPayload<S extends boolean | null | undefined | productDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$productPayload, S>
 
-export type ProductCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> =
-  Omit<ProductFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+export type productCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> =
+  Omit<productFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
     select?: ProductCountAggregateInputType | true
   }
 
-export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-  [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Product'], meta: { name: 'Product' } }
+export interface productDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+  [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['product'], meta: { name: 'product' } }
   /**
    * Find zero or one Product that matches the filter.
-   * @param {ProductFindUniqueArgs} args - Arguments to find a Product
+   * @param {productFindUniqueArgs} args - Arguments to find a Product
    * @example
    * // Get one Product
    * const product = await prisma.product.findUnique({
@@ -1587,12 +1587,12 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    *   }
    * })
    */
-  findUnique<T extends ProductFindUniqueArgs>(args: Prisma.SelectSubset<T, ProductFindUniqueArgs<ExtArgs>>): Prisma.Prisma__ProductClient<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  findUnique<T extends productFindUniqueArgs>(args: Prisma.SelectSubset<T, productFindUniqueArgs<ExtArgs>>): Prisma.Prisma__productClient<runtime.Types.Result.GetResult<Prisma.$productPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
   /**
    * Find one Product that matches the filter or throw an error with `error.code='P2025'`
    * if no matches were found.
-   * @param {ProductFindUniqueOrThrowArgs} args - Arguments to find a Product
+   * @param {productFindUniqueOrThrowArgs} args - Arguments to find a Product
    * @example
    * // Get one Product
    * const product = await prisma.product.findUniqueOrThrow({
@@ -1601,13 +1601,13 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    *   }
    * })
    */
-  findUniqueOrThrow<T extends ProductFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, ProductFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__ProductClient<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  findUniqueOrThrow<T extends productFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, productFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__productClient<runtime.Types.Result.GetResult<Prisma.$productPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
    * Find the first Product that matches the filter.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {ProductFindFirstArgs} args - Arguments to find a Product
+   * @param {productFindFirstArgs} args - Arguments to find a Product
    * @example
    * // Get one Product
    * const product = await prisma.product.findFirst({
@@ -1616,14 +1616,14 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    *   }
    * })
    */
-  findFirst<T extends ProductFindFirstArgs>(args?: Prisma.SelectSubset<T, ProductFindFirstArgs<ExtArgs>>): Prisma.Prisma__ProductClient<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  findFirst<T extends productFindFirstArgs>(args?: Prisma.SelectSubset<T, productFindFirstArgs<ExtArgs>>): Prisma.Prisma__productClient<runtime.Types.Result.GetResult<Prisma.$productPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
   /**
    * Find the first Product that matches the filter or
    * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {ProductFindFirstOrThrowArgs} args - Arguments to find a Product
+   * @param {productFindFirstOrThrowArgs} args - Arguments to find a Product
    * @example
    * // Get one Product
    * const product = await prisma.product.findFirstOrThrow({
@@ -1632,13 +1632,13 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    *   }
    * })
    */
-  findFirstOrThrow<T extends ProductFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, ProductFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__ProductClient<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  findFirstOrThrow<T extends productFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, productFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__productClient<runtime.Types.Result.GetResult<Prisma.$productPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
    * Find zero or more Products that matches the filter.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {ProductFindManyArgs} args - Arguments to filter and select certain fields only.
+   * @param {productFindManyArgs} args - Arguments to filter and select certain fields only.
    * @example
    * // Get all Products
    * const products = await prisma.product.findMany()
@@ -1650,11 +1650,11 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    * const productWithIdOnly = await prisma.product.findMany({ select: { id: true } })
    * 
    */
-  findMany<T extends ProductFindManyArgs>(args?: Prisma.SelectSubset<T, ProductFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+  findMany<T extends productFindManyArgs>(args?: Prisma.SelectSubset<T, productFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$productPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
   /**
    * Create a Product.
-   * @param {ProductCreateArgs} args - Arguments to create a Product.
+   * @param {productCreateArgs} args - Arguments to create a Product.
    * @example
    * // Create one Product
    * const Product = await prisma.product.create({
@@ -1664,11 +1664,11 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    * })
    * 
    */
-  create<T extends ProductCreateArgs>(args: Prisma.SelectSubset<T, ProductCreateArgs<ExtArgs>>): Prisma.Prisma__ProductClient<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  create<T extends productCreateArgs>(args: Prisma.SelectSubset<T, productCreateArgs<ExtArgs>>): Prisma.Prisma__productClient<runtime.Types.Result.GetResult<Prisma.$productPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
    * Create many Products.
-   * @param {ProductCreateManyArgs} args - Arguments to create many Products.
+   * @param {productCreateManyArgs} args - Arguments to create many Products.
    * @example
    * // Create many Products
    * const product = await prisma.product.createMany({
@@ -1678,11 +1678,11 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    * })
    *     
    */
-  createMany<T extends ProductCreateManyArgs>(args?: Prisma.SelectSubset<T, ProductCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  createMany<T extends productCreateManyArgs>(args?: Prisma.SelectSubset<T, productCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
    * Delete a Product.
-   * @param {ProductDeleteArgs} args - Arguments to delete one Product.
+   * @param {productDeleteArgs} args - Arguments to delete one Product.
    * @example
    * // Delete one Product
    * const Product = await prisma.product.delete({
@@ -1692,11 +1692,11 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    * })
    * 
    */
-  delete<T extends ProductDeleteArgs>(args: Prisma.SelectSubset<T, ProductDeleteArgs<ExtArgs>>): Prisma.Prisma__ProductClient<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  delete<T extends productDeleteArgs>(args: Prisma.SelectSubset<T, productDeleteArgs<ExtArgs>>): Prisma.Prisma__productClient<runtime.Types.Result.GetResult<Prisma.$productPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
    * Update one Product.
-   * @param {ProductUpdateArgs} args - Arguments to update one Product.
+   * @param {productUpdateArgs} args - Arguments to update one Product.
    * @example
    * // Update one Product
    * const product = await prisma.product.update({
@@ -1709,11 +1709,11 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    * })
    * 
    */
-  update<T extends ProductUpdateArgs>(args: Prisma.SelectSubset<T, ProductUpdateArgs<ExtArgs>>): Prisma.Prisma__ProductClient<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  update<T extends productUpdateArgs>(args: Prisma.SelectSubset<T, productUpdateArgs<ExtArgs>>): Prisma.Prisma__productClient<runtime.Types.Result.GetResult<Prisma.$productPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
   /**
    * Delete zero or more Products.
-   * @param {ProductDeleteManyArgs} args - Arguments to filter Products to delete.
+   * @param {productDeleteManyArgs} args - Arguments to filter Products to delete.
    * @example
    * // Delete a few Products
    * const { count } = await prisma.product.deleteMany({
@@ -1723,13 +1723,13 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    * })
    * 
    */
-  deleteMany<T extends ProductDeleteManyArgs>(args?: Prisma.SelectSubset<T, ProductDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  deleteMany<T extends productDeleteManyArgs>(args?: Prisma.SelectSubset<T, productDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
    * Update zero or more Products.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {ProductUpdateManyArgs} args - Arguments to update one or more rows.
+   * @param {productUpdateManyArgs} args - Arguments to update one or more rows.
    * @example
    * // Update many Products
    * const product = await prisma.product.updateMany({
@@ -1742,11 +1742,11 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    * })
    * 
    */
-  updateMany<T extends ProductUpdateManyArgs>(args: Prisma.SelectSubset<T, ProductUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
+  updateMany<T extends productUpdateManyArgs>(args: Prisma.SelectSubset<T, productUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>
 
   /**
    * Create or update one Product.
-   * @param {ProductUpsertArgs} args - Arguments to update or create a Product.
+   * @param {productUpsertArgs} args - Arguments to update or create a Product.
    * @example
    * // Update or create a Product
    * const product = await prisma.product.upsert({
@@ -1761,14 +1761,14 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    *   }
    * })
    */
-  upsert<T extends ProductUpsertArgs>(args: Prisma.SelectSubset<T, ProductUpsertArgs<ExtArgs>>): Prisma.Prisma__ProductClient<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+  upsert<T extends productUpsertArgs>(args: Prisma.SelectSubset<T, productUpsertArgs<ExtArgs>>): Prisma.Prisma__productClient<runtime.Types.Result.GetResult<Prisma.$productPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
   /**
    * Count the number of Products.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {ProductCountArgs} args - Arguments to filter Products to count.
+   * @param {productCountArgs} args - Arguments to filter Products to count.
    * @example
    * // Count the number of Products
    * const count = await prisma.product.count({
@@ -1777,8 +1777,8 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    *   }
    * })
   **/
-  count<T extends ProductCountArgs>(
-    args?: Prisma.Subset<T, ProductCountArgs>,
+  count<T extends productCountArgs>(
+    args?: Prisma.Subset<T, productCountArgs>,
   ): Prisma.PrismaPromise<
     T extends runtime.Types.Utils.Record<'select', any>
       ? T['select'] extends true
@@ -1817,7 +1817,7 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    * Group by Product.
    * Note, that providing `undefined` is treated as the value not being there.
    * Read more here: https://pris.ly/d/null-undefined
-   * @param {ProductGroupByArgs} args - Group by arguments.
+   * @param {productGroupByArgs} args - Group by arguments.
    * @example
    * // Group by city, order by createdAt, get count
    * const result = await prisma.user.groupBy({
@@ -1832,14 +1832,14 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
    * 
   **/
   groupBy<
-    T extends ProductGroupByArgs,
+    T extends productGroupByArgs,
     HasSelectOrTake extends Prisma.Or<
       Prisma.Extends<'skip', Prisma.Keys<T>>,
       Prisma.Extends<'take', Prisma.Keys<T>>
     >,
     OrderByArg extends Prisma.True extends HasSelectOrTake
-      ? { orderBy: ProductGroupByArgs['orderBy'] }
-      : { orderBy?: ProductGroupByArgs['orderBy'] },
+      ? { orderBy: productGroupByArgs['orderBy'] }
+      : { orderBy?: productGroupByArgs['orderBy'] },
     OrderFields extends Prisma.ExcludeUnderscoreKeys<Prisma.Keys<Prisma.MaybeTupleToUnion<T['orderBy']>>>,
     ByFields extends Prisma.MaybeTupleToUnion<T['by']>,
     ByValid extends Prisma.Has<ByFields, OrderFields>,
@@ -1888,25 +1888,25 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
           ? never
           : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
       }[OrderFields]
-  >(args: Prisma.SubsetIntersection<T, ProductGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetProductGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  >(args: Prisma.SubsetIntersection<T, productGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetProductGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
 /**
- * Fields of the Product model
+ * Fields of the product model
  */
-readonly fields: ProductFieldRefs;
+readonly fields: productFieldRefs;
 }
 
 /**
- * The delegate class that acts as a "Promise-like" for Product.
+ * The delegate class that acts as a "Promise-like" for product.
  * Why is this prefixed with `Prisma__`?
  * Because we want to prevent naming conflicts as mentioned in
  * https://github.com/prisma/prisma-client-js/issues/707
  */
-export interface Prisma__ProductClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+export interface Prisma__productClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  category<T extends Prisma.CategoryDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.CategoryDefaultArgs<ExtArgs>>): Prisma.Prisma__CategoryClient<runtime.Types.Result.GetResult<Prisma.$CategoryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  stockTransactions<T extends Prisma.Product$stockTransactionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Product$stockTransactionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  purchases<T extends Prisma.Product$purchasesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Product$purchasesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchaseItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  purchaseReturns<T extends Prisma.Product$purchaseReturnsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Product$purchaseReturnsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchaseReturnItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  category<T extends Prisma.categoryDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.categoryDefaultArgs<ExtArgs>>): Prisma.Prisma__categoryClient<runtime.Types.Result.GetResult<Prisma.$categoryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  purchaseitem<T extends Prisma.product$purchaseitemArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.product$purchaseitemArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$purchaseitemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  purchasereturnitem<T extends Prisma.product$purchasereturnitemArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.product$purchasereturnitemArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$purchasereturnitemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  stocktransaction<T extends Prisma.product$stocktransactionArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.product$stocktransactionArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$stocktransactionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1933,462 +1933,462 @@ export interface Prisma__ProductClient<T, Null = never, ExtArgs extends runtime.
 
 
 /**
- * Fields of the Product model
+ * Fields of the product model
  */
-export interface ProductFieldRefs {
-  readonly id: Prisma.FieldRef<"Product", 'Int'>
-  readonly productCode: Prisma.FieldRef<"Product", 'String'>
-  readonly barcode: Prisma.FieldRef<"Product", 'String'>
-  readonly name: Prisma.FieldRef<"Product", 'String'>
-  readonly categoryId: Prisma.FieldRef<"Product", 'Int'>
-  readonly jewelleryType: Prisma.FieldRef<"Product", 'String'>
-  readonly karat: Prisma.FieldRef<"Product", 'String'>
-  readonly purity: Prisma.FieldRef<"Product", 'Decimal'>
-  readonly grossWeight: Prisma.FieldRef<"Product", 'Decimal'>
-  readonly stoneWeight: Prisma.FieldRef<"Product", 'Decimal'>
-  readonly netWeight: Prisma.FieldRef<"Product", 'Decimal'>
-  readonly wastagePercent: Prisma.FieldRef<"Product", 'Decimal'>
-  readonly makingCharge: Prisma.FieldRef<"Product", 'Decimal'>
-  readonly stoneCharge: Prisma.FieldRef<"Product", 'Decimal'>
-  readonly purchasePrice: Prisma.FieldRef<"Product", 'Decimal'>
-  readonly sellingPrice: Prisma.FieldRef<"Product", 'Decimal'>
-  readonly stockQuantity: Prisma.FieldRef<"Product", 'Int'>
-  readonly status: Prisma.FieldRef<"Product", 'Boolean'>
-  readonly createdAt: Prisma.FieldRef<"Product", 'DateTime'>
-  readonly updatedAt: Prisma.FieldRef<"Product", 'DateTime'>
+export interface productFieldRefs {
+  readonly id: Prisma.FieldRef<"product", 'Int'>
+  readonly productCode: Prisma.FieldRef<"product", 'String'>
+  readonly barcode: Prisma.FieldRef<"product", 'String'>
+  readonly name: Prisma.FieldRef<"product", 'String'>
+  readonly categoryId: Prisma.FieldRef<"product", 'Int'>
+  readonly jewelleryType: Prisma.FieldRef<"product", 'String'>
+  readonly karat: Prisma.FieldRef<"product", 'String'>
+  readonly purity: Prisma.FieldRef<"product", 'Decimal'>
+  readonly grossWeight: Prisma.FieldRef<"product", 'Decimal'>
+  readonly stoneWeight: Prisma.FieldRef<"product", 'Decimal'>
+  readonly netWeight: Prisma.FieldRef<"product", 'Decimal'>
+  readonly wastagePercent: Prisma.FieldRef<"product", 'Decimal'>
+  readonly makingCharge: Prisma.FieldRef<"product", 'Decimal'>
+  readonly stoneCharge: Prisma.FieldRef<"product", 'Decimal'>
+  readonly purchasePrice: Prisma.FieldRef<"product", 'Decimal'>
+  readonly sellingPrice: Prisma.FieldRef<"product", 'Decimal'>
+  readonly stockQuantity: Prisma.FieldRef<"product", 'Int'>
+  readonly status: Prisma.FieldRef<"product", 'Boolean'>
+  readonly createdAt: Prisma.FieldRef<"product", 'DateTime'>
+  readonly updatedAt: Prisma.FieldRef<"product", 'DateTime'>
 }
     
 
 // Custom InputTypes
 /**
- * Product findUnique
+ * product findUnique
  */
-export type ProductFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Product
+   * Select specific fields to fetch from the product
    */
-  select?: Prisma.ProductSelect<ExtArgs> | null
+  select?: Prisma.productSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Product
+   * Omit specific fields from the product
    */
-  omit?: Prisma.ProductOmit<ExtArgs> | null
+  omit?: Prisma.productOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProductInclude<ExtArgs> | null
+  include?: Prisma.productInclude<ExtArgs> | null
   /**
-   * Filter, which Product to fetch.
+   * Filter, which product to fetch.
    */
-  where: Prisma.ProductWhereUniqueInput
+  where: Prisma.productWhereUniqueInput
 }
 
 /**
- * Product findUniqueOrThrow
+ * product findUniqueOrThrow
  */
-export type ProductFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Product
+   * Select specific fields to fetch from the product
    */
-  select?: Prisma.ProductSelect<ExtArgs> | null
+  select?: Prisma.productSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Product
+   * Omit specific fields from the product
    */
-  omit?: Prisma.ProductOmit<ExtArgs> | null
+  omit?: Prisma.productOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProductInclude<ExtArgs> | null
+  include?: Prisma.productInclude<ExtArgs> | null
   /**
-   * Filter, which Product to fetch.
+   * Filter, which product to fetch.
    */
-  where: Prisma.ProductWhereUniqueInput
+  where: Prisma.productWhereUniqueInput
 }
 
 /**
- * Product findFirst
+ * product findFirst
  */
-export type ProductFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Product
+   * Select specific fields to fetch from the product
    */
-  select?: Prisma.ProductSelect<ExtArgs> | null
+  select?: Prisma.productSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Product
+   * Omit specific fields from the product
    */
-  omit?: Prisma.ProductOmit<ExtArgs> | null
+  omit?: Prisma.productOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProductInclude<ExtArgs> | null
+  include?: Prisma.productInclude<ExtArgs> | null
   /**
-   * Filter, which Product to fetch.
+   * Filter, which product to fetch.
    */
-  where?: Prisma.ProductWhereInput
+  where?: Prisma.productWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of Products to fetch.
+   * Determine the order of products to fetch.
    */
-  orderBy?: Prisma.ProductOrderByWithRelationInput | Prisma.ProductOrderByWithRelationInput[]
+  orderBy?: Prisma.productOrderByWithRelationInput | Prisma.productOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for searching for Products.
+   * Sets the position for searching for products.
    */
-  cursor?: Prisma.ProductWhereUniqueInput
+  cursor?: Prisma.productWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` Products from the position of the cursor.
+   * Take `±n` products from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` Products.
+   * Skip the first `n` products.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of Products.
+   * Filter by unique combinations of products.
    */
   distinct?: Prisma.ProductScalarFieldEnum | Prisma.ProductScalarFieldEnum[]
 }
 
 /**
- * Product findFirstOrThrow
+ * product findFirstOrThrow
  */
-export type ProductFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Product
+   * Select specific fields to fetch from the product
    */
-  select?: Prisma.ProductSelect<ExtArgs> | null
+  select?: Prisma.productSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Product
+   * Omit specific fields from the product
    */
-  omit?: Prisma.ProductOmit<ExtArgs> | null
+  omit?: Prisma.productOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProductInclude<ExtArgs> | null
+  include?: Prisma.productInclude<ExtArgs> | null
   /**
-   * Filter, which Product to fetch.
+   * Filter, which product to fetch.
    */
-  where?: Prisma.ProductWhereInput
+  where?: Prisma.productWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of Products to fetch.
+   * Determine the order of products to fetch.
    */
-  orderBy?: Prisma.ProductOrderByWithRelationInput | Prisma.ProductOrderByWithRelationInput[]
+  orderBy?: Prisma.productOrderByWithRelationInput | Prisma.productOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for searching for Products.
+   * Sets the position for searching for products.
    */
-  cursor?: Prisma.ProductWhereUniqueInput
+  cursor?: Prisma.productWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` Products from the position of the cursor.
+   * Take `±n` products from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` Products.
+   * Skip the first `n` products.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of Products.
+   * Filter by unique combinations of products.
    */
   distinct?: Prisma.ProductScalarFieldEnum | Prisma.ProductScalarFieldEnum[]
 }
 
 /**
- * Product findMany
+ * product findMany
  */
-export type ProductFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Product
+   * Select specific fields to fetch from the product
    */
-  select?: Prisma.ProductSelect<ExtArgs> | null
+  select?: Prisma.productSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Product
+   * Omit specific fields from the product
    */
-  omit?: Prisma.ProductOmit<ExtArgs> | null
+  omit?: Prisma.productOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProductInclude<ExtArgs> | null
+  include?: Prisma.productInclude<ExtArgs> | null
   /**
-   * Filter, which Products to fetch.
+   * Filter, which products to fetch.
    */
-  where?: Prisma.ProductWhereInput
+  where?: Prisma.productWhereInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
    * 
-   * Determine the order of Products to fetch.
+   * Determine the order of products to fetch.
    */
-  orderBy?: Prisma.ProductOrderByWithRelationInput | Prisma.ProductOrderByWithRelationInput[]
+  orderBy?: Prisma.productOrderByWithRelationInput | Prisma.productOrderByWithRelationInput[]
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
    * 
-   * Sets the position for listing Products.
+   * Sets the position for listing products.
    */
-  cursor?: Prisma.ProductWhereUniqueInput
+  cursor?: Prisma.productWhereUniqueInput
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Take `±n` Products from the position of the cursor.
+   * Take `±n` products from the position of the cursor.
    */
   take?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
    * 
-   * Skip the first `n` Products.
+   * Skip the first `n` products.
    */
   skip?: number
   /**
    * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
    * 
-   * Filter by unique combinations of Products.
+   * Filter by unique combinations of products.
    */
   distinct?: Prisma.ProductScalarFieldEnum | Prisma.ProductScalarFieldEnum[]
 }
 
 /**
- * Product create
+ * product create
  */
-export type ProductCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Product
+   * Select specific fields to fetch from the product
    */
-  select?: Prisma.ProductSelect<ExtArgs> | null
+  select?: Prisma.productSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Product
+   * Omit specific fields from the product
    */
-  omit?: Prisma.ProductOmit<ExtArgs> | null
+  omit?: Prisma.productOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProductInclude<ExtArgs> | null
+  include?: Prisma.productInclude<ExtArgs> | null
   /**
-   * The data needed to create a Product.
+   * The data needed to create a product.
    */
-  data: Prisma.XOR<Prisma.ProductCreateInput, Prisma.ProductUncheckedCreateInput>
+  data: Prisma.XOR<Prisma.productCreateInput, Prisma.productUncheckedCreateInput>
 }
 
 /**
- * Product createMany
+ * product createMany
  */
-export type ProductCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * The data used to create many Products.
+   * The data used to create many products.
    */
-  data: Prisma.ProductCreateManyInput | Prisma.ProductCreateManyInput[]
+  data: Prisma.productCreateManyInput | Prisma.productCreateManyInput[]
   skipDuplicates?: boolean
 }
 
 /**
- * Product update
+ * product update
  */
-export type ProductUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Product
+   * Select specific fields to fetch from the product
    */
-  select?: Prisma.ProductSelect<ExtArgs> | null
+  select?: Prisma.productSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Product
+   * Omit specific fields from the product
    */
-  omit?: Prisma.ProductOmit<ExtArgs> | null
+  omit?: Prisma.productOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProductInclude<ExtArgs> | null
+  include?: Prisma.productInclude<ExtArgs> | null
   /**
-   * The data needed to update a Product.
+   * The data needed to update a product.
    */
-  data: Prisma.XOR<Prisma.ProductUpdateInput, Prisma.ProductUncheckedUpdateInput>
+  data: Prisma.XOR<Prisma.productUpdateInput, Prisma.productUncheckedUpdateInput>
   /**
-   * Choose, which Product to update.
+   * Choose, which product to update.
    */
-  where: Prisma.ProductWhereUniqueInput
+  where: Prisma.productWhereUniqueInput
 }
 
 /**
- * Product updateMany
+ * product updateMany
  */
-export type ProductUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * The data used to update Products.
+   * The data used to update products.
    */
-  data: Prisma.XOR<Prisma.ProductUpdateManyMutationInput, Prisma.ProductUncheckedUpdateManyInput>
+  data: Prisma.XOR<Prisma.productUpdateManyMutationInput, Prisma.productUncheckedUpdateManyInput>
   /**
-   * Filter which Products to update
+   * Filter which products to update
    */
-  where?: Prisma.ProductWhereInput
+  where?: Prisma.productWhereInput
   /**
-   * Limit how many Products to update.
+   * Limit how many products to update.
    */
   limit?: number
 }
 
 /**
- * Product upsert
+ * product upsert
  */
-export type ProductUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Product
+   * Select specific fields to fetch from the product
    */
-  select?: Prisma.ProductSelect<ExtArgs> | null
+  select?: Prisma.productSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Product
+   * Omit specific fields from the product
    */
-  omit?: Prisma.ProductOmit<ExtArgs> | null
+  omit?: Prisma.productOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProductInclude<ExtArgs> | null
+  include?: Prisma.productInclude<ExtArgs> | null
   /**
-   * The filter to search for the Product to update in case it exists.
+   * The filter to search for the product to update in case it exists.
    */
-  where: Prisma.ProductWhereUniqueInput
+  where: Prisma.productWhereUniqueInput
   /**
-   * In case the Product found by the `where` argument doesn't exist, create a new Product with this data.
+   * In case the product found by the `where` argument doesn't exist, create a new product with this data.
    */
-  create: Prisma.XOR<Prisma.ProductCreateInput, Prisma.ProductUncheckedCreateInput>
+  create: Prisma.XOR<Prisma.productCreateInput, Prisma.productUncheckedCreateInput>
   /**
-   * In case the Product was found with the provided `where` argument, update it with this data.
+   * In case the product was found with the provided `where` argument, update it with this data.
    */
-  update: Prisma.XOR<Prisma.ProductUpdateInput, Prisma.ProductUncheckedUpdateInput>
+  update: Prisma.XOR<Prisma.productUpdateInput, Prisma.productUncheckedUpdateInput>
 }
 
 /**
- * Product delete
+ * product delete
  */
-export type ProductDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Product
+   * Select specific fields to fetch from the product
    */
-  select?: Prisma.ProductSelect<ExtArgs> | null
+  select?: Prisma.productSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Product
+   * Omit specific fields from the product
    */
-  omit?: Prisma.ProductOmit<ExtArgs> | null
+  omit?: Prisma.productOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProductInclude<ExtArgs> | null
+  include?: Prisma.productInclude<ExtArgs> | null
   /**
-   * Filter which Product to delete.
+   * Filter which product to delete.
    */
-  where: Prisma.ProductWhereUniqueInput
+  where: Prisma.productWhereUniqueInput
 }
 
 /**
- * Product deleteMany
+ * product deleteMany
  */
-export type ProductDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Filter which Products to delete
+   * Filter which products to delete
    */
-  where?: Prisma.ProductWhereInput
+  where?: Prisma.productWhereInput
   /**
-   * Limit how many Products to delete.
+   * Limit how many products to delete.
    */
   limit?: number
 }
 
 /**
- * Product.stockTransactions
+ * product.purchaseitem
  */
-export type Product$stockTransactionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type product$purchaseitemArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the StockTransaction
+   * Select specific fields to fetch from the purchaseitem
    */
-  select?: Prisma.StockTransactionSelect<ExtArgs> | null
+  select?: Prisma.purchaseitemSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the StockTransaction
+   * Omit specific fields from the purchaseitem
    */
-  omit?: Prisma.StockTransactionOmit<ExtArgs> | null
+  omit?: Prisma.purchaseitemOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.StockTransactionInclude<ExtArgs> | null
-  where?: Prisma.StockTransactionWhereInput
-  orderBy?: Prisma.StockTransactionOrderByWithRelationInput | Prisma.StockTransactionOrderByWithRelationInput[]
-  cursor?: Prisma.StockTransactionWhereUniqueInput
+  include?: Prisma.purchaseitemInclude<ExtArgs> | null
+  where?: Prisma.purchaseitemWhereInput
+  orderBy?: Prisma.purchaseitemOrderByWithRelationInput | Prisma.purchaseitemOrderByWithRelationInput[]
+  cursor?: Prisma.purchaseitemWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.StockTransactionScalarFieldEnum | Prisma.StockTransactionScalarFieldEnum[]
+  distinct?: Prisma.PurchaseitemScalarFieldEnum | Prisma.PurchaseitemScalarFieldEnum[]
 }
 
 /**
- * Product.purchases
+ * product.purchasereturnitem
  */
-export type Product$purchasesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type product$purchasereturnitemArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseItem
+   * Select specific fields to fetch from the purchasereturnitem
    */
-  select?: Prisma.PurchaseItemSelect<ExtArgs> | null
+  select?: Prisma.purchasereturnitemSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseItem
+   * Omit specific fields from the purchasereturnitem
    */
-  omit?: Prisma.PurchaseItemOmit<ExtArgs> | null
+  omit?: Prisma.purchasereturnitemOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseItemInclude<ExtArgs> | null
-  where?: Prisma.PurchaseItemWhereInput
-  orderBy?: Prisma.PurchaseItemOrderByWithRelationInput | Prisma.PurchaseItemOrderByWithRelationInput[]
-  cursor?: Prisma.PurchaseItemWhereUniqueInput
+  include?: Prisma.purchasereturnitemInclude<ExtArgs> | null
+  where?: Prisma.purchasereturnitemWhereInput
+  orderBy?: Prisma.purchasereturnitemOrderByWithRelationInput | Prisma.purchasereturnitemOrderByWithRelationInput[]
+  cursor?: Prisma.purchasereturnitemWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.PurchaseItemScalarFieldEnum | Prisma.PurchaseItemScalarFieldEnum[]
+  distinct?: Prisma.PurchasereturnitemScalarFieldEnum | Prisma.PurchasereturnitemScalarFieldEnum[]
 }
 
 /**
- * Product.purchaseReturns
+ * product.stocktransaction
  */
-export type Product$purchaseReturnsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type product$stocktransactionArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the PurchaseReturnItem
+   * Select specific fields to fetch from the stocktransaction
    */
-  select?: Prisma.PurchaseReturnItemSelect<ExtArgs> | null
+  select?: Prisma.stocktransactionSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the PurchaseReturnItem
+   * Omit specific fields from the stocktransaction
    */
-  omit?: Prisma.PurchaseReturnItemOmit<ExtArgs> | null
+  omit?: Prisma.stocktransactionOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.PurchaseReturnItemInclude<ExtArgs> | null
-  where?: Prisma.PurchaseReturnItemWhereInput
-  orderBy?: Prisma.PurchaseReturnItemOrderByWithRelationInput | Prisma.PurchaseReturnItemOrderByWithRelationInput[]
-  cursor?: Prisma.PurchaseReturnItemWhereUniqueInput
+  include?: Prisma.stocktransactionInclude<ExtArgs> | null
+  where?: Prisma.stocktransactionWhereInput
+  orderBy?: Prisma.stocktransactionOrderByWithRelationInput | Prisma.stocktransactionOrderByWithRelationInput[]
+  cursor?: Prisma.stocktransactionWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.PurchaseReturnItemScalarFieldEnum | Prisma.PurchaseReturnItemScalarFieldEnum[]
+  distinct?: Prisma.StocktransactionScalarFieldEnum | Prisma.StocktransactionScalarFieldEnum[]
 }
 
 /**
- * Product without action
+ * product without action
  */
-export type ProductDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type productDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Product
+   * Select specific fields to fetch from the product
    */
-  select?: Prisma.ProductSelect<ExtArgs> | null
+  select?: Prisma.productSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Product
+   * Omit specific fields from the product
    */
-  omit?: Prisma.ProductOmit<ExtArgs> | null
+  omit?: Prisma.productOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ProductInclude<ExtArgs> | null
+  include?: Prisma.productInclude<ExtArgs> | null
 }
